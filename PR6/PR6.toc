@@ -1,0 +1,7 @@
+\babel@toc {catalan}{}\relax 
+\contentsline {section}{\numberline {1}Introducció Teòrica}{3}{section.1}%
+\contentsline {section}{\numberline {2}Desviació electroestàtica}{3}{section.2}%
+\contentsline {section}{\numberline {3}Desviació magnetoestàtica}{3}{section.3}%
+\contentsline {section}{\numberline {4}Desviació electromagnètica}{3}{section.4}%
+\contentsline {section}{\numberline {5}Conclusions}{3}{section.5}%
+\contentsline {section}{\numberline {A}askdjfñla}{3}{appendix.A}%
