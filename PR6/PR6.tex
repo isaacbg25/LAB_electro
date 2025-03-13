@@ -36,7 +36,7 @@
 \author{\begin{tabular}{c}
 \textbf{GRUP A6} \\
 Isaac Baldi García (1667260)\\
-Miguel \\
+Miguel Ordejón de Prada (1710966) \\
 Eira Jacas García (1666616) \\
 Victor
 \end{tabular}}
@@ -57,10 +57,53 @@ Victor
 \newpage
 
 \section{Introducció Teòrica}
+
+\section{Mètode Experimental}
+
 \section{Desviació electroestàtica}\label{sec: desv_electr}
-(miguel)
+
+Teoria:
+Una partícula de massa $m$ i càrrega $q$ sota l'influència d'un camp elèctric uniforme en direcció $y$ i magnitut $E$ i amb velocitat en direcció $x$ i magnitut $v_0$ descriurà la següent trajectòria:
+\begin{align*}
+    &x = v_0 t      &y = -\frac{qEt}{2m}
+\end{align*}
+
+Tenint en compte la conservació de la energia tenim:
+\begin{equation*}
+    \frac{1}{2}mv_0^2=qV_a
+\end{equation*}
+
+On $V_a$ és el potencial amb el que s'acceleren les partícules.
+
+Y tenint en compte que el condensador de plaques planoparal·leles no és ideal:
+
+Finalment, obtenim:
+\begin{equation*}
+    y = \frac{kV_px^2}{4dV_a}
+\end{equation*}
+
+
+Presentació de resultats:
+
+--- Posar fotografies de la desviació electroestàtica ---
+
+En subministrar una diferència de potencial a les plaques s'observa com el raig es desvia cap al càtode. Per tant, les partícules de les què està compost els raigs catòdics tenen una càrrega negativa.
+
+ Les regressions lineals entre $y$ i $x^2$ confirmen que la trajectòria observada és una paràbola on els coeficients de correlació $R^2 \sim 0,98$ \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: traj_no_rect}}. D'aquestes també obtenim els diferents valors de k.
+
+--- Gràfics amb incerteses ---
+\begin{align*}
+    V_p &= 1kV      & k = 0,905842781 \\
+    V_p &= 2kV      & k = 1,392224283 \\
+    V_p &= 3kV      & k = 2,131002674 \\
+    V_p &= 4kV      & k = 2,42607494 
+\end{align*}
+
+
+
+
 \section{Desviació magnetoestàtica}\label{sec: desv_magn}
-En aquest apartat de la pràctica, després de comprovar que les partícules dels ràigs catòdics tenen càrrega negativa com hem vist a la secció \ref{sec: desv_electr} n'estudiem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. El camp l'hem direccionat perpendicular als raigs catòdics i n'hem controlat la intencitat regulant la intencitat del corrent de les bobines. Al aplicar el camp hem observat com els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intencitat del corrent de les bobines i el potencial dels raigs catòdics per poder determinar més propietats de les partícules d'aquests. 
+En aquest apartat de la pràctica, després de comprovar que les partícules dels ràigs catòdics tenen càrrega negativa com hem vist a la secció \ref{sec: desv_electr} n'estudiem la interacció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. El camp l'hem direccionat perpendicular als raigs catòdics i n'hem controlat la intensitat regulant la intensitat del corrent de les bobines. Al aplicar el camp hem observat com els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intensitat del corrent de les bobines i el potencial dels raigs catòdics per poder determinar més propietats de les partícules d'aquests. 
 
 \begin{equation}
     R=\frac{x^2+y^2}{2y}
