@@ -109,7 +109,7 @@ El camp l'hem direccionat perpendicular als raigs catòdics i n'hem controlat la
 Teoria: 
 El camp d'inducció magnètica generat per unes bobines de Hemholtz es pot aproximar al camp uniforme 
 \begin{equation}
-    \vec{B}=\frac{32\pi nI}{5\sqrt{5}r}\cross10^-7 \hat{z} Wb/m^2.
+    \vec{B}=\frac{32\pi nI}{5\sqrt{5}r}\cross10^{-7} \quad \hat{z}\quad Wb/m^2.
     \label{eq: B}
 \end{equation}
 Per la llei de Lorentz, una partícula carregada negativament sota un camp d'inducció magnètica, $\vec{B}$, pateix una força
@@ -132,29 +132,30 @@ Igualant la força centrípeta a la força de Lorentz obtenim la relació
 \end{equation}
 que combinada amb l'equació \ref{eq: B} ens dona la relació entre el radi i la intencitat de corrent
 \begin{equation}
-    R=k\frac{1}{I} \quad on k=\frac{mv5\sqrt{5}r}{32\pi n}\cross 10^7.
+    R=K\frac{1}{I} \quad on \quad K=\frac{mv5\sqrt{5}r}{32\pi n}\cross 10^7.
     \label{eq: IvsR}
 \end{equation}
-Tenint en compte l'equació \ref{eq: fc=fl } i la llei de la concervació de l'energia mecànica, $qV_a = \frac{1}{2}mv^2$, s'obté 
+Tenint en compte l'equació \ref{eq: fc=fl} i la llei de la concervació de l'energia mecànica, $qV_a = \frac{1}{2}mv^2$, s'obté 
 \begin{equation}
     \frac{q}{m}=\frac{2V_a }{B^2R^2}
     \label{eq: q/m}
 \end{equation}
-per calcular la relació $\frac{q}{m}$.
+que ens permetrà calcular la relació $\frac{q}{m}$ de les partícules.
 
 resultats:
 
 %Hem estudiat la dependència del radi de la trajectòria dels ràigs catòdics amb la intencitat del corrent de les bobines agafant $0.1A, 0.2A, 0.3A, 0.4A, 0.5A, 0.6A, 0.7A, 0.8A$ com a intencitats de mostreig. Per això, hem calculat el radi associat a cada intencitat que com veiem a \ref{eq: radi} és el pendent de la regressió linial entre $x^2+y^2$ i $2y$ .
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intencitat de corrent de les bobines hem calculat el pendent de la recta de regressió entre $x^2+y^2$ i $2y$ (\ref{fig: regressio_1 }). Agafant $0.1A, 0.2A, 0.3A, 0.4A, 0.5A, 0.6A, 0.7A, 0.8A$ com a intencitats de mostreig s'obtenen els radis de corbatura de la taula \ref{tab: RvsI}\footnote{El càlcul de les incerteses es mostra a l'annex \ref{sec: incerteses}}. Amb aquestes dades hem construit la gràfica \ref{fig: RvsI} on es mostra que la variació de $R$ és lineal amb la variació de $\frac{1}{I}$ amb una $r^2=??$. Aquest resultat s'explica amb l'equació \ref{eq: IvsR} que prediu aquest comportament.
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intencitat de corrent de les bobines hem calculat el pendent de la recta de regressió entre $x^2+y^2$ i $2y$ (\ref{fig: regressio_1 }). Agafant $0.1A, 0.2A, 0.3A, 0.4A, 0.5A, 0.6A, 0.7A, 0.8A$ com a intencitats de mostreig s'obtenen els radis de corbatura de la taula \ref{tab: RvsI}\footnote{El càlcul de les incerteses es mostra a l'annex \ref{sec: incerteses}}. Amb aquestes dades hem construit la gràfica \ref{fig: RvsI} on es mostra que la variació de $R$ és lineal amb la variació de $\frac{1}{I}$ amb un coeficient de determinació de $r^2=??$. Aquest resultat s'explica amb l'equació \ref{eq: IvsR} que prediu aquest comportament.
 
 -fig regressio (intensitats representatives)
--tab taula RvsI
--fig RvsI
+-tab taula RvsI 
+-fig RvsI (inclu recta de regressió amb expressió de la recta!)
 
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes hem calculat el pendent de la recta de regressió entre $x^2+y^2$ i $2y$ (\ref{fig: regressio_2 }). Agafant $2kV, 3kV, 4kV i 5kV$ com a potencials  de mostreig s'obtenen els radis de corbatura de la taula \ref{tab: RvsVa}. Amb aquestes dades hem construit la gràfica \ref{fig: RvsVa} on es mostra que la variació de $R$ és cuadràtica amb la variació de $V_a$, ja que la recta de regressio $R^2$ enfront $V_a$ presenta un coeficient de determinació de  $r^2=??$. Aquest resultat s'explica amb l'equació \ref{eq: IvsVa} que prediu aquest comportament.
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes hem calculat el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Agafant $2kV, 3kV, 4kV i 5kV$ com a potencials  de mostreig s'obtenen els radis de corbatura de la taula \ref{tab: RvsVa}. Amb aquestes dades hem construit la gràfica \ref{fig: RvsVa} on es mostra que la variació de $R$ és cuadràtica amb la variació de $V_a$, ja que la recta de regressio $R^2$ enfront $V_a$ presenta un coeficient de determinació de  $r^2=??$. Aquest resultat s'explica amb l'equació \ref{eq: q/m} que prediu aquest comportament.
 
 
-com i per què varia R en funció de Va?
+relació q/m
+
 
 (!!pensar com evaluar les incerteses)
 
