@@ -145,10 +145,10 @@ Tenint en compte l'equació \ref{eq: fc=fl} i la llei de la conservació de l'en
 que ens permetrà calcular la relació $\frac{q}{m}$ de les partícules.
 
 resultats:
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intencitat de corrent de les bobines hem usat l'equació (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la figura (\ref{fig: regressio_1 }) hem representat algunes d'aquestes regressions i ja podem veure com a mesura que augmenta la intencitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intencitat de corrent de les bobines hem usat l'equació (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la figura (\ref{fig: regressio_1}) hem representat algunes d'aquestes regressions i ja podem veure com a mesura que augmenta la intencitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{regressio_1.png}
+    \includegraphics[scale=0.3]{regressio_1.png}
     \caption{Regressió per diverses intencitats de les bobines de Hemholtz de $x^2+y^2$ en front $2y$ on $y$ i $x$ són punts de la trajectòria dels raigs catòdics. La pendent de les rectes és el radi de corbatura de la trajectòria.}
     \label{fig: regressio_1}
 \end{figure}
@@ -193,20 +193,18 @@ amb un coeficient de determinació de $r^2=0.99$ . Per tant, la relació és cer
 
 
 
-
-
--fig regressio (intensitats representatives)
--tab taula RvsI 
--fig RvsI (inclu recta de regressió amb expressió de la recta!)
-
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'equació \ref{eq: radi} que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Agafant $2kV, 3kV, 4kV$ i $5kV$ com a potencials  de mostreig s'obtenen els radis de corbatura de la taula \ref{tab:RvsVa}. Amb aquestes dades hem construit la Fig. \ref{fig: RvsVa} on es mostra que la variació de $R$ és cuadràtica amb la variació de $V_a$, ja que la recta de regressio $R^2$ enfront $V_a$ presenta un coeficient de determinació de  $r^2=??$. Aquest resultat s'explica amb l'equació \ref{eq: q/m} que prediu aquest comportament.
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'equació (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Agafant $2kV, 3kV, 4kV$ i $5kV$ com a potencials  de mostreig s'obtenen els radis de corbatura de la taula (\ref{tab:RvsVa}). Amb aquestes dades hem construit la gràfica de la figura (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és cuadràtica amb la variació de $V_a$. AL fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
+\begin{equation}
+    y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(0.00228\pm0,00098)
+\end{equation}  
+amb un coeficient de determinació $r^2=0.98$. Per tant, la relació és certament lineal (cuadràtica respecte R) i compatible amb l'equació teòrica (\ref{eq: q/m}).
 
 \begin{figure}[h]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{RvsVa.png}
-        \caption{Regressió dels punts experimentals de R en funció de $V_a^2$}
+        \caption{Regressió dels punts experimentals de $R^2$ en funció de $V_a$. Veiem que la relació és clarament lineal.}
         \label{fig: RvsVa}
     \end{minipage}
     \hfill
@@ -214,26 +212,24 @@ Per calcular el radi de la trajectòria de les partícules dels raigs catòdics 
         \centering
         \begin{tabular}{|c|c|}
             \hline
-            $V_a$(V) & R (m)\\\hline
-            (2000 ± 200)	&	(0,0880 ± 0,0030)	\\\hline
-            (3000 ± 200)	&	(0,1069± 0,0035)	\\\hline
-            (4000 ± 200)	&	(0,1204 ± 0,0030)	\\\hline
-            (5000 ± 200)	&	(0,1284± 0,0040)	\\\hline
+            Va (V)	&	R (m)	\\\hline
+            (2000 ± 200)	&	(0.0880± 0.0077)	\\\hline
+            (3000 ± 200)	&	(0.107± 0.011)	\\\hline
+            (4000 ± 200)	&	(0.120± 0.014)	\\\hline
+            (5000 ± 200)	&	(0.128 ± 0.015)	\\\hline
+            
         \end{tabular}
         \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor de potencial d'acceleració.}
         \label{tab:RvsVa}
     \end{minipage}
 \end{figure}
-(la regressió talla al 0?)
 
-Finalment, amb l'equació \ref{eq: q/m} i els resultats de tots els radis hem calculat que la relació q/m de les partícules dels raigs catòdics té un valor de 
+Finalment, amb l'equació (\ref{eq: q/m}) i els resultats de tots els radis hem calculat que la relació q/m de les partícules dels raigs catòdics té un valor de 
 \[
-\boxed{\frac{q}{m}=(4.16\pm0.38)\cross10^{11}\quad C/Kg.}
+\boxed{\frac{q}{m}=(-4.16\pm0.88)\cross10^{11}\quad C/Kg.}
 \]
-Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$ i hem obtingut la recta $y=(4.16\pm0.38)x + (-1412.64\pm791.71)$ amb un coeficient de determinació de $R^2=0.98$. Això indica que els nostres resultats concorden amb la teoria ja que la relació és clarament linial. Per altra banda si mirem el resultat teòric de q/m no és compatible amb el nostre resultat però sí que coincideix en ordre de magnitud. Això pot ser degut a... (veiem que tampoc te oo=0 però per poc)
+Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$ i hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $R^2=0.98$. El pendent d'aquesta recta ens ha donat el valor de q/m i després hem afegit l'incertesa instrumental al resultat. La linealitat dels punts indica que els nostres resultats concorden amb la teoria ja que com veiem a l'equació (\ref{eq: q/m}) la relació ha de ser lineal. Per altra banda si mirem la relació q/m dels electrons veiem que no és compatible amb el nostre resultat però sí que coincideix en ordre de magnitud. Això pot ser degut a que el camp magnètic generat per les bobines de Hemholtz no és uniforme fent que el seu valor difereixi del teòric.
 
-
-(!!pensar com evaluar les incerteses)
 
 \section{Desviació electromagnètica}\label{sec: desv_em}
 
