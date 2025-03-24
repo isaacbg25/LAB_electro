@@ -60,24 +60,8 @@ Víctor Bosch González (1676373)
 
 \section{Introducció Teòrica}
 
-\section{Mètode Experimental}
+%DESV E
 
-El mètode seguit ha constat de diverses parts explicades al guió de la pràctica, sempre ajustant al màxim possible l'exactitud de les mesures. Primerament, s'ha aplicat una diferència de potencial al tub de raigs catòdics i s'ha fet visible un feix lluminós sobre una regla. Tot seguit s'ha estudiat la desviació d'aquest feix al aplicar un camp elèctric, generat per un condensador planoparal·lel, o magnètic, generat per unes bobines de Hemholtz, ambdós uniformes i perpendiculars.  
-En aquest punt, mitjançant un dispositiu mòbil s'han fotografiat els diferents casos. Aleshores, s'ha processat cada imatge, ja a ordinador, amb un programa d'edició que permet ajustar les mesures del feix mitjançant els propis píxels de les fotografies comparats amb les marques de la regla. Es a dir, comptant aquests píxels i convertint-los a centímetres. Aquest doncs, ha estat el procediment seguit: triar a consciència diversos punts del feix i donar-ne la posició (x,y) més exacta possible, sempre sent possibles errors degut al processat de la fotografia o al desplaçament de píxels. Més precisament, s'ha aplicat una grid (cuadrícula) sobre els espais compresos entre cada marca de la regla, coincidint amb cada variació de 1 cm, per cada eix. Així, per cada una de les imatges s'ha establert una conversió píxel/cm. S'inclou un exemple gràfic (\ref{fig: ex_grid}) a continuació:
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.3]{Ex_grid.png}
-    \caption{Imatge modificada després de l'aplicació de la grid corresponent amb la seva relació px/cm: 152/1 i 153/1.}
-    \label{fig: ex_grid}
-\end{figure}
-
-
-Llavors, per cada un dels punts s'ha determinat la posició dins la grid comptant els píxels de separació amb la frontera del quadrat corresponent, i finalment, s'han convertit a centímetres. Amb aquests resultats, s'ha estudiat la desviació de la trajectòria; fet crucial pel desenvolupament de la prova, doncs les partícules del feix es poden identificar segons aquest comportament.
-
-\section{Desviació electroestàtica}\label{sec: desv_electr}
-
-Teoria:
 Una partícula de massa $m$ i càrrega $q$ sota l'influència d'un camp elèctric uniforme en direcció $y$ i magnitut $E$ i amb velocitat en direcció $x$ i magnitut $v_0$ descriurà la següent trajectòria:
 \begin{align*}
     &x = v_0 t      &y = -\frac{qEt}{2m}
@@ -90,78 +74,16 @@ Tenint en compte la conservació de la energia tenim:
 
 On $V_a$ és el potencial amb el que s'acceleren les partícules.
 
-Y tenint en compte que el condensador de plaques planoparal·leles no és ideal:
-
-Finalment, obtenim:
+Finalment, obtenim: 
 \begin{equation*}
     y = \frac{kV_px^2}{4dV_a}
 \end{equation*}
 
+On es té en compte que el condensador de plaques planoparal·leles no és ideal.
 
-Presentació de resultats:
+%DESV M
+\hspace{}
 
---- Posar fotografies de la desviació electroestàtica ---
-
-En subministrar una diferència de potencial a les plaques s'observa com el raig es desvia cap al càtode. Per tant, les partícules de les què està compost els raigs catòdics tenen una càrrega negativa.
-
- Les regressions lineals entre $y$ i $x^2$ confirmen que la trajectòria observada és una paràbola on els coeficients de correlació $R^2 \sim 0,98$ \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: traj_no_rect}}. D'aquestes també obtenim els diferents valors de k.
-
---- Gràfics amb incerteses ---
-\begin{align*}
-    V_p &= 1kV      & k = 0,905842781 \\
-    V_p &= 2kV      & k = 1,392224283 \\
-    V_p &= 3kV      & k = 2,131002674 \\
-    V_p &= 4kV      & k = 2,42607494 
-\end{align*}
-
- Per fer regressions lineals que tenen en compte les incerteces individuals de cadascún dels punt hem utilitzat el mètode de mínims quadrats ponderats (weighted least squares).
- 
- Donada una funció $f(x,\vec{\beta})$ a ajustar (en el nostre cas $f(x) = mx+n$):
- \begin{equation}
-     f(x,\vec{\beta}) = \sum_{j=1}^m\beta_j\phi_j(x)
- \end{equation}
- 
-  On ${\beta_j}$ són els paràmetres a ajustar i $\phi_j$ són funcions de x (en el nostre cas $\phi_1 = x$, $\beta_1 = m$ i $\phi_2 = 1$, $\beta_2 = n$)
- 
- \begin{equation}
-     \hat{\beta} = (X^TWX)^{-1}X^TW\vec{y}
- \end{equation}
- \begin{equation}
-     M^\beta = (X^TWX)^{-1}
- \end{equation}
- 
- On $\hat{\beta}$ és l'estimador de $\beta$, $M^\beta$ la matriu de variància dels estimadors, d'on els elements de la diagonal són la desviació estàndard al quadrat dels estimadors i, per tant, l'incertesa és l'arrel quadrada dels elements de la diagonal. $W$ és la matriu (diagonal) de ponderació, $X$ és la matriu de les variables independents i $\vec{y}$ el vector de la variable dependent.
- 
- \begin{equation}
-     W_{ii} = \frac{1}{\sigma_i^2}
- \end{equation}
- \begin{equation}
-     X_{ij} = \phi_j(x_i)
- \end{equation}
- 
- \subsection{Desviació Elèctrica}\label{sec: Reg.L Desv.E}
- Donats els valors de la posició de la trajectòria trobats en la secció (\ref{sec: Met. Exp.}):
- 
- \begin{table}[h!]
- \centering
- \begin{tabular}{|c|c|c|c|c|}
- \hline
- \text{Vp (V)} & 1000 $\pm$ 200 & 2000 $\pm$ 200 & 3000 $\pm$ 200 & 4000 $\pm$ 200 \\
- \hline
- m (m$^{-1}$)&( 1.01 $\pm$ 0.71) & (3.11 $\pm$ 0.50) & (6.745 $\pm$ 0.080) & (10.05 $\pm$ 0.18) \\
- \hline
- \text{n (m) } & (-1.5 $\pm$ 5.7)$10^{-4}$ & (-4.47 $\pm$ 0.57)$10^{-4}$  & (-1.020 $\pm$ 0.058)$10^{-3}$ & (-1.265 $\pm$ 0.096)$10^{-3}$$ \\
- \hline
- \text{r$^2$} & (0.97769 $\pm$ 0.00018) & (0,99728 $\pm$ 0.00025) & (0,99395 $\pm$ 0,00063) & (0,9832 $\pm$ 0,0010)\\
- \hline
- \end{tabular}
- \end{table}
-
-\section{Desviació magnetoestàtica}\label{sec: desv_magn}
-intro: Després de comprovar que les partícules dels ràigs catòdics tenen càrrega negativa (secció \ref{sec: desv_electr}) n'estudiem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
-El camp l'hem direccionat perpendicular als raigs catòdics i n'hem controlat la intencitat regulant la intencitat del corrent de les bobines. Al aplicar el camp, com era d'esperar, hem observat com els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intencitat del corrent de les bobines i amb el potencial dels raigs catòdics per poder determinar més propietats de les partícules d'aquests. 
-
-Teoria: 
 El camp d'inducció magnètica generat per unes bobines de Hemholtz es pot aproximar al camp uniforme 
 \begin{equation}
     \vec{B}=\frac{32\pi nI}{5\sqrt{5}r}\cross10^{-7} \quad \hat{z}\quad Wb/m^2.
@@ -197,8 +119,82 @@ Tenint en compte l'equació \ref{eq: fc=fl} i la llei de la conservació de l'en
 \end{equation}
 que ens permetrà calcular la relació $\frac{q}{m}$ de les partícules.
 
-resultats:
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intencitat de corrent de les bobines hem usat l'equació (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la figura (\ref{fig: regressio_1}) hem representat algunes d'aquestes regressions i ja podem veure com a mesura que augmenta la intencitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
+%DESV EM
+\hspace{}
+
+Una altre manera de calcular la relació càrrega/massa de les partícules dels raigs catòdics és igualant forces elèctriques i magnètiques. Fent-ho, arribem a la següent equació:
+
+\begin{equation}\label{eq: Fm=Fe}
+    qE = qvB
+\end{equation}
+
+Amb la que es troba que la velocitat vindrà donada pel quocient:
+
+\begin{equation}
+    v = \frac{E}{B}
+\end{equation}
+
+Podem obtenir el radi de la trajectòria circular deguda només a la desviació magnètica com hem explicat prèviament.
+
+De les Eqs \eqref{eq: Fm=Fe}, \eqref{eq: fc=fl} es pot deduir l'equació que emprem en la secció \ref{sec: desv_em} per a calcular la relació càrrega/massa a partir de les nostres dades experimentals:
+
+\begin{equation}
+    \frac{q}{m}=\frac{E}{RB^2}=\frac{kV_p}{dK^2I^2R}
+\end{equation}
+
+\section{Mètode Experimental}
+
+El mètode seguit ha constat de diverses parts explicades al guió de la pràctica, sempre ajustant al màxim possible l'exactitud de les mesures. Primerament, s'ha aplicat una diferència de potencial al tub de raigs catòdics i s'ha fet visible un feix lluminós sobre una regla. Tot seguit s'ha estudiat la desviació d'aquest feix al aplicar un camp elèctric, generat per un condensador planoparal·lel, o magnètic, generat per unes bobines de Hemholtz, ambdós uniformes i perpendiculars.  
+En aquest punt, mitjançant un dispositiu mòbil s'han fotografiat els diferents casos. Aleshores, s'ha processat cada imatge, ja a ordinador, amb un programa d'edició que permet ajustar les mesures del feix mitjançant els propis píxels de les fotografies comparats amb les marques de la regla. Es a dir, comptant aquests píxels i convertint-los a centímetres. Aquest doncs, ha estat el procediment seguit: triar a consciència diversos punts del feix i donar-ne la posició (x,y) més exacta possible, sempre sent possibles errors degut al processat de la fotografia o al desplaçament de píxels. Més precisament, s'ha aplicat una grid (cuadrícula) sobre els espais compresos entre cada marca de la regla, coincidint amb cada variació de 1 cm, per cada eix. Així, per cada una de les imatges s'ha establert una conversió píxel/cm. S'inclou un exemple gràfic (\ref{fig: ex_grid}) a continuació:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{Ex_grid.png}
+    \caption{Imatge modificada després de l'aplicació de la grid corresponent amb la seva relació px/cm: 152/1 i 153/1.}
+    \label{fig: ex_grid}
+\end{figure}
+
+
+Llavors, per cada un dels punts s'ha determinat la posició dins la grid comptant els píxels de separació amb la frontera del quadrat corresponent, i finalment, s'han convertit a centímetres. Amb aquests resultats, s'ha estudiat la desviació de la trajectòria; fet crucial pel desenvolupament de la prova, doncs les partícules del feix es poden identificar segons aquest comportament.
+
+\section{Desviació electroestàtica}\label{sec: desv_electr}
+
+--- Posar fotografies de la desviació electroestàtica ---
+
+En subministrar una diferència de potencial a les plaques s'observa com el raig es desvia cap al càtode. Per tant, les partícules de les què està compost els raigs catòdics tenen una càrrega negativa.
+
+Trobem els següents valors de les trajectòries
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\text{Vp (V)} & 1000 $\pm$ 200 & 2000 $\pm$ 200 & 3000 $\pm$ 200 & 4000 $\pm$ 200 \\
+\hline
+m (m$^{-1}$)&( 1.01 $\pm$ 0.71) & (3.11 $\pm$ 0.50) & (6.745 $\pm$ 0.080) & (10.05 $\pm$ 0.18) \\
+\hline
+\text{n (m) } & (-1.5 $\pm$ 5.7)$10^{-4}$ & (-4.47 $\pm$ 0.57)$10^{-4}$  & (-1.020 $\pm$ 0.058)$10^{-3}$ & (-1.265 $\pm$ 0.096)$10^{-3}$$ \\
+\hline
+\text{r$^2$} & (0.97769 $\pm$ 0.00018) & (0,99728 $\pm$ 0.00025) & (0,99395 $\pm$ 0,00063) & (0,9832 $\pm$ 0,0010)\\
+\hline
+\end{tabular}
+\end{table}
+
+Les regressions lineals entre $y$ i $x^2$ confirmen que la trajectòria observada és una paràbola on els coeficients de correlació $R^2 \sim 0,98$ \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: traj_no_rect}}. D'aquestes també obtenim els diferents valors de k.
+
+--- Gràfics amb incerteses ---
+\begin{align*}
+    V_p &= 1kV      & k = 0,905842781 \\
+    V_p &= 2kV      & k = 1,392224283 \\
+    V_p &= 3kV      & k = 2,131002674 \\
+    V_p &= 4kV      & k = 2,42607494 
+\end{align*}
+
+\section{Desviació magnetoestàtica}\label{sec: desv_magn}
+Després de comprovar que les partícules dels ràigs catòdics tenen càrrega negativa (secció \ref{sec: desv_electr}) n'estudiem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
+El camp l'hem direccionat perpendicular als raigs catòdics i n'hem controlat la intencitat regulant la intencitat del corrent de les bobines. Al aplicar el camp, com era d'esperar, hem observat com els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intencitat del corrent de les bobines i amb el potencial dels raigs catòdics per poder determinar més propietats de les partícules d'aquests. 
+
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intensitat de corrent de les bobines hem usat l'equació (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la figura (\ref{fig: regressio_1}) hem representat algunes d'aquestes regressions i ja podem veure com a mesura que augmenta la intencitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{regressio_1.png}
@@ -212,8 +208,6 @@ Al fer la regressió lineal del radi en funció de l'inversa de l'intencitat hem
     y=x(0.03976\pm0.0006)+(0.0002\pm0.0016)
 \end{equation}  
 amb un coeficient de determinació de $r^2=0.99$ . Per tant, la relació és certament lineal i és compatible amb l'equació teòrica (\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El resultat de que $R$ és inversament proporcional a $I$ es producte de que al augmentar la intencitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què provoca la disminució del radi de la trajectòria.
-
- 
 
 \begin{figure}[h]
     \centering
@@ -243,8 +237,6 @@ amb un coeficient de determinació de $r^2=0.99$ . Per tant, la relació és cer
         \label{tab:RvsI}
     \end{minipage}
 \end{figure}
-
-
 
 Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'equació (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Agafant $2kV, 3kV, 4kV$ i $5kV$ com a potencials  de mostreig s'obtenen els radis de corbatura de la taula (\ref{tab:RvsVa}). Amb aquestes dades hem construit la gràfica de la figura (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és cuadràtica amb la variació de $V_a$. AL fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
 \begin{equation}
@@ -347,44 +339,18 @@ Per últim, un cop hem trobat la relació càrrega-massa q/m\footnote{El càlcul
 \boxed{\frac{q}{m}=(-3.6\pm2.2)\cross10^{11}\quad C/Kg.}
 \] 
 
-Tot i que coincideix en ordre de magnitud, observem que el nostre resultat q/m queda lluny del resultat que esperàvem. No obstant el valor és comparable amb l'esperat degut a la gran incertesa que comporta emprar aquest mètode experimental. 
+Tot i que coincideix en ordre de magnitud, observem que el nostre resultat q/m queda lluny del resultat que esperàvem. No obstant, el valor és comparable amb l'esperat degut a la gran incertesa que comporta haver emprat aquest mètode experimental. 
 
 \section{Conclusions}
-A partir de l'experimentació amb els raigs catòdics, s'han obtingut resultats que confirmen el comportament esperat dels electrons sota la influència de camps elèctrics i magnètics. Les principals conclusions que es poden extreure de l'estudi són les següents:
-
-\begin{enumerate}
-    \item \textbf{Confirmació de la naturalesa dels raigs catòdics:}
-    \begin{itemize}
-        \item S'ha verificat que els feixos tractats, els raigs catòdics, estan compostos per partícules carregades negativament, és a dir, efectivament electrons.
-        \item La desviació del feix en presència d'un camp elèctric segueix una trajectòria aproximadament parabòlica, fet que concorda amb el moviment d'una càrrega sotmesa a una força constant en una direcció perpendicular a la seva velocitat inicial.
-        \item La curvatura observada en el camp magnètic és consistent amb l'acció de la força de Lorentz, cosa que confirma que la partícula en moviment és una càrrega negativa.
-    \end{itemize}
+A partir de l'experimentació amb els raigs catòdics, s'han obtingut resultats que confirmen el comportament esperat dels electrons sota la influència de camps elèctrics i magnètics. 
     
-    \item \textbf{Interacció amb el camp elèctric:}
-    \begin{itemize}
-        \item En aplicar una diferència de potencial en les plaques del condensador, s'ha observat que el feix d'electrons es desvia en la direcció del camp elèctric.
-        \item Aquest comportament permet confirmar la validesa de l'equació del moviment d'una partícula carregada en un camp elèctric uniforme.
-    \end{itemize}
-    
-    \item \textbf{Interacció amb el camp magnètic:}
-    \begin{itemize}
-        \item Quan els electrons travessen una regió amb un camp magnètic uniforme, la seva trajectòria canvia a una corba amb un radi dependent del quocient càrrega/massa ($q/m$).
-        \item S'ha comprovat que el radi de curvatura del feix d'electrons disminueix en augmentar la intensitat del camp magnètic, la qual cosa és coherent amb l'expressió teòrica.
-        \item A partir de la relació entre el radi de curvatura, la velocitat dels electrons i el camp magnètic aplicat, s'ha pogut estimar la relació càrrega/massa de l'electró amb un marge d'error acceptable en comparació amb el valor teòric:
-        \begin{equation}
-            \frac{q}{m} = 1.76 \times 10^{11} \, \text{C/kg}
-        \end{equation}
-    \end{itemize}
-\end{enumerate}
+En aplicar una diferència de potencial en les plaques del condensador, s'ha observat que el feix de partícules es desvia en la direcció contrària al camp elèctric. Al travessar una regió amb un camp magnètic uniforme, la trajectòria del feix canvia a una corba amb un radi que té dependència inversament proporcional amb el quocient càrrega/massa ($q/m$) i amb la intensitat del camp magnètic. 
 
-En conclusió, aquest experiment ha permès verificar les propietats fonamentals dels electrons i la validesa dels models que descriuen el seu comportament en presència de camps elèctrics i magnètics. A més, ha fet possible determinar experimentalment la relació càrrega/massa de l'electró, cosa que reforça la seva importància en la història de la física i en el desenvolupament de tecnologies basades en feixos d'electrons, com tubs de raigs catòdics i acceleradors de partícules.
+Així doncs, s'ha verificat que els feixos tractats, els raigs catòdics, estan compostos per partícules carregades negativament i que efectivament, són electrons. Tanmateix, fixant-nos en les diferències numèriques trobades al comparar els nostres resultats amb els esperats podem concloure que el disseny experimental és prou bo per a estudiar la relació càrrega/massa de les partícules dels raigs catòdics però no suficientment exacte. Hauriem de millorar el nostre mètode experimental per tal de minimitzar els errors en la presa de dades experimentals.
 
 \appendix{Annex}
 
-\section{askdjfñla}
-
 \section{Càlcul d'incerteses}\label{sec: incerteses}
-\subsection{Desviació magnetoestàtica\label{sec: inc_desv_mag}}
 \underline{Incertesa instrumental:} Hem agafat $\sigma_{c}=\pm0.01A$ i $\sigma_{t}=\pm100V$ com les incerteses de la font de corrent i la font de tensió respectivament. Per altra banda, hem agafat la mitjana del gruix del raig catòdic com  l'incertesa en la mesura dels punts de la trajectòria, ja que per trobar els punts hem usat un mètode de processat d'imatge molt exacte. Això d'ona una incertesa de les mesures de posició: $\sigma_{l}=\pm0.0014m$.
 
 \underline{Propagació d'errors:} Per trobar les incerteses de magnituds dependents d'altres magnituds mesurables hem usat l'equació de propagació d'incerteses
@@ -404,7 +370,32 @@ En el cas del càlcul de l'incertesa dels radis, hem calculat l'incertesa combin
 \end{equation}
 on $\sigma_{R,ins}$ és l'incertesa instrumental trobada amb l'equació (\ref{eq: ins_r}) evaluada als valors mitjans de $y$ i $x$ de cada corba i $\sigma_{R,est}$ l'incertesa estadística del pendent calculada amb la regressió que hem usat per trobar el radi.
 
-\subsection{Desviació electromagnètica}\label{sec: inc_desv_em}
+\section{Regressions lineals}
+
+ Per fer regressions lineals que tenen en compte les incerteces individuals de cadascún dels punt hem utilitzat el mètode de mínims quadrats ponderats (weighted least squares).
+ 
+ Donada una funció $f(x,\vec{\beta})$ a ajustar (en el nostre cas $f(x) = mx+n$):
+ \begin{equation}
+     f(x,\vec{\beta}) = \sum_{j=1}^m\beta_j\phi_j(x)
+ \end{equation}
+ 
+  On ${\beta_j}$ són els paràmetres a ajustar i $\phi_j$ són funcions de x (en el nostre cas $\phi_1 = x$, $\beta_1 = m$ i $\phi_2 = 1$, $\beta_2 = n$)
+ 
+ \begin{equation}
+     \hat{\beta} = (X^TWX)^{-1}X^TW\vec{y}
+ \end{equation}
+ \begin{equation}
+     M^\beta = (X^TWX)^{-1}
+ \end{equation}
+ 
+ On $\hat{\beta}$ és l'estimador de $\beta$, $M^\beta$ la matriu de variància dels estimadors, d'on els elements de la diagonal són la desviació estàndard al quadrat dels estimadors i, per tant, l'incertesa és l'arrel quadrada dels elements de la diagonal. $W$ és la matriu (diagonal) de ponderació, $X$ és la matriu de les variables independents i $\vec{y}$ el vector de la variable dependent.
+ 
+ \begin{equation}
+     W_{ii} = \frac{1}{\sigma_i^2}
+ \end{equation}
+ \begin{equation}
+     X_{ij} = \phi_j(x_i)
+ \end{equation}
 
 \section{Trajectòria rectilinia amb camp elèctric i camp magnètic aplicat}\label{sec: traj_no_rect}
 
