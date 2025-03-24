@@ -114,8 +114,48 @@ En subministrar una diferència de potencial a les plaques s'observa com el raig
     V_p &= 4kV      & k = 2,42607494 
 \end{align*}
 
-
-
+ Per fer regressions lineals que tenen en compte les incerteces individuals de cadascún dels punt hem utilitzat el mètode de mínims quadrats ponderats (weighted least squares).
+ 
+ Donada una funció $f(x,\vec{\beta})$ a ajustar (en el nostre cas $f(x) = mx+n$):
+ \begin{equation}
+     f(x,\vec{\beta}) = \sum_{j=1}^m\beta_j\phi_j(x)
+ \end{equation}
+ 
+  On ${\beta_j}$ són els paràmetres a ajustar i $\phi_j$ són funcions de x (en el nostre cas $\phi_1 = x$, $\beta_1 = m$ i $\phi_2 = 1$, $\beta_2 = n$)
+ 
+ \begin{equation}
+     \hat{\beta} = (X^TWX)^{-1}X^TW\vec{y}
+ \end{equation}
+ \begin{equation}
+     M^\beta = (X^TWX)^{-1}
+ \end{equation}
+ 
+ On $\hat{\beta}$ és l'estimador de $\beta$, $M^\beta$ la matriu de variància dels estimadors, d'on els elements de la diagonal són la desviació estàndard al quadrat dels estimadors i, per tant, l'incertesa és l'arrel quadrada dels elements de la diagonal. $W$ és la matriu (diagonal) de ponderació, $X$ és la matriu de les variables independents i $\vec{y}$ el vector de la variable dependent.
+ 
+ \begin{equation}
+     W_{ii} = \frac{1}{\sigma_i^2}
+ \end{equation}
+ \begin{equation}
+     X_{ij} = \phi_j(x_i)
+ \end{equation}
+ 
+ \subsection{Desviació Elèctrica}\label{sec: Reg.L Desv.E}
+ Donats els valors de la posició de la trajectòria trobats en la secció (\ref{sec: Met. Exp.}):
+ 
+ \begin{table}[h!]
+ \centering
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline
+ \text{Vp (V)} & 1000 $\pm$ 200 & 2000 $\pm$ 200 & 3000 $\pm$ 200 & 4000 $\pm$ 200 \\
+ \hline
+ m (m$^{-1}$)&( 1.01 $\pm$ 0.71) & (3.11 $\pm$ 0.50) & (6.745 $\pm$ 0.080) & (10.05 $\pm$ 0.18) \\
+ \hline
+ \text{n (m) } & (-1.5 $\pm$ 5.7)$10^{-4}$ & (-4.47 $\pm$ 0.57)$10^{-4}$  & (-1.020 $\pm$ 0.058)$10^{-3}$ & (-1.265 $\pm$ 0.096)$10^{-3}$$ \\
+ \hline
+ \text{r$^2$} & (0.97769 $\pm$ 0.00018) & (0,99728 $\pm$ 0.00025) & (0,99395 $\pm$ 0,00063) & (0,9832 $\pm$ 0,0010)\\
+ \hline
+ \end{tabular}
+ \end{table}
 
 \section{Desviació magnetoestàtica}\label{sec: desv_magn}
 intro: Després de comprovar que les partícules dels ràigs catòdics tenen càrrega negativa (secció \ref{sec: desv_electr}) n'estudiem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
@@ -254,7 +294,7 @@ Tenint en compte el que ja hem pogut observar en els apartats anteriors: la desv
     qE = qvB
 \end{equation}
 
-amb la que es troba que la velocitat vindrà donada pel quocient
+Amb la que es troba que la velocitat vindrà donada pel quocient
 
 \begin{equation}
     v = \frac{E}{B}
@@ -262,7 +302,7 @@ amb la que es troba que la velocitat vindrà donada pel quocient
 
 Podem obtenir el radi de la trajectòria circular deguda només a la desviació magnètica com s'explica a la secció \ref{sec: desv_magn}.
 
-De les Eqs \eqref{eq: Fm=Fe}, I MES EQ (LA DEL RADI) es pot deduir l'equació que emprem per a calcular la relació càrrega/massa de la partícula que forma els raigs catòdics a partir de les nostres dades experimentals:
+De les Eqs \eqref{eq: Fm=Fe}, \eqref{eq: radi} es pot deduir l'equació que emprem per a calcular la relació càrrega/massa de la partícula que forma els raigs catòdics a partir de les nostres dades experimentals:
 
 \begin{equation}
     \frac{q}{m}=\frac{E}{RB^2}=\frac{kV_p}{dK^2I^2R}
@@ -270,15 +310,44 @@ De les Eqs \eqref{eq: Fm=Fe}, I MES EQ (LA DEL RADI) es pot deduir l'equació qu
 
 Primerament, hem trobat el valor de la diferència de potencial aplicat entre les plaques amb el qual la desviació de la trajectòria rectilina paral·lela a l'eix de les abscisses és mínima\footnote{L'ampliació respecte aquest aspecte es troba en l'annex \ref{sec: traj_no_rect}}. 
 
-En concret hem hagut d'aplicar una diferència de potencial $Vp = (0,85 + )$ kV per compensar un camp magnètic generat per bobines amb intensitat de $I = 100$ mA i un potencial $Va = 3$ kV per a l'accelaració de les partícules dels raigs catòdics.
+En concret hem hagut d'aplicar una diferència de potencial $Vp = (0,85 \pm 0,20 )$ kV per compensar un camp magnètic generat per bobines amb intensitat de $I = (0,10 \pm 0,01 )$ mA i un potencial $Va = 3$ kV per a l'accelaració de les partícules dels raigs catòdics.
 
-En segon lloc, suprimint el camp elèctric $\vec{E}$ podem mesurar el radi de la trajectòria que deguda només de la desviació magnètica d'igual manera que en la secció \ref{sec: desv_magn}, el qual ha resultat ser $R = (A + A)$ m.
+Fixant aquests valors de pontencial i d'intensitat, posteriorment es suprimeix el camp elèctric $\vec{E}$ per poder mesurar el radi de la trajectòria que deguda només de la desviació magnètica d'igual manera que en la secció \ref{sec: desv_magn}, el qual ha resultat ser $R = (0.263 \pm 0.033)$ m.
 
-La constant del condensador $k$, la qual té en compte els efectes de vorada de les plaques, la podem obtenir com hem fet prèviament a la secció \ref{sec: desv_electr}. D'altra banda la constant de les bobines de Hemholtz $K$ ve determinada per la geometria d'aquestes, com s'explica en la secció \ref{sec: desv_magn}.
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Vp (kV)} & \textbf{I (A)} & \textbf{x (cm)} & \textbf{y (cm)} \\
+\hline
+ &  & 2.00 $\pm$ 0.10 & 0.01 $\pm$ 0.10 \\
+ &  & 3.00 $\pm$ 0.10 & 0.23 $\pm$ 0.10 \\
+0.85 $\pm$ 0.20 & 0.10 $\pm$ 0.01 & 4.00 $\pm$ 0.10 & 0.35 $\pm$ 0.10 \\
+ &  & 5.00 $\pm$ 0.10 & 0.47 $\pm$ 0.10 \\
+ &  & 6.00 $\pm$ 0.10 & 0.65 $\pm$ 0.10 \\
+\hline
+\end{tabular}
+\end{table}
 
-Per últim, un cop hem trobat la relació càrrega-massa q/m podem comparar-la amb la relació e/m, on e correspon a la càrrega d'un electró i m a la seva massa.
+Amb aquestes dades hem obtingut el radi de la trajectòria pel mètode dels mínims quadrats, on aquest venia donat pel pendent de la recta de regressió lineal.
 
-RESULTAT Q/M\footnote{El càlcul de les incerteses associades a aquest resultat es presenten en l'annex \ref{sec: inc_desv_em}}
+Essent la recta en qüestió: 
+\begin{equation}
+    y=(0.263 \pm 0.033)x + (0.00094\times10^{-2} \pm 0.00027)
+\end{equation}  
+amb un coeficient de determinació $r^2=0.96$.
+
+La constant del condensador $k$, la qual té en compte els efectes de vorada de les plaques, la podem obtenir com hem fet prèviament a la secció \ref{sec: desv_electr}. 
+
+D'altra banda la constant de les bobines de Hemholtz $K$ ve determinada per la geometria d'aquestes, com s'explica en la secció \ref{sec: desv_magn}.
+
+Per últim, un cop hem trobat la relació càrrega-massa q/m\footnote{El càlcul de les incerteses associades a aquest resultat es presenten en l'annex \ref{sec: incerteses}} podem comparar-la amb la relació e/m, on e correspon a la càrrega d'un electró i m a la seva massa.
+
+\[
+\boxed{\frac{q}{m}=(-3.6\pm2.2)\cross10^{11}\quad C/Kg.}
+\] 
+
+Tot i que coincideix en ordre de magnitud, observem que el nostre resultat q/m queda lluny del resultat que esperàvem. No obstant el valor és comparable amb l'esperat degut a la gran incertesa que comporta emprar aquest mètode experimental. 
 
 \section{Conclusions}
 A partir de l'experimentació amb els raigs catòdics, s'han obtingut resultats que confirmen el comportament esperat dels electrons sota la influència de camps elèctrics i magnètics. Les principals conclusions que es poden extreure de l'estudi són les següents:
@@ -312,8 +381,6 @@ En conclusió, aquest experiment ha permès verificar les propietats fonamentals
 
 \appendix{Annex}
 
-\section{askdjfñla}
-
 \section{Càlcul d'incerteses}\label{sec: incerteses}
 \subsection{Desviació magnetoestàtica\label{sec: inc_desv_mag}}
 \underline{Incertesa instrumental:} Hem agafat $\sigma_{c}=\pm0.01A$ i $\sigma_{t}=\pm100V$ com les incerteses de la font de corrent i la font de tensió respectivament. Per altra banda, hem agafat la mitjana del gruix del raig catòdic com  l'incertesa en la mesura dels punts de la trajectòria, ja que per trobar els punts hem usat un mètode de processat d'imatge molt exacte. Això d'ona una incertesa de les mesures de posició: $\sigma_{l}=\pm0.0014m$.
@@ -339,8 +406,9 @@ on $\sigma_{R,ins}$ és l'incertesa instrumental trobada amb l'equació (\ref{eq
 
 \section{Trajectòria rectilinia amb camp elèctric i camp magnètic aplicat}\label{sec: traj_no_rect}
 
-AFEGIR FOTOS!
+Notem que aquesta trajectòria de fet, no és igual de rectílina a la trajectòria que podem observar quan no hi ha aplicat ni camp elèctric ni camp magnètic. Això és degut a la no uniformitat que suposem tant del camp elèctric com del camp magnètic. 
 
-Notem que aquesta trajectòria de fet, no és igual de rectílina a la trajectòria que podem observar quan no hi ha aplicat ni camp elèctric ni camp magnètic. Això és degut a la NO UNIFORMITAT DEL CAMP ELÈCTRIC (CONDENSADOR DE PLAQUES PETITES) I A LA NO UNIFORMITAT DEL CAMP MAGNÈTIC (SOLENOIDE NO PERFECTAMENT IDEAL).
+Per una banda el condensador no és ideal, ja que les plaques són petites, lluny de poder-se considerar infinites però és cert que aquests efectes de vorada ja els tenim en compte al calcular la seva $k$ mitjançant la regressió lineal. 
 
+D'altra banda, el solenoide emprat no és ideal tampoc, ja que la seva longitud no és molt més gran que el radi. Això implica que el camp en l'interior sigui de magnitud més gran com més aprop de l'eix central de la bobina ens trobem. Aquest és l'efecte que podem observar en les imatges, podem veure com la trjaectòria dels raigs catòdics presenta més desviació deguda al camp magnètic quan passa pel centre del solenoide.
 \end{document}
