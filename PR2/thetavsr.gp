@@ -2,7 +2,7 @@ set terminal pngcairo size 800,600
 set output 'thetavsr_amb_errors.png'
 
 # Títols i etiquetes
-set xlabel "1/r (m^(-1))"
+set xlabel "1/r (m^{-1})"
 set ylabel "Angle (θ)"
 set key bottom right
 
