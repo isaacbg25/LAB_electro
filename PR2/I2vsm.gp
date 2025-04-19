@@ -13,4 +13,6 @@ fit f(x) "I2vsm.txt" using 1:2 via a, b
 
 # Dibuixa la gràfica
 plot "I2vsm.txt" using 1:2:3:4 with xyerrorbars title "I2vsm", \
-     f(x) with lines title "Regressió Lineal de I2vsm"
+     f(x) with lines title "Regressió Lineal de I2vsm", \
+     "I2vsm.txt" using 1:2 with points
+
