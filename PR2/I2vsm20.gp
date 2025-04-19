@@ -9,8 +9,8 @@ set ylabel "m"
 f(x) = a*x + b
 
 # Ajusta la regressió lineal
-fit f(x) "I^2vsm20.txt" using 1:2 via a, b
+fit f(x) "I2vsm20.txt" using 1:2 via a, b
 
 # Dibuixa la gràfica
-plot "I^2vsm.txt" using 1:2:3:4 with yerrorbars title "I^2vsm", \
+plot "I2vsm20.txt" using 1:2:3:4 with yerrorbars title "I^2vsm", \
      f(x) with lines title "Regressió Lineal de I^2vsm"
