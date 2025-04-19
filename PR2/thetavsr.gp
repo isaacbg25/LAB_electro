@@ -1,5 +1,5 @@
 set terminal pngcairo size 800,600
-set output 'rvstheta_amb_errors.png'
+set output 'thetavsr_amb_errors.png'
 
 # Títols i etiquetes
 set xlabel "1/r (m^(-1))"
@@ -10,9 +10,9 @@ set key bottom right
 f(x) = a*x + b
 
 # Ajusta la regressió lineal
-fit f(x) "rvstheta.txt" using 1:2 via a, b
+fit f(x) "thetavsr.txt" using 1:2 via a, b
 
 # Dibuixa la gràfica
-plot "rvstheta.txt" using 1:2:3:4 with xyerrorbars title "Barres d'error", \
+plot "thetavsr.txt" using 1:2:3:4 with xyerrorbars title "Barres d'error", \
      f(x) with lines title "Regressió Lineal", \
-     "rvstheta.txt" using 1:2 with points pt 7 ps 1 lc rgb 'blue' title "Angle en funció de la inversa de la distància de separació"
+     "thetavsr.txt" using 1:2 with points pt 7 ps 1 lc rgb 'blue' title "Angle en funció de la inversa de la distància de separació"
