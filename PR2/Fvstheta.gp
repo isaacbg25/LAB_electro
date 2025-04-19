@@ -6,6 +6,10 @@ set xlabel "Angle (θ)"
 set ylabel "Força (N)"
 set key bottom right
 
+# Establir els límits per als eixos
+set xrange [10:80]
+set yrange [0:0.0003]
+
 # Defineix la funció lineal f(x) = a*x + b
 f(x) = a*x + b
 
