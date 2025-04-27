@@ -18,7 +18,4 @@ Mβ = np.linalg.inv(np.transpose(X) @ W @ X )
 print(β)
 print(np.sqrt(np.diagonal(Mβ)))
 
-
-
-
-
+#imprimeix uns valors: [m, n] i [u_m, u_n]
