@@ -61,7 +61,7 @@ Víctor Bosch González (1676373)
 
 \section{Introducció teòrica}\label{sec: intro}
 
-En l'experiment tenim un condensador de plaques plano-paral·leles que són finites en la direcció $Y$ i infinites en la direcció $Z$. Anomenem $l$ a la llargada de les plaques (cap a la direcció $Y$), $L$ una altura arbitrària i $d$ la separació entre les plaques.
+En l'experiment tenim un condensador de plaques plano-paral·leles que són finites en la direcció $Y$ i infinites en la direcció $Z$. Anomenem $l$ a la llargada de les plaques (cap a la direcció $Y$), $L$ una altura arbitrària (cap a la direcció $Z$) i $d$ la distància de separació entre les plaques.
 \begin{equation}
     \frac{Q}{L} \approx \varepsilon \sum_i E_i \, \Delta l_i \approx \varepsilon \sum_i \frac{\Delta V_i \, \Delta l_i}{\Delta r_i}
     \label{eq: Q}
@@ -85,7 +85,7 @@ i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon
 \subsection{tractament de dades exp i simulacions}
 Per calc el camp hem calculat el vector perp a la recta entre dos punts exp adjacents.
 
-\section{Resultats}\label{sec: resultats}
+\section{Resultats i discussió}\label{sec: resultats}
 En aquesta secció presentem i comparem els resultats obtinguts tant experimental com computacionalment. Mostrem les línies de camp i les línies equipotencials de tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnote{Codi i breu descripció a l'annex \ref{sec: annex}}. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
 
 \subsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
@@ -114,8 +114,8 @@ Pel que fa a la Fig. (\ref{fig: cond_e}) veiem com les línies de camp van des d
 Per calcular la capacitat del condensador, primer hem calculat la càrrega per unitat de superfície del condensador en funció de $\varepsilon$, a partir de l'Eq. (\ref{eq: Q}). Tot seguit amb l'Eq () hem calculat la capacitat per unitat de longitud del condensador\footnote{Les dades necessaries per fer els càlculs es poden trobar a la Taula \ref{tab:mesures} de l'annex com també les Eqs. (\ref{eq: ins_q}) i (\ref{eq: ins_c}) pel càlcul d'incerteses.}.
 
 \[
-\frac{Q}{L} = \varepsilon \cdot (37{,}65 \pm 9{,}48)\, \mathrm{C/m} \implies
-\boxed{ \frac{C}{L} = \varepsilon \cdot (2{,}51 \pm 0{,}63)\, \mathrm{F/m} }
+\frac{Q}{L} = \varepsilon  (37{,}65 \pm 9{,}48)\, \mathrm{C/m} \implies
+\boxed{ \frac{C}{L} = \varepsilon  (2{,}51 \pm 0{,}63)\, \mathrm{F/m} }
 \]    
 
 Aquest resultat el podem comparar amb el resultat tèoric de la capacitat d'un condensador ideal amb les mateixes dimensions. Usant l'Eq. (\ref{eq: c_t}) obtenim $(\frac{C}{L})_t =(2,667 \pm 0,095)\, \mathrm{F/m}$ que és compatible amb el resultat experimental del nostre condensador no ideal.
@@ -186,11 +186,22 @@ on $U$ és una funció desconeguda\footnote{Això sempre ho podem fer perquè po
     \phi(r)=\frac{\phi_0(r)}{\varepsilon_r}.
     \label{eq: epsilon}
 \end{equation} 
-Per poder treballar còmodament posem el 0 de potencial a una de les dues plaques i per calcular $\varepsilon_r$ només hem d'evaluar l'Eq. (\ref{eq: epsilon}) a diferents punts. Agafant diferents punts experimentals i evaluant-ne el potencial teòric al buit trobem el valor de $\varepsilon_r$. Fent la mitjana entre els valors obtinguts hem estimat
+Per poder treballar còmodament posem el 0 de potencial a una de les dues plaques i per calcular $\varepsilon_r$ només hem d'evaluar l'Eq. (\ref{eq: epsilon}) a diferents punts. Agafant diferents punts experimentals i evaluant-ne el potencial teòric al buit trobem el valor de $\varepsilon_r$. Fent la mitjana entre els valors obtinguts hem estimat\footnote{Càlcul d'inserteses a l'annex}
 \begin{equation}
     \varepsilon_r=(1,98 \pm 0,10)\, \mathrm{F/m}
 \end{equation}
+
 \section{Conclusions}\label{sec: conc}
+
+En aquesta pràctica hem estudiat les línies equipotencials i de camp dins d'un material dielèctric de tres configuracions de conductors diferents gràcies al paral·lelisme entre les equacions del camp de corrents i del camp de desplaçament. 
+
+En primer lloc hem estudiat un condensador de plaques plano-paral·leles finites en una dimensió i hem pogut veure com les línies de camp es tancaven al voltant de les plàque a diferència del cas ideal. També hem vist com la simulació al buit coïncidia en tendència amb l'experiment però les línies equipotencials simulades es tancaven més aprop de les plaques a causa de que el camp elèctric al buit és més intens. A més, hem realitzat un càlcul experimental de la capacitat del condensador i hem obtingut un valor de $ \frac{C}{L} = \varepsilon  (2{,}51 \pm 0{,}63)\, \mathrm{F/m} $ que es compatible amb resultat del model ideal.
+
+En segon lloc hem estudiat dos fils infinits paral·lels a potencials oposats. En aquest cas hem pogut observar com les limitacions del nostre experiment per reproduïr aquesta configuració han provocat que les línies equipotencials fòssin el·líptiques en comptes de circulars.
+
+En tercer lloc, hem estudiat una placa amb una escletxa davant d'un fil infinit a un potencial diferent amb l'objectiu de veure si les línies equipotencials patien algun fenòmen similar a la difracció d'una ona deguda a una escletxa. No obstant les línies experimentals semblaven patir quelcom semblant a la difracció, amb la simulació hem pogut comprovar que la forma de les línies equipotencials quasi no depenia de si hi havia escletxa o no, i per tant, hem descartat aquesta idea.
+
+Per últim, combinant els resultat experimentals i els de la simulació hem ideat una manera d'estimar el valor de la permitivitat relativa del medi dielèctric de l'experiment. Així hem obtingut un valor de $\varepsilon_r=(1,98 \pm 0,10)\, \mathrm{F/m}$.
 
 \appendix{Annex}\label{sec: annex}
 \section{Càlcul d'inserteses}
@@ -251,6 +262,6 @@ Per poder treballar còmodament posem el 0 de potencial a una de les dues plaque
     \label{tab:mesures}
 \end{table}
 
-
+\section{Fitxers de programa de la simulació}
 
 \end{document}
