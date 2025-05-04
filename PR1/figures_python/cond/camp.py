@@ -4,7 +4,8 @@ import matplotlib.patches as patches
 import matplotlib.colors as mcolors
 
 plt.rcParams['text.usetex'] = True
-plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.family'] = 'Helvetica'
+plt.rcParams.update({'font.size': 15})
 
 # Dimensions de la malla
 nx, ny = 132, 132
@@ -141,10 +142,12 @@ def representar_segments_llargs(equipotencials, salt=2, llargada=0.5):
     fletxa_computacional = Line2D([0], [0], color='darkslategrey', lw=2, label='Càlcul computacional')
 
     # Crear la llegenda
-    plt.legend(handles=[segment_experimental, fletxa_computacional]+plt.gca().get_legend_handles_labels()[0])
+    plt.legend(handles=[segment_experimental, fletxa_computacional]+plt.gca().get_legend_handles_labels()[0],fontsize=12)
 
     plt.xlim(-13,13)
     plt.ylim(-10,10)
+    #plt.ylim(-6.5,6.5)
+    #plt.xlim(-10,10)
     plt.xlabel('x(cm)')
     plt.ylabel('y(cm)')
     plt.gca().set_aspect('equal')
@@ -152,7 +155,7 @@ def representar_segments_llargs(equipotencials, salt=2, llargada=0.5):
     plt.grid(True, linestyle=':', linewidth=1, alpha=0.7)
     plt.tight_layout()
     plt.tick_params(direction='in', top=True, right=True)
-    plt.savefig("cond_camp.png", dpi=300)
+    plt.savefig("cond_camp.pdf")
     plt.show()
 
 # === Executar ===

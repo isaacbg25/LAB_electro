@@ -4,7 +4,8 @@ import matplotlib.patches as patches
 import matplotlib.colors as mcolors
 
 plt.rcParams['text.usetex'] = True
-plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.family'] = 'Helvetica'
+plt.rcParams.update({'font.size': 15})
 
 # Dimensions de la malla
 
@@ -131,14 +132,14 @@ def representar_segments_llargs(equipotencials, salt=2, llargada=0.5):
     from matplotlib.patches import FancyArrow
 
     # Segment simple (línia experimental)
-    segment_experimental = Line2D([0], [0], color='lightskyblue', lw=2, label='Resultat experimental')
+    segment_experimental = Line2D([0], [0], color='lightskyblue', lw=1.5, label='Resultat experimental')
 
     # Fletxa (línia computacional amb punta)
     # FancyArrow no es pot posar directament a la llegenda, però podem fer servir una línia amb un capçal de fletxa
-    fletxa_computacional = Line2D([0], [0], color='darkslategrey', lw=2, label='Càlcul computacional')
+    fletxa_computacional = Line2D([0], [0], color='darkslategrey', lw=1.5, label='Càlcul computacional')
 
     # Crear la llegenda
-    plt.legend(handles=[segment_experimental, fletxa_computacional]+plt.gca().get_legend_handles_labels()[0])
+    plt.legend(handles=[segment_experimental, fletxa_computacional]+plt.gca().get_legend_handles_labels()[0], fontsize=12, loc='upper left')
 
     plt.xlim(-13,13)
     plt.ylim(-10,10)
@@ -149,7 +150,7 @@ def representar_segments_llargs(equipotencials, salt=2, llargada=0.5):
     plt.grid(True, linestyle=':', linewidth=1, alpha=0.7)
     plt.tight_layout()
     plt.tick_params(direction='in', top=True, right=True)
-    plt.savefig("fils_camp.png", dpi=300)
+    plt.savefig("fils_camp.pdf")
     plt.show()
 
 # === Executar ===

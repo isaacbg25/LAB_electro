@@ -5,10 +5,12 @@ import matplotlib.colors as mcolors
 
 
 plt.rcParams['text.usetex'] = True
-plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.family'] = 'Helvetica'
+plt.rcParams.update({'font.size': 15})
+
 
 # Llegir dades de potencial (x, y, V)
-dades = np.loadtxt("lliure_teo_0.txt", skiprows=1)  # salta la capçalera
+dades = np.loadtxt("lliure_teo_e.txt", skiprows=1)  # salta la capçalera
 x = dades[:, 0]
 y = dades[:, 1]
 V = dades[:, 2]
@@ -42,7 +44,7 @@ print(nivells)
 
 nivells = np.linspace(-3.4, 7.1, 15)  # 20 nivells de color
 contours = plt.contour(X, Y, Z_masked, levels=nivells,cmap=cmap)
-plt.clabel(contours, inline=True, fontsize=7,fmt='%1.1f V') #manual=[(3,1),(7,3),(-4,-1),(-6,-4),(0,4)]
+plt.clabel(contours, inline=True, fontsize=10,fmt='%1.1f V') #manual=[(3,1),(7,3),(-4,-1),(-6,-4),(0,4)]
 
 rectangle_1 = patches.Circle((3, 0), 0.5, facecolor='black', label='Fil a -7.5 V')
 plt.gca().add_patch(rectangle_1)
@@ -50,10 +52,10 @@ plt.gca().add_patch(rectangle_1)
 rectangle_1 = patches.Rectangle((-2, 0.2), 0.5,7.2, facecolor='black', alpha=0.5, label='Placa a 7.5 V')
 plt.gca().add_patch(rectangle_1)
 
-rectangle_1 = patches.Rectangle((-2, -7.4), 0.5,7.6, facecolor='black', alpha=0.5)
+rectangle_1 = patches.Rectangle((-2, -7.4), 0.5,7.4, facecolor='black', alpha=0.5)
 plt.gca().add_patch(rectangle_1)
 
-"""
+
 
 # Llegir blocs de punts separats per línies en blanc
 with open("lliure_exp.txt") as f:
@@ -78,7 +80,7 @@ for i, bloc in enumerate(blocs):
     bloc = np.array(bloc)
     color = colors[i]#cmap(norm(valors[i]))  #  Això fa que el color sigui igual al del contour
     plt.scatter(bloc[:, 0], bloc[:, 1], s=20, color=color)# label=f"potencial {valors[i]}")
-"""
+
 
 
 
@@ -93,15 +95,14 @@ from matplotlib.lines import Line2D
 
 # Crear símbols falsos per la llegenda
 linea_computacional = Line2D([0], [0], color='black', lw=1, label='Càlcul computacional')
-#punts_experimentals = Line2D([0], [0], marker='o', color='none', markerfacecolor='red', markersize=5,
-#                             label='Dades experimentals')
+punts_experimentals = Line2D([0], [0], marker='o', color='none', markerfacecolor='red', markersize=5, label='Dades experimentals')
 
 # Afegir llegenda amb aquests símbols + les corbes reals
-plt.legend(handles=[linea_computacional] + plt.gca().get_legend_handles_labels()[0])
+plt.legend(handles=[linea_computacional, punts_experimentals] + plt.gca().get_legend_handles_labels()[0],fontsize=12)
 
 plt.grid(True, linestyle=':', linewidth=1, alpha=0.5)
 plt.tight_layout()
 plt.tick_params(direction='in', top=True, right=True)
 plt.gca().set_aspect('equal')
-plt.savefig("lliure_combi_0.png", dpi=300)
+plt.savefig("lliure_combi_e_colors.pdf")
 plt.show()

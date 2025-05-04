@@ -5,7 +5,8 @@ import matplotlib.colors as mcolors
 
 
 plt.rcParams['text.usetex'] = True
-plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.family'] = 'Helvetica'
+plt.rcParams.update({'font.size': 15})
 
 # Llegir dades de potencial (x, y, V)
 dades = np.loadtxt("lliure_teo_e.txt", skiprows=1)  # salta la capçalera
@@ -40,7 +41,7 @@ print(nivells)
 
 
 contours = plt.contour(X, Y, Z_masked, levels=nivells,cmap=cmap, norm=norm, linewidths=1.5)
-plt.clabel(contours, inline=True, fontsize=9,fmt='%1.1f V') #manual=[(3,1),(7,3),(-4,-1),(-6,-4),(0,4)]
+plt.clabel(contours, inline=True, fontsize=11,fmt='%1.1f V') #manual=[(3,1),(7,3),(-4,-1),(-6,-4),(0,4)]
 
 rectangle_1 = patches.Circle((3, 0), 0.5, facecolor='black', label='Fil a -7.5 V')
 plt.gca().add_patch(rectangle_1)
@@ -95,11 +96,11 @@ punts_experimentals = Line2D([0], [0], marker='o', color='none', markerfacecolor
                              label='Dades experimentals')
 
 # Afegir llegenda amb aquests símbols + les corbes reals
-plt.legend(handles=[linea_computacional, punts_experimentals] + plt.gca().get_legend_handles_labels()[0])
+plt.legend(handles=[linea_computacional, punts_experimentals] + plt.gca().get_legend_handles_labels()[0], fontsize=12)
 
 plt.grid(True, linestyle=':', linewidth=1, alpha=0.5)
 plt.tight_layout()
 plt.tick_params(direction='in', top=True, right=True)
 plt.gca().set_aspect('equal')
-plt.savefig("lliure_mapa.png", dpi=300)
+plt.savefig("lliure_mapa.pdf")
 plt.show()

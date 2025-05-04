@@ -26,16 +26,16 @@ V[0,:]=100
 V[:,0]=100
 #V[90:99,:]=0.1
 #V[:,90:99]=0.1
-"""
+
 # Dibuixa les línies equipotencials
 nivells = [0,1.5,3,7.5,10,13.5,14.99]
 nivells = [x-7.5 for x in nivells]  # Potencials concrets que vols mostrar
-plt.contour(V, levels=nivells, colors='k')  # 'k' = negre
+plt.contour(V/0.5, levels=nivells, colors='k')  # 'k' = negre
 plt.title("Línies equipotencials (condensador no ideal)")
 plt.gca().set_aspect('equal')
-#plt.show()
+plt.show()
 #print(nivells)
-"""
+
 x = np.linspace(0, 27, nx)  # coordenades x
 y = np.linspace(0, 27, ny)  # coordenades y
 X, Y = np.meshgrid(x, y)
@@ -46,21 +46,5 @@ ny, nx = V.shape
 dades = np.column_stack((X.ravel()-13.5, Y.ravel()-13.5, V.ravel()))
 
 # Guardem com a txt: una fila = x y v
-np.savetxt("cond_teo.txt", dades, fmt="%.6f", header="x y V", comments='')
+#np.savetxt("cond_teo_prova.txt", dades, fmt="%.6f", header="x y V", comments='')
 
-# Calcular components del camp elèctric
-Ey, Ex = np.gradient(-V)  # negatiu del gradient del potencial
-
-# Representar línies de camp elèctric
-plt.streamplot(X, Y, Ex, Ey, color='blue', density=3, linewidth=0.6, arrowsize=0.5)
-
-# Línies equipotencials (opcional)
-#plt.contour(X, Y, V, levels=nivells, colors='black')
-
-# Format de gràfica
-plt.gca().set_aspect('equal')
-plt.title("Línies de camp elèctric i equipotencials")
-plt.xlabel("x")
-plt.ylabel("y")
-plt.grid(True)
-plt.show()

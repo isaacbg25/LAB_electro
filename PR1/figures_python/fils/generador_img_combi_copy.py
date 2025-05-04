@@ -5,7 +5,8 @@ import matplotlib.colors as mcolors
 
 
 plt.rcParams['text.usetex'] = True
-plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.family'] = 'Helvetica'
+plt.rcParams.update({'font.size': 15})
 
 # Llegir dades de potencial (x, y, V)
 dades = np.loadtxt("fils_teo.txt", skiprows=1)  # salta la capçalera
@@ -33,8 +34,8 @@ nivells = [x-7.5 for x in nivells]
 cmap = plt.cm.Set1
 norm = mcolors.Normalize(vmin=min(nivells), vmax=max(nivells))
 
-contours = plt.contour(X, Y, Z_masked, levels=nivells,cmap=cmap, norm=norm, linewidths=1)
-plt.clabel(contours, inline=True, fontsize=10, manual=[(3,1),(7,3),(-4,-1),(-6,-4),(0,4)],fmt='%1.1f V')
+contours = plt.contour(X, Y, Z_masked, levels=nivells,cmap=cmap, norm=norm, linewidths=1.5)
+plt.clabel(contours, inline=True, fontsize=12, manual=[(3,1),(7,3),(-4,-1),(-6,-4),(0,4)],fmt='%1.1f V')
 
 rectangle_1 = patches.Circle((4, 0), 0.5, facecolor='black', label='Fil a -7.5 V')
 plt.gca().add_patch(rectangle_1)
@@ -86,11 +87,11 @@ punts_experimentals = Line2D([0], [0], marker='o', color='none', markerfacecolor
                              label='Dades experimentals')
 
 # Afegir llegenda amb aquests símbols + les corbes reals
-plt.legend(handles=[linea_computacional, punts_experimentals] + plt.gca().get_legend_handles_labels()[0])
+plt.legend(handles=[linea_computacional, punts_experimentals] + plt.gca().get_legend_handles_labels()[0], fontsize=11)
 
 plt.grid(True, linestyle=':', linewidth=1, alpha=0.5)
 plt.tight_layout()
 plt.tick_params(direction='in', top=True, right=True)
 plt.gca().set_aspect('equal')
-plt.savefig("fils_combi.png", dpi=300)
+plt.savefig("fils_combi.pdf")
 plt.show()
