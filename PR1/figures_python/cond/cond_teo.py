@@ -30,7 +30,7 @@ V[:,0]=100
 # Dibuixa les línies equipotencials
 nivells = [0,1.5,3,7.5,10,13.5,14.99]
 nivells = [x-7.5 for x in nivells]  # Potencials concrets que vols mostrar
-plt.contour(V/0.5, levels=nivells, colors='k')  # 'k' = negre
+plt.contour(V, levels=nivells, colors='k')  
 plt.title("Línies equipotencials (condensador no ideal)")
 plt.gca().set_aspect('equal')
 plt.show()
@@ -46,5 +46,5 @@ ny, nx = V.shape
 dades = np.column_stack((X.ravel()-13.5, Y.ravel()-13.5, V.ravel()))
 
 # Guardem com a txt: una fila = x y v
-#np.savetxt("cond_teo_prova.txt", dades, fmt="%.6f", header="x y V", comments='')
+np.savetxt("cond_teo_prova.txt", dades, fmt="%.6f", header="x y V", comments='')
 
