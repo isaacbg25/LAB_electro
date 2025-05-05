@@ -127,9 +127,10 @@ i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon
 \end{equation}
 
 \section{Mètode experimental}\label{sec: metode}
-Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectàngles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora. Així doncs, traduit els nostres sistemes en tres dimensions (però amb simetria  en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció dels conductors cap a la direcció $Z$. Per exemple, el codensador s'ha convertit en dues línies paral·leles o els dos fils infinits en dos punts. Tot seguit, quan la tinta era seca, hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$.En aquest pas és molt important comprobar que el conductor està ben dibuixat mirant si tots els punts tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
+Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectàngles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora. Així doncs, traduit els nostres sistemes en tres dimensions (però amb simetria  en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció dels conductors cap a la direcció $Z$. Per exemple, el codensador s'ha convertit en dues línies paral·leles o els dos fils infinits en dos punts, a l'annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca, hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest pas és molt important comprobar que el conductor està ben dibuixat mirant si tots els punts tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
+
 En el cas del condensador és important que tingui les dimension adequades. Ha de ser prou petit per obtenir línies tancades i que $\frac{d}{l}$ sigui prou petit perquè aquestes siguin paral·leles a la zona central del condensador. Unes bones mides amb per la dimenció del nostre paper són: $d=3cm$ i $l=8cm$. 
-Pel que fa al sistema de fils infinits, que sobre el paper representem com dos punts, és important fer-los suficientment grans perquè les forquilles amb les que els conectem a la font de corrent càpiguen a dins i no generin interferències.
+Pel que fa al sistema de fils infinits, que sobre el paper representem com dos punts, és important fer-los suficientment grans perquè les forquilles amb les que els conectem a la font de corrent hi càpiguen i no generin interferències.
 
 Per obtenir les dades necessàres pel càlcul de la capacitat del condensador, primerament hem dibuixat dues línies equipotencials tancades al voltant d'una de les plaques. Després hem dividit la línia interna en 20 segments i hem anat mesurant la llargada de cada segment ($\Delta l_i$), conjuntament amb la distància del segment a la línia equipotencial externa ($\Delta r_i$) i la diferència de potencial entre les dues línies ($\Delta \phi_i$).
 
@@ -139,7 +140,7 @@ Finalment hem fet una simulació em python per calcular computacionalment les l�
 
 
 \section{Resultats i discussió}\label{sec: resultats}
-En aquesta secció presentem i comparem els resultats obtinguts tant experimental com computacionalment. Mostrem les línies de camp i les línies equipotencials de tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
+En aquesta secció presentem i comparem els resultats obtinguts tant experimental com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
 
 \subsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
 La primera distribució de càrrega que estudiarem és un condensador de plaques plano-paral·leles centrat a l'orígen. Les plaques són paral·leles al pla $XZ$, finites en la direcció $Y$ i molt llargues o infinies en la direcció $Z$.
@@ -257,8 +258,26 @@ En tercer lloc, hem estudiat una placa amb una escletxa davant d'un fil infinit 
 Per últim, combinant els resultat experimentals i els de la simulació hem ideat una manera d'estimar el valor de la permitivitat relativa del medi dielèctric de l'experiment. Així hem obtingut un valor de $\varepsilon_r=(1,98 \pm 0,10)\, \mathrm{F/m}$.
 
 \appendix{Annex}\label{sec: annex}
-\section{Càlcul d'inserteses}
+\section{Imatges del muntatge experimental}\label{fotos}
+\begin{figure}[h!]
+    \centering
 
+    \begin{subcaptionbox}{Condensador\label{fig:img1}}[0.3\textwidth]
+        {\includegraphics[width=\linewidth]{imatge1.jpg}}
+    \end{subcaptionbox}
+    \hfill
+    \begin{subcaptionbox}{Fils inifnits\label{fig:img2}}[0.3\textwidth]
+        {\includegraphics[width=\linewidth]{imatge2.jpg}}
+    \end{subcaptionbox}
+    \hfill
+    \begin{subcaptionbox}{Configuració lliure\label{fig:img3}}[0.3\textwidth]
+        {\includegraphics[width=\linewidth]{imatge3.jpg}}
+    \end{subcaptionbox}
+
+    \caption{Muntatge experimental de les tres distribucions de conductors.}
+    \label{fig:figura3}
+\end{figure}
+\section{Càlcul d'inserteses}
 \begin{equation}
     u_{Q/L} = \varepsilon \sqrt{
         \left( \sum_i \frac{\Delta l_i}{\Delta r_i} \right)^2 u^2_{\Delta \phi_i} +
@@ -314,7 +333,7 @@ Per últim, combinant els resultat experimentals i els de la simulació hem idea
     \caption{Mesures de $\Delta l$, $\Delta r$ i $\Delta V$ amb incerteses}
     \label{tab:mesures}
 \end{table}
-\newpage
+
 \section{Fitxers de programa de la simulació}\label{sec: python}
 Per fer les simulacions de les línies equipotencials de les diferents configuracions de conductors hem solucionat l'equació de Laplace amb el mètode de Jacobi amb un programa de python. Aquí mostrem el probrama pel cas del condensador. Per calcular els altre casos només cal canviar les dimencions dels conductors ($l$ i $d$) i les condicions de contorn.
 

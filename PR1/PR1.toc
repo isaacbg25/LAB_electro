@@ -3,10 +3,11 @@
 \contentsline {section}{\numberline {2}Mètode experimental}{3}{section.2}%
 \contentsline {section}{\numberline {3}Resultats i discussió}{4}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Condensador de plaques plano-paral·leles}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Fils infinits}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Fils infinits}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Placa amb escletxa i fil infinit}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Estimació de la permitivitat relativa}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Estimació de la permitivitat relativa}{7}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Conclusions}{8}{section.4}%
-\contentsline {section}{\numberline {A}Càlcul d'inserteses}{9}{appendix.A}%
-\contentsline {section}{\numberline {B}Dades experimentals}{9}{appendix.B}%
-\contentsline {section}{\numberline {C}Fitxers de programa de la simulació}{10}{appendix.C}%
+\contentsline {section}{\numberline {A}Imatges del muntatge experimental}{9}{appendix.A}%
+\contentsline {section}{\numberline {B}Càlcul d'inserteses}{9}{appendix.B}%
+\contentsline {section}{\numberline {C}Dades experimentals}{10}{appendix.C}%
+\contentsline {section}{\numberline {D}Fitxers de programa de la simulació}{10}{appendix.D}%
