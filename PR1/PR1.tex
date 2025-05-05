@@ -33,42 +33,73 @@
 \usepackage{framed}
 \usepackage{ulem}
 
-
-\title{\Huge\bfseries Pràctica 6: \\ Feixos de raigs catòdics \\ [2ex] \Large}
-
-\author{\begin{tabular}{c}
-\textbf{GRUP A6} \\
-Isaac Baldi García (1667260)\\
-Miguel Ordejón de Prada (1710966) \\
-Eira Jacas García (1666616) \\
-Víctor Bosch González (1676373)
-\end{tabular}}
-
-\date{Març 2025}
-
 \begin{document}
-
-\maketitle
-\begin{center}
-    \textbf{Abstract: En aquesta pràctica s'estudia el comportament d'un feix de raigs catòdics sota un camp elèctirc i un camp magnètic amb l'objectiu de determinar propietats de les partícules que els conformen. Concretament, analitzant les desviacions del feix dels raigs sota aquests camps s'obté la relació entre la càrrega i la massa d'aquestes particules.} 
-\end{center}
-
-
-\newpage
-
 \tableofcontents
 \newpage
+\vspace{10em}
+
+{\huge \textbf{Pràctica 1}}  % Títol petit en negreta
+
+\vspace{0.5em}  % Espai vertical
+
+{\Huge \textbf{Representació de camps}}  % Títol gran
+
+\vspace{2em}  % Espai abans del contingut
+
+%\title{\Huge\bfseries Pràctica 1 \\ Feixos de raigs catòdics \\ [2ex] \Large}
+
+\begin{abstract}
+    En aquesta pràctica estudiem les línies equipotencials i de camp de tres distribucions de condutors en un medi dielèctric assumint simetria en l'eix vertical. Un condensador plano-paral·lel, dos fils infinits i una geometria escollida entre els membres del grup que replica la disposició d'un experiment de difracció. Els resultats obtinguts són corroborats per simulacions computacionals i comparats amb els resultats del cas ideal dels que en difereix substancialment. També s'obté experimentalment la capacitat del condensador i es conclou que no difereix significativament del càlcul ideal.
+\end{abstract}
+
 
 \section{Introducció teòrica}\label{sec: intro}
+En aquesta pràctica trobem experimentalment les línies equipotencials i de camp de 3 distribucions de conductors en un material dielèctric de difícil o inexistent solució analítica, així com alguna propitat associada. La primera distribució estudiada és un cond, del qual també en calc la capacitat; la segona són dos fils infinits paral·lels i per últim  estudiem una placa amb escletxa davant d'un fil infinit.
 
-En l'experiment tenim un condensador de plaques plano-paral·leles que són finites en la direcció $Y$ i infinites en la direcció $Z$. Anomenem $l$ a la llargada de les plaques (cap a la direcció $Y$), $L$ una altura arbitrària (cap a la direcció $Z$) i $d$ la distància de separació entre les plaques.
+Per generar aquestes distribucions de conductors dins un medi dielèctric usem la dualitat que existeix entre el camp de corrents, $\vec{J}$, i el camp de desplaçament elèctric, $\vec{D}$. Com podem veure a les Eqs. (\ref{eq: J_D}) aquests dos camps tenen les mateixes equacions, i per tant, si repliquem les condicions de contorn, obtindrem les mateixes solucions.
+
 \begin{equation}
-    \frac{Q}{L} \approx \varepsilon \sum_i E_i \, \Delta l_i \approx \varepsilon \sum_i \frac{\Delta V_i \, \Delta l_i}{\Delta r_i}
+    \begin{array}{lll}
+    \vec{\nabla} \times \vec{J}=0 & \vec{J}=\sigma \vec{E} & \vec{\nabla} \cdot \vec{J}=0 \\
+    \vec{\nabla} \times \vec{D}=0 & \vec{D}=\epsilon \vec{E} & \vec{\nabla} \cdot \vec{D}=0
+    \end{array}
+    \label{eq: J_D}
+\end{equation}
+
+Considerant que el medi dielèctric és lineal, isòtrop i homogèni (l.i.h), com veiem a les Eqs. (\ref{eq: J_D}) a través del camp de desplaçament, podem obtenir fàcilment les solucions del potencial i el camp elèctric. A més, com que en aquest cas $\varepsilon$ i $g$ són escalars, el potencial complirà l'equació de Laplace
+\begin{equation}
+    \laplacian{\phi}=0.
+\end{equation}
+Així, usant un paper de conductivitat $g$ (que eqival al medi dielèctric de permitivitat $\varepsilon$) i dibuixant-hi amb tinta conductora el sistema de conductors podem fer mesures del potencial que generaran els corrents i relacionar-lo amb el potencial elèctric de la mateixa distribució de conductors en un medi dielèctric.  
+
+Concretament, els objectius que ens proposem són 
+\begin{list}{$\ast$}{\leftmargin=1em}
+    \item Determinar les línies equipotencials i de camp elèctric experimentals de
+        \begin{enumerate}{\leftmargin=1em}
+            \item  Un condensador de plaques plano-paral·leles d'alçada infinita però llargada finita.
+            \item  Dos fils infinits paral·lels a diferents potencials.
+            \item  Una placa amb una escletxa paral·lela i davant d'un fil infinit a diferents potencials.
+        \end{enumerate}  
+        i comparar-les amb els resultats simulats i els càlculs tèorics en el cas ideal.
+    \item Determinar la capacitat per unitat de longitud del condensador.
+    \item (extra) Estimar la permetivitat relativa del medi dielèctric de l'experiment.
+\end{list}
+
+Pel que fa al càlcul experimental de la capacitat del condensacor, anomenant $l$ a la llargada de les plaques (cap a la direcció $Y$), $L$ una altura arbitrària (cap a la direcció $Z$) i $d$ la distància de separació entre les plaques, podem procedir de la següent manera.
+A partir de dues línies equipotencials que tanquin una de les pláques del condensador podem calcular la càrrega per unitat de longitud.
+\begin{equation}
+    \frac{Q}{L} = \frac{1}{L}\oint\vec{D}\vec{ds}=\varepsilon\oint Edl\approx \varepsilon \sum_i E_i \, \Delta l_i \approx \varepsilon \sum_i \frac{\Delta \phi_i \, \Delta l_i}{\Delta r_i}
     \label{eq: Q}
 \end{equation}
-on $\frac{Q }{L }$ és la càrrega per unitat de longitud del condensador, $\varepsilon$ la peritivitat del medi dielèctric, $\Delta V_i$, $\Delta l_i$ i $\Delta r_i$ les diferències de voltatge entre les plaques, distància tangencial i distància radial corresponentment.
+On $\frac{Q }{L }$ és la càrrega per unitat de longitud del condensador, $\varepsilon$ la peritivitat del medi dielèctric, $\Delta \phi_i$, la diferència de potencial entre les plaques, $\Delta l_i$ un petit increment de distància sobre la línia equipotencial interior i $\Delta r_i$ la distància en aquest punt entre la línia equipotencial interior i l'exterior.
+Aleshores, podem calcular la capacitat per unitat de longitud si sabem el potencal aplicat entre les plaques, $\Delta V_i$.
+\begin{equation}
+    \frac{C}{L}=\frac{Q/L}{\Delta V}
+    \label{eq: C}
+\end{equation}
 
-Per calcular la capacitat ideal d'un condensador de plaques plano-paral·lels com el que tenim a l'experiment calculem la diferència de potencial entre les plaques 
+
+Per altra banda, per calcular la capacitat ideal d'un condensador de plaques plano-paral·lels com el que tenim a l'experiment calculem la diferència de potencial entre les plaques 
 \begin{equation}
     |\Delta\phi|=\int_{0}^{d} \vec{E}\vec{dl}= Ed
 \end{equation}
@@ -111,7 +142,7 @@ A la Fig. (\ref{fig: cond_pot}) podem veure com a la regió central del condensa
 
 Pel que fa a la Fig. (\ref{fig: cond_e}) veiem com les línies de camp van des de la placa positiva a la negativa i tenen major densitat a prop d'aquestes, indicant un camp més intens. Com en el cas del potencial, les línies segueixen un comportament semblant al ideal a la part central i, en canvi, a prop de les vores es desvien a causa dels efectes de vorada. Similarment, els segments experimentals que representen la direcció del camp també segueixen la tendència del càlcul computacional tot i que les línies experimentals tendeixen a tancar-se més sobre els electrodes. Aquestes diferències s'expliquen igual que les discutides anteriorment.
 
-Per calcular la capacitat del condensador, primer hem calculat la càrrega per unitat de superfície del condensador en funció de $\varepsilon$, a partir de l'Eq. (\ref{eq: Q}). Tot seguit amb l'Eq () hem calculat la capacitat per unitat de longitud del condensador\footnote{Les dades necessaries per fer els càlculs es poden trobar a la Taula \ref{tab:mesures} de l'annex com també les Eqs. (\ref{eq: ins_q}) i (\ref{eq: ins_c}) pel càlcul d'incerteses.}.
+Per calcular la capacitat del condensador, primer hem calculat la càrrega per unitat de superfície del condensador en funció de $\varepsilon$, a partir de l'Eq. (\ref{eq: Q}). Tot seguit amb l'Eq (\ref{eq: C}) hem calculat la capacitat per unitat de longitud del condensador\footnote{Les dades necessaries per fer els càlculs es poden trobar a la Taula \ref{tab:mesures} de l'annex com també les Eqs. (\ref{eq: ins_q}) i (\ref{eq: ins_c}) pel càlcul d'incerteses.}.
 
 \[
 \frac{Q}{L} = \varepsilon  (37{,}65 \pm 9{,}48)\, \mathrm{C/m} \implies
@@ -208,9 +239,9 @@ Per últim, combinant els resultat experimentals i els de la simulació hem idea
 
 \begin{equation}
     u_{Q/L} = \varepsilon \sqrt{
-        \left( \sum_i \frac{\Delta l_i}{\Delta r_i} \right)^2 u^2_{\Delta V_i} +
-        \left( \sum_i \frac{\Delta V_i}{\Delta r_i} \right)^2 u^2_{\Delta l_i} +
-        \left( \sum_i \frac{\Delta V_i \Delta l_i}{\Delta r_i^2} \right)^2 u^2_{\Delta r_i}}
+        \left( \sum_i \frac{\Delta l_i}{\Delta r_i} \right)^2 u^2_{\Delta \phi_i} +
+        \left( \sum_i \frac{\Delta \phi_i}{\Delta r_i} \right)^2 u^2_{\Delta l_i} +
+        \left( \sum_i \frac{\Delta \phi_i \Delta l_i}{\Delta r_i^2} \right)^2 u^2_{\Delta r_i}}
         \label{eq: ins_q}
 \end{equation}
 
