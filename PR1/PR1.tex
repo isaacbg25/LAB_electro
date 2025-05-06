@@ -66,15 +66,14 @@
 %\title{\Huge\bfseries Pràctica 1 \\ Feixos de raigs catòdics \\ [2ex] \Large}
 
 \begin{abstract}
-    En aquesta pràctica estudiem les línies equipotencials i de camp de tres distribucions de condutors en un medi dielectric assumint simetria en l'eix vertical. Un condensador plano-paral·lel, dos fils infinits i una geometria escollida entre els membres del grup que replica la disposició d'un experiment de difracció. Els resultats obtinguts són corroborats per simulacions computacionals i comparats amb els resultats del cas ideal dels que en difereix substancialment. També s'obté experimentalment la capacitat del condensador i es conclou que no difereix significativament del càlcul ideal.
+    En aquesta pràctica estudiem les línies equipotencials i de camp de tres distribucions de conductors en un medi dielèctric assumint simetria en l'eix vertical. Un condensador plano-paral·lel, dos fils infinits i una geometria escollida entre els membres del grup que replica la disposició d'un experiment de difracció. Els resultats obtinguts són corroborats per simulacions computacionals i comparats amb els resultats del cas ideal dels que en difereix substancialment. També s'obté experimentalment la capacitat del condensador i es conclou que no difereix significativament del càlcul ideal.
 \end{abstract}
 
 
 \section{Introducció teòrica}\label{sec: intro}
-En aquesta pràctica trobem experimentalment les línies equipotencials i de camp de 3 distribucions de conductors en un material dielèctric de difícil o inexistent solució analítica, així com alguna propitat associada. La primera distribució estudiada és un cond, del qual també en calc la capacitat; la segona són dos fils infinits paral·lels i per últim  estudiem una placa amb escletxa davant d'un fil infinit.
+En aquesta pràctica trobem experimentalment les línies equipotencials i de camp de 3 distribucions de conductors en un material dielèctric de difícil o inexistent solució analítica, així com alguna propietat associada. La primera distribució estudiada és un condensador de plaques plano-paral·leles d'altura infinita i llargada finita, del qual també en calculem la capacitat; la segona són dos fils infinits paral·lels a diferents potencials i per últim estudiem una placa amb una escletxa davant d'un fil infinit.
 
-Per generar aquestes distribucions de conductors dins un medi dielèctric usem la dualitat que existeix entre el camp de corrents, $\vec{J}$, i el camp de desplaçament elèctric, $\vec{D}$. Com podem veure a les Eqs. (\ref{eq: J_D}) aquests dos camps tenen les mateixes equacions, i per tant, si repliquem les condicions de contorn, obtindrem les mateixes solucions.
-
+Per generar aquestes distribucions de conductors dins un medi dielèctric usem la dualitat que existeix entre el camp de corrents, $\vec{J}$, i el camp de desplaçament elèctric, $\vec{D}$. Com podem veure a les Eqs. (\ref{eq: J_D}) aquests dos camps tenen les mateixes equacions i, per tant, si repliquem les condicions de contorn, obtindrem les mateixes solucions.
 \begin{equation}
     \begin{array}{lll}
     \vec{\nabla} \times \vec{J}=0 & \vec{J}=\sigma \vec{E} & \vec{\nabla} \cdot \vec{J}=0 \\
@@ -82,14 +81,13 @@ Per generar aquestes distribucions de conductors dins un medi dielèctric usem l
     \end{array}
     \label{eq: J_D}
 \end{equation}
-
-Considerant que el medi dielèctric és lineal, isòtrop i homogèni (l.i.h), com veiem a les Eqs. (\ref{eq: J_D}) a través del camp de desplaçament, podem obtenir fàcilment les solucions del potencial i el camp elèctric. A més, com que en aquest cas $\varepsilon$ i $g$ són escalars, el potencial complirà l'equació de Laplace
+Considerant que el medi dielèctric és lineal, isòtrop i homogeni (l.i.h), com veiem a les Eqs. (\ref{eq: J_D}) a través del camp de desplaçament, podem obtenir fàcilment les solucions del potencial i el camp elèctric. A més, com que en aquest cas $\varepsilon$ i $g$ són escalars, el potencial complirà l'equació de Laplace
 \begin{equation}
     \laplacian{\phi}=0.
 \end{equation}
-Així, usant un paper de carbó de conductivitat $g$ (que eqival al medi dielèctric de permitivitat $\varepsilon$) i dibuixant-hi amb tinta conductora el sistema de conductors podem fer mesures del potencial que generaran els corrents i relacionar-lo amb el potencial elèctric de la mateixa distribució de conductors en un medi dielèctric.  
+Així, usant un paper de carbó de conductivitat $g$ (que equival al medi dielèctric de permitivitat $\varepsilon$) i dibuixant-hi amb tinta conductora el sistema de conductors podem fer mesures del potencial que generaran els corrents i relacionar-lo amb el potencial elèctric de la mateixa distribució de conductors en un medi dielèctric.
 
-Concretament, els objectius que ens proposem són: 
+Concretament, els objectius que ens proposem són:
 \begin{list}{$\ast$}{\leftmargin=1em}
     \item Determinar les línies equipotencials i de camp elèctric experimentals de
         \begin{enumerate}{\leftmargin=1em}
@@ -102,24 +100,24 @@ Concretament, els objectius que ens proposem són:
     \item (extra) Estimar la permetivitat relativa del medi dielèctric de l'experiment.
 \end{list}
 
-Pel que fa al càlcul experimental de la capacitat del condensacor, anomenant $l$ a la llargada de les plaques (cap a la direcció $Y$), $L$ una altura arbitrària (cap a la direcció $Z$) i $d$ la distància de separació entre les plaques, podem procedir de la següent manera.
-A partir de dues línies equipotencials que tanquin una de les pláques del condensador podem calcular la càrrega per unitat de longitud.
+Pel que fa al càlcul experimental de la capacitat del condensador, anomenant $l$ a la llargada de les plaques (cap a la direcció $Y$), $L$ una altura arbitrària (cap a la direcció $Z$) i $d$ la distància de separació entre les plaques, podem procedir de la següent manera.
+A partir de dues línies equipotencials que tanquin una de les plaques del condensador podem calcular la càrrega per unitat de longitud.
 \begin{equation}
     \frac{Q}{L} = \frac{1}{L}\oint\vec{D}\vec{ds}=\varepsilon\oint Edl\approx \varepsilon \sum_i E_i \, \Delta l_i \approx \varepsilon \sum_i \frac{\Delta \phi_i \, \Delta l_i}{\Delta r_i}
     \label{eq: Q}
 \end{equation}
 On $\frac{Q }{L }$ és la càrrega per unitat de longitud del condensador, $\varepsilon$ la peritivitat del medi dielèctric, $\Delta \phi_i$, la diferència de potencial entre les plaques, $\Delta l_i$ un petit increment de distància sobre la línia equipotencial interior i $\Delta r_i$ la distància en aquest punt entre la línia equipotencial interior i l'exterior.
-Aleshores, podem calcular la capacitat per unitat de longitud si sabem el potencal aplicat entre les plaques, $\Delta V_i$.
+Aleshores, podem calcular la capacitat per unitat de longitud si sabem el potencial aplicat entre les plaques, $\Delta V_i$.
 \begin{equation}
     \frac{C}{L}=\frac{Q/L}{\Delta V}
     \label{eq: C}
 \end{equation}
 
-Per altra banda, per calcular la capacitat ideal d'un condensador de plaques plano-paral·lels com el que tenim a l'experiment calculem la diferència de potencial entre les plaques 
+Per altra banda, per calcular la capacitat ideal d'un condensador de plaques plano-paral·lels com el que tenim a l'experiment calculem la diferència de potencial entre les plaques.
 \begin{equation}
     |\Delta\phi|=\int_{0}^{d} \vec{E}\vec{dl}= Ed
 \end{equation}
-i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon}$\footnote{És molt fàcil obtenir aquest resultat sumant el camp de dos plans infinits de càrrega oposada que s'obté amb la llei de Gauss} podem obtenir la capacitat per per unitat de longitud de la següent manera
+i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon}$\footnote{És molt fàcil obtenir aquest resultat sumant el camp de dos plans infinits de càrrega oposada que s'obté amb la llei de Gauss} podem obtenir la capacitat per unitat de longitud de la següent manera
 \begin{equation}
     \Delta\phi=Ed=\frac{\sigma d}{\varepsilon}
     =Q\frac{d}{lL\varepsilon}=\frac{Q}{C}\implies (\frac{C}{L})_t=\frac{l\varepsilon}{d}
@@ -127,20 +125,19 @@ i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon
 \end{equation}
 
 \section{Mètode experimental}\label{sec: metode}
-Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectàngles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora. Així doncs, traduit els nostres sistemes en tres dimensions (però amb simetria  en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció dels conductors cap a la direcció $Z$. Per exemple, el codensador s'ha convertit en dues línies paral·leles o els dos fils infinits en dos punts, a l'annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca, hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest pas és molt important comprobar que el conductor està ben dibuixat mirant si tots els punts tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
+Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectangles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora. Així doncs, hem traduït els nostres sistemes de tres dimensions (però amb simetria en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció dels conductors cap a la direcció $Z$. Per exemple, el condensador s'ha convertit en dues línies paral·leles o els dos fils infinits en dos punts, a l'annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca, hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest pas és molt important comprovar que el conductor està ben dibuixat mirant si tots els punts tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
 
-En el cas del condensador és important que tingui les dimension adequades. Ha de ser prou petit per obtenir línies tancades i que $\frac{d}{l}$ sigui prou petit perquè aquestes siguin paral·leles a la zona central del condensador. Unes bones mides amb per la dimenció del nostre paper són: $d=3cm$ i $l=8cm$. 
-Pel que fa al sistema de fils infinits, que sobre el paper representem com dos punts, és important fer-los suficientment grans perquè les forquilles amb les que els conectem a la font de corrent hi càpiguen i no generin interferències.
+En el cas del condensador és important que tingui les dimensions adequades. Ha de ser prou petit per obtenir línies tancades i que $\frac{d}{l}$ sigui prou petit perquè aquestes siguin paral·leles a la zona central del condensador. Unes bones mides amb per la dimensió del nostre paper són: $d=3cm$ i $l=8cm$.
+Pel que fa al sistema de fils infinits, que sobre el paper representem com dos punts, és important fer-los prou grans perquè les forquilles amb què els connectem a la font de corrent hi càpiguen i no generin interferències.
 
-Per obtenir les dades necessàres pel càlcul de la capacitat del condensador, primerament hem dibuixat dues línies equipotencials tancades al voltant d'una de les plaques. Després hem dividit la línia interna en 20 segments i hem anat mesurant la llargada de cada segment ($\Delta l_i$), conjuntament amb la distància del segment a la línia equipotencial externa ($\Delta r_i$) i la diferència de potencial entre les dues línies ($\Delta \phi_i$).
+Per obtenir les dades necessàries pel càlcul de la capacitat del condensador, primerament hem dibuixat dues línies equipotencials tancades al voltant d'una de les plaques. Després hem dividit la línia interna en 20 segments i hem anat mesurant la llargada de cada segment ($\Delta l_i$), conjuntament amb la distància del segment a la línia equipotencial externa ($\Delta r_i$) i la diferència de potencial entre les dues línies ($\Delta \phi_i$).
 
-Per representar els punts experimentals els hem digitalitzat amb el programa web WebPlotDigitizer\copyright\footnote{Enllaç a l'aplicació web: \url{https://automeris.io/wpd/}}.Així, també hem pogut dibuixar el camp elèctric calculant la direcció perpendicular a la recta entre dos punts experimentals adjacents amb un programa de python.
+Per representar els punts experimentals els hem digitalitzat amb el programa web WebPlotDigitizer\copyright\footnote{Enllaç a l'aplicació web: \url{https://automeris.io/wpd/}}. Així, també hem pogut dibuixar el camp elèctric calculant la direcció perpendicular a la recta entre dos punts experimentals adjacents amb un programa de Python.
 
-Finalment hem fet una simulació em python per calcular computacionalment les línies equipotencials i de camp de les tres configuracions de conductors.\footnote{\label{nota: codis}Tots els codis es troben a l'Annex \ref{sec: python}}
-
+Finalment, hem fet una simulació em Python per calcular computacionalment les línies equipotencials i de camp de les tres configuracions de conductors.\footnote{\label{nota: codis}Tots els codis es troben a l'Annex \ref{sec: python}}
 
 \section{Resultats i discussió}\label{sec: resultats}
-En aquesta secció presentem i comparem els resultats obtinguts tant experimental com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
+En aquesta secció presentem i comparem els resultats obtinguts tant experimentalment com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
 
 \subsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
 La primera distribució de càrrega que estudiarem és un condensador de plaques plano-paral·leles centrat a l'orígen. Les plaques són paral·leles al pla $XZ$, finites en la direcció $Y$ i molt llargues o infinies en la direcció $Z$.
