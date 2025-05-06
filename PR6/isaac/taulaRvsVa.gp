@@ -1,8 +1,8 @@
-set terminal pngcairo size 800,600
+set terminal pngcairo size 800,600 font "Helvetica, 18"
 set output 'RvsVa.png'
 
 # Títols i etiquetes
-set title "R^2 en funció de Va"
+#set title "R^2 en funció de Va"
 set xlabel "Va (V)"
 set ylabel "R^2 (m^2)"
 set key top left

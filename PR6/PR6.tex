@@ -230,7 +230,7 @@ Com es mostra en la Fig. \ref{fig: Desv E}, en subministrar una diferència de p
 \end{figure}
 
 \subsection{Desviació magnetoestàtica}\label{sec: desv_magn}
-Després de comprovar,va la Secció \ref{sec: desv_electr}, que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
+Després de comprovar a la Secció \ref{sec: desv_electr} que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
 Al aplicar el camp, com era d'esperar, hem observat que els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intensitat del corrent de les bobines i amb el potencial dels raigs catòdics.
 
 Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intensitat de corrent de les bobines hem usat l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la Fig. (\ref{fig: regressio_1}) hem representat algunes d'aquestes regressions i ja podem veure com a mesura que augmenta la intensitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
@@ -241,12 +241,12 @@ Per calcular el radi de la trajectòria de les partícules dels raigs catòdics 
     \label{fig: regressio_1}
 \end{figure}
 
-Aplicant diverses intensitats a les bobines de Helmholtz hem obtingut els radis de corvatura de la Taula \ref{tab:RvsI}\footnote{El càlcul de les incerteses es mostra a l'annex \ref{sec: incerteses}}. Amb aquestes dades (excloent l'última dada ja que té massa incertesa a causa de l'amplada del feix) hem construit la gràfica de la Fig. (\ref{fig: RvsI}) on es mostra que la variació de $R$ és lineal amb la variació de la inversa de la intensitat. 
+Aplicant diverses intensitats a les bobines de Helmholtz hem obtingut els radis de corvatura de la Taula \ref{tab:RvsI} que es pot trobar a l'annex conjuntament amb el càlcul d'incerteses. Amb aquestes dades (excloent l'última dada ja que té massa incertesa a causa de l'amplada del feix dels raigs) hem construit la gràfica de la Fig. (\ref{fig: RvsI}) on es mostra que la variació de $R$ és lineal amb la variació de la inversa de la intensitat. 
 Al fer la regressió lineal del radi en funció de l'inversa de l'intensitat hem obtingut la recta
 \begin{equation}
     y=x(0.03976\pm0.0006)+(0.0002\pm0.0016)
 \end{equation}  
-amb un coeficient de determinació de $r^2=0,99$. Per tant, la relació és certament lineal i és compatible amb l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El resultat de que $R$ és inversament proporcional a $I$ es producte de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què provoca la disminució del radi de la trajectòria.
+amb un coeficient de determinació de $r^2=0,99$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El $R$ és inversament proporcional a $I$ a causa de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
 
 \begin{figure}[h]
     \centering
@@ -259,60 +259,26 @@ amb un coeficient de determinació de $r^2=0,99$. Per tant, la relació és cert
     \hfill
     \begin{minipage}{0.45\textwidth} 
         \centering
-        \begin{tabular}{|c|c|}
-            \hline
-            I(A)	&	R (m)	\\\hline
-            (0,800 ± 0,010)	&	(0,0494 ± 0,0037)	\\\hline
-            (0,700 ± 0,010)	&	(0,0570± 0,0048)	\\\hline
-            (0,600 ± 0,010)	&	(0,0685 ± 0,0051)	\\\hline
-            (0,500 ± 0,010)	&	(0,0808± 0,0082)	\\\hline
-            (0,400 ± 0,010)	&	(0,0983 ± 0,0089)	\\\hline
-            (0,300 ± 0,010)	&	(0,1298 ± 0,016)	\\\hline
-            (0,200 ± 0,010)	&	(0,201 ± 0,034)	\\\hline
-            (0,100 ± 0,010)	&	(0,26 ± 0,10)	\\\hline
-            
-        \end{tabular}
-        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor d'intensitat de corrent.}
-        \label{tab:RvsI}
-    \end{minipage}
-\end{figure}
-
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmoholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa}. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és cuadràtica amb la variació de $V_a$. AL fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
-\begin{equation}
-    y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(0.00228\pm0,00098)
-\end{equation}  
-amb un coeficient de determinació $r^2=0.98$. Per tant, la relació és certament lineal (cuadràtica respecte R) i compatible amb l'Eq. teòrica (\ref{eq: q/m}).
-
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
         \includegraphics[width=\textwidth]{RvsVa.png}
         \caption{Regressió dels punts experimentals de $R^2$ en funció de $V_a$. Veiem que la relació és clarament lineal.}
         \label{fig: RvsVa}
     \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth} 
-        \centering
-        \begin{tabular}{|c|c|}
-            \hline
-            Va (V)	&	R (m)	\\\hline
-            (2000 ± 200)	&	(0.0880± 0.0077)	\\\hline
-            (3000 ± 200)	&	(0.107± 0.011)	\\\hline
-            (4000 ± 200)	&	(0.120± 0.014)	\\\hline
-            (5000 ± 200)	&	(0.128 ± 0.015)	\\\hline
-            
-        \end{tabular}
-        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor de potencial d'acceleració.}
-        \label{tab:RvsVa}
-    \end{minipage}
 \end{figure}
 
-Finalment, amb l'Eq. (\ref{eq: q/m}) i els resultats de tots els radis hem calculat que la relació q/m de les partícules dels raigs catòdics té un valor de 
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmoholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa} que es troba a l'annex. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és quadràtica amb la variació de $V_a$. Al fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
+\begin{equation}
+    y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(2.28\times 10^{-3}\pm9.8\times10^{-4})
+\end{equation}  
+amb un coeficient de determinació $r^2=0.98$. Per tant, la relació és certament lineal (quadràtica respecte $R$) i corrobora l'Eq. (\ref{eq: q/m}).
+
+
+
+Finalment, amb l'Eq. (\ref{eq: q/m}) hem obtingut la relació $\frac{q}{m}$ de les partícules dels raigs catòdics
 \[
-\boxed{\frac{q}{m}=(-4.16\pm0.88)\cross10^{11}\quad C/Kg.}
+\boxed{\frac{q}{m}=(-4.16\pm0.88)\cross10^{11}\quad \mathrm{\frac{C}{Kg}.}}
 \]
-Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$ i hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $R^2=0.98$. El pendent d'aquesta recta ens ha donat el valor de q/m i després hem afegit l'incertesa instrumental al resultat. La linealitat dels punts indica que els nostres resultats concorden amb la teoria ja que com veiem a l'Eq. (\ref{eq: q/m}) la relació ha de ser lineal. Per altra banda si mirem la relació q/m dels electrons veiem que no és compatible amb el nostre resultat però sí que coincideix en ordre de magnitud. Això pot ser degut a que el camp magnètic generat per les bobines de Hemholtz no és uniforme fent que el seu valor difereixi del teòric.
+Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$. Així, hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $R^2=0.98$. El pendent d'aquesta recta ens ha donat el valor de $\frac{q}{m}$ i després hem afegit l'insertesa instrumental al resultat. La linealitat dels punts indica que els nostres resultats concorden amb la teoria ja que com veiem a l'Eq. (\ref{eq: q/m}) la relació ha de ser lineal. 
+Per altra banda, el valor tabulat\footnote{Valor obingut de la pàgina del NIST: "The NIST Reference on Constants, Units and Uncertainty".} de la relació $\frac{q}{m}$ dels electrons és de $\frac{q}{m}=(-1.76\times10^{11}\pm5.5\times10^{2}) \frac{C}{Kg}$ que    com podem veure no és compatible amb el nostre resultat però sí que coincideix en ordre de magnitud. Això pot ser per diversoso motius com que, com es veu a la Secció \ref{sec: traj_no_rect} el camp magnètic generat per les bobines de Hemholtz no és del tot uniforme o que el feix dels raigs catòdics té un gruix considerable que fa molt difícil l'obtenció dels punts experimentals.
 
 
 \section{Desviació electromagnètica}\label{sec: desv_em}
@@ -388,6 +354,46 @@ En aplicar una diferència de potencial en les plaques del condensador, s'ha obs
 Així doncs, s'ha verificat que els feixos tractats, els raigs catòdics, estan compostos per partícules carregades negativament i que efectivament, són electrons. Tanmateix, fixant-nos en les diferències numèriques trobades al comparar els nostres resultats amb els esperats podem concloure que el disseny experimental és prou bo per a estudiar la relació càrrega/massa de les partícules dels raigs catòdics però no suficientment exacte. Hauriem de millorar el nostre mètode experimental per tal de minimitzar els errors en la presa de dades experimentals.
 \newpage
 \appendix{Annex}
+\section{Resultats experimentals}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            Va (V)	&	R (m)	\\\hline
+            (2000 ± 200)	&	(0.0880± 0.0077)	\\\hline
+            (3000 ± 200)	&	(0.107± 0.011)	\\\hline
+            (4000 ± 200)	&	(0.120± 0.014)	\\\hline
+            (5000 ± 200)	&	(0.128 ± 0.015)	\\\hline
+            
+        \end{tabular}
+        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor de potencial d'acceleració.}
+        \label{tab:RvsVa}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth} 
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            I(A)	&	R (m)	\\\hline
+            (0,800 ± 0,010)	&	(0,0494 ± 0,0037)	\\\hline
+            (0,700 ± 0,010)	&	(0,0570± 0,0048)	\\\hline
+            (0,600 ± 0,010)	&	(0,0685 ± 0,0051)	\\\hline
+            (0,500 ± 0,010)	&	(0,0808± 0,0082)	\\\hline
+            (0,400 ± 0,010)	&	(0,0983 ± 0,0089)	\\\hline
+            (0,300 ± 0,010)	&	(0,1298 ± 0,016)	\\\hline
+            (0,200 ± 0,010)	&	(0,201 ± 0,034)	\\\hline
+            (0,100 ± 0,010)	&	(0,26 ± 0,10)	\\\hline
+            
+        \end{tabular}
+        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor d'intensitat de corrent.}
+        \label{tab:RvsI}
+    \end{minipage}
+\end{figure}
+
+
+
 
 \section{Càlcul d'incerteses}\label{sec: incerteses}
 \underline{Incertesa instrumental:} Hem agafat $\sigma_{c}=\pm0.01A$ i $\sigma_{t}=\pm100V$ com les incerteses de la font de corrent i la font de tensió respectivament. Per altra banda, hem agafat la mitjana del gruix del raig catòdic com  l'incertesa en la mesura dels punts de la trajectòria, ja que per trobar els punts hem usat un mètode de processat d'imatge molt exacte. Això d'ona una incertesa de les mesures de posició: $\sigma_{l}=\pm0.0014m$.

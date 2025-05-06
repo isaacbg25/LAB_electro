@@ -1,8 +1,8 @@
-set terminal pngcairo size 800,600
+set terminal pngcairo size 800,600 font "Helvetica, 18"
 set output 'RvsI.png'
 
 # Títols i etiquetes
-set title "R en funció de 1/I"
+#set title "R en funció de 1/I"
 set xlabel "1/I (1/A)"
 set ylabel "R (m)"
 set key top left

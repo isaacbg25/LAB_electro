@@ -1,8 +1,8 @@
-set terminal pngcairo size 800,600
+set terminal pngcairo size 800,600 font "Helvetica, 18"
 set output 'regressio_1.png'
 
 # Títols i etiquetes
-set title "Regressió lineal de x^2+y^2 vs 2y per diferents intencitats"
+#set title "Regressió lineal de x^2+y^2 vs 2y per diferents intencitats"
 set xlabel "2y(m)"
 set ylabel "x^2+y^2 (m²)"
 set key top left  # Posició de la llegenda
