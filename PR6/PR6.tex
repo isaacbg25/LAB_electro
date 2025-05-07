@@ -50,12 +50,12 @@
 \end{abstract}
 
 \section{Introducció Teòrica}
-En aquesta pràctica estudiarem com es desvia el feix de raigs catòdics sota el camp elèctric generat per un condensador i el camp magnètic generat per unes bobines de Helmoholtz. A través de les equacions d'aquests, podrem determinar propietats de les partícules que conformen aquests raigs. Concretament, els objectius que ens plantegem són:
+En aquesta pràctica estudiarem com es desvia el feix de raigs catòdics sota el camp elèctric generat per un condensador i el camp magnètic generat per unes bobines de Helmoholtz. A través de les equacions d'aquests, podrem determinar propietats de les partícules que conformen els raigs. Concretament, els objectius que ens plantegem són:
 
 \begin{list}{$\ast$}{\leftmargin=1em}
-    \item Caracteritzar el camp generat pel condensador no ideal que usem per generar el camp elèctric a l'experiment.
-    \item Determinar i explicar el comportament dels raigs catòdics sota el camp elèctric i el camp magnètic.
-    \item Determinar de què estan fets els raigs catòdics trobant la relació entre la càrrega i la massa de les seves partícules amb diversos mètodes.
+    \item Caracteritzar el camp elèctric generat pel condensador no ideal que usem a l'experiment a través d'un factor experimental.
+    \item Determinar i explicar el comportament dels raigs catòdics sota el camp elèctric i el camp magnètic. Estudiar-ho per diferents intencitats i potencials aplicats als generadors de camp.
+    \item Determinar, amb dos mètodes diferents, de què estan fets els raigs catòdics trobant la relació entre la càrrega i la massa de les seves partícules.
 \end{list}
 
 El camp elèctric generat pel condensador que desviarà el feix es pot considerar un camp uniforme:
@@ -96,12 +96,12 @@ Y apartir del pendent $m$ d'una recta de regressió lineal y l'equació (\ref{eq
 %DESV M
 \vspace{1cm}
 
-Per calcular el radi de corvatura i posteriorment la relació $\frac{q}{m}$ de les partícules dels raigs catòdics necessitem caracteritzar la trajectòria de de partícules carregades sota un camp magnètic uniforme. El camp d'inducció magnètica generat per unes bobines de Hemholtz es pot aproximar al camp uniforme 
+Per calcular el radi de corvatura i posteriorment la relació $\frac{q}{m}$ de les partícules dels raigs catòdics necessitem caracteritzar la trajectòria de les partícules carregades sota un camp magnètic uniforme. En l'experiment, el camp d'inducció magnètica està generat per unes bobines de Hemholtz que aproximadament produeixen el camp uniforme 
 \begin{equation}
     \vec{B}=\frac{32\pi nI}{5\sqrt{5}r}\cross10^{-7} \quad \hat{z}\quad Wb/m^2.
     \label{eq: B}
 \end{equation}
-Per la llei de Lorentz, una partícula carregada negativament sota un camp d'inducció magnètica, $\vec{B}$, pateix una força
+Per altra banda, la llei de Lorentz dicta que una partícula carregada negativament sota un camp d'inducció magnètica, $\vec{B}$, pateix una força
 \begin{equation}
     \vec{F}=q\vec{v}\cross\vec{B}.
     \label{eq: Lorentz} 
@@ -114,7 +114,7 @@ En el nostre cas, $\vec{v}$ és perpendicular a $\vec{B }$ i, per tant, les part
 \end{equation}
 On $R$ és el radi del cercle i hem agafag el centre de coordenades a l'inici del tub de raigs catòdics i l'eix $X$ del sistema paral·lel a la direcció de sortida dels raigs.
 
-Ara, per obtenir la relació entre la intensitat de corrent en les bobines de Helmoholtz i el radi de corvatura de les partícules cal igualar força centrípeta a la força de Lorentz i obtenim 
+Ara, per calcular la relació entre la intensitat de corrent de les bobines de Helmoholtz i el radi de corvatura de les partícules cal igualar la força centrípeta a la força de Lorentz, i obtenim 
 \begin{equation}
     Bqv=\frac{mv^2}{R}
     \label{eq: fc=fl}
@@ -233,21 +233,19 @@ Com es mostra en la Fig. \ref{fig: Desv E}, en subministrar una diferència de p
 Després de comprovar a la Secció \ref{sec: desv_electr} que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
 Al aplicar el camp, com era d'esperar, hem observat que els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intensitat del corrent de les bobines i amb el potencial dels raigs catòdics.
 
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intensitat de corrent de les bobines hem usat l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la Fig. (\ref{fig: regressio_1}) hem representat algunes d'aquestes regressions i ja podem veure com a mesura que augmenta la intensitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intensitat de corrent de les bobines hem usat l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la Fig. (\ref{fig: regressio_1}) hem representat una selecció d'aquestes regressions i ja podem veure com a mesura que augmenta la intensitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{regressio_1.png}
     \caption{Regressió per diverses intensitats de les bobines de Hemholtz de $x^2+y^2$ en front $2y$ on $y$ i $x$ són punts de la trajectòria dels raigs catòdics. La pendent de les rectes és el radi de corvatura de la trajectòria.}
     \label{fig: regressio_1}
 \end{figure}
-
-Aplicant diverses intensitats a les bobines de Helmholtz hem obtingut els radis de corvatura de la Taula \ref{tab:RvsI} que es pot trobar a l'annex conjuntament amb el càlcul d'incerteses. Amb aquestes dades (excloent l'última dada ja que té massa incertesa a causa de l'amplada del feix dels raigs) hem construit la gràfica de la Fig. (\ref{fig: RvsI}) on es mostra que la variació de $R$ és lineal amb la variació de la inversa de la intensitat. 
+Aplicant diverses intensitats a les bobines de Helmholtz hem obtingut els radis de corvatura de la Taula \ref{tab:RvsI} que es pot trobar a l'annex conjuntament amb el càlcul d'incerteses. Amb aquestes dades (excloent l'última dada ja que té massa incertesa a causa de l'amplada del feix dels raigs) hem construit la gràfica de la Fig. (\ref{fig: RvsI}) on es mostra que la variació del radi corvatura és lineal amb la variació de la inversa de la intensitat. 
 Al fer la regressió lineal del radi en funció de l'inversa de l'intensitat hem obtingut la recta
 \begin{equation}
     y=x(0.03976\pm0.0006)+(0.0002\pm0.0016)
 \end{equation}  
-amb un coeficient de determinació de $r^2=0,99$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El $R$ és inversament proporcional a $I$ a causa de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
-
+amb un coeficient de determinació de $r^2\approx0,99$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El radi de corvatura és inversament proporcional a la intencitat a causa de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
 \begin{figure}[h]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -264,7 +262,6 @@ amb un coeficient de determinació de $r^2=0,99$. Per tant, la relació és cert
         \label{fig: RvsVa}
     \end{minipage}
 \end{figure}
-
 Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmoholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa} que es troba a l'annex. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és quadràtica amb la variació de $V_a$. Al fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
 \begin{equation}
     y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(2.28\times 10^{-3}\pm9.8\times10^{-4})
@@ -272,12 +269,11 @@ Per calcular el radi de la trajectòria de les partícules dels raigs catòdics 
 amb un coeficient de determinació $r^2=0.98$. Per tant, la relació és certament lineal (quadràtica respecte $R$) i corrobora l'Eq. (\ref{eq: q/m}).
 
 
-
 Finalment, amb l'Eq. (\ref{eq: q/m}) hem obtingut la relació $\frac{q}{m}$ de les partícules dels raigs catòdics
 \[
 \boxed{\frac{q}{m}=(-4.16\pm0.88)\cross10^{11}\quad \mathrm{\frac{C}{Kg}.}}
 \]
-Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$. Així, hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $R^2=0.98$. El pendent d'aquesta recta ens ha donat el valor de $\frac{q}{m}$ i després hem afegit l'insertesa instrumental al resultat. La linealitat dels punts indica que els nostres resultats concorden amb la teoria ja que com veiem a l'Eq. (\ref{eq: q/m}) la relació ha de ser lineal. 
+Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$. Així, hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $r^2\approx0.98$. El pendent d'aquesta recta ens ha donat el valor de $\frac{q}{m}$ i després hem afegit l'insertesa instrumental al resultat. La linealitat dels punts indica que els nostres resultats concorden amb la teoria ja que com veiem a l'Eq. (\ref{eq: q/m}) la relació ha de ser lineal. 
 Per altra banda, el valor tabulat\footnote{Valor obingut de la pàgina del NIST: "The NIST Reference on Constants, Units and Uncertainty".} de la relació $\frac{q}{m}$ dels electrons és de $\frac{q}{m}=(-1.76\times10^{11}\pm5.5\times10^{2}) \frac{C}{Kg}$ que    com podem veure no és compatible amb el nostre resultat però sí que coincideix en ordre de magnitud. Això pot ser per diversoso motius com que, com es veu a la Secció \ref{sec: traj_no_rect} el camp magnètic generat per les bobines de Hemholtz no és del tot uniforme o que el feix dels raigs catòdics té un gruix considerable que fa molt difícil l'obtenció dels punts experimentals.
 
 
