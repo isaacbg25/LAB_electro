@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1746521306 "/home/isaac/Projectes/3r FisQuim/LAB electro/PR_1/LAB_electro/PR1/PR1.tex" "PR1.pdf" "PR1" 1746521308
+["pdflatex"] 1746708810 "/home/isaac/Projectes/3r FisQuim/LAB electro/PR_1/LAB_electro/PR1/PR1.tex" "PR1.pdf" "PR1" 1746708812
   "/etc/texmf/web2c/texmf.cnf" 1735152389 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/isaac/Projectes/3r FisQuim/LAB electro/PR_1/LAB_electro/PR1/PR1.tex" 1746521301 30669 7bf3bf014c40da768d84f20a1e59ada1 ""
+  "/home/isaac/Projectes/3r FisQuim/LAB electro/PR_1/LAB_electro/PR1/PR1.tex" 1746708809 31297 2bde2bf1785b913ce37d45276b9db24d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -282,9 +282,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1735152405 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1735152536 2800972 92a11f7425d4c77c4fa139d2d4326f8f ""
-  "PR1.aux" 1746521307 12013 51a5d2b5184b082318a73122629c861e "pdflatex"
-  "PR1.tex" 1746521301 30669 7bf3bf014c40da768d84f20a1e59ada1 ""
-  "PR1.toc" 1746521307 1052 993034bbba3f2534abd63324075c8e8f "pdflatex"
+  "PR1.aux" 1746708812 12130 5df227cc99237abe70ce5988a6ff46ea "pdflatex"
+  "PR1.tex" 1746708809 31297 2bde2bf1785b913ce37d45276b9db24d ""
+  "PR1.toc" 1746708812 1062 bb2984567d1c62e50044af35cb19fad1 "pdflatex"
   "cond_camp.pdf" 1746139790 193556 b53b734586ac9c209b7b13f682341c8b ""
   "cond_combi_def.pdf" 1746139074 153337 285d247bf2b5aa0c45492895efb1970a ""
   "fils_camp.pdf" 1746302723 158974 7c921c8257d0e2bf23e977261db3288a ""
