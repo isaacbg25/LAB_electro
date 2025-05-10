@@ -19,4 +19,4 @@ print(β)
 print(np.sqrt(np.diagonal(Mβ)))
 
 #imprimeix uns valors: [m, n] i [u_m, u_n]
-#[[][]] []
+#[[4.04546663e-06] [2.13663461e-05]][4.40545408e-05 9.60557680e-04]
