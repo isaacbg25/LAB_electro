@@ -10,9 +10,9 @@ set key bottom right
 f(x) = a*x + b
 
 # Ajusta la regressió lineal
-fit f(x) "FvsI.txt" using 1:2 via a, b
+fit f(x) "fvsI.txt" using 1:2 via a, b
 
 # Dibuixa la gràfica
-plot "I2vsm.txt" using 1:2:3:4 with xyerrorbars title "Barres d'error", \
+plot "fvsI.txt" using 1:2:3:4 with xyerrorbars title "Barres d'error", \
      f(x) with lines title "Regressió Lineal", \
-     "I2vsm.txt" using 1:2 with points pt 7 ps 1 lc rgb 'blue' title "Massa en funció de I al quadrat"
+     "fvsI.txt" using 1:2 with points pt 7 ps 1 lc rgb 'blue' title "Massa en funció de I al quadrat"
