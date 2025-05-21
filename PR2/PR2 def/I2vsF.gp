@@ -20,4 +20,4 @@ fit f(x) "I2vsF.txt" using 1:2 via a, b
 # Dibuixa la gràfica
 plot "I2vsF.txt" using 1:2:3:4 with xyerrorbars title "Barres d'error", \
      f(x) with lines title "Regressió Lineal", \
-     "I2vsF.txt" using 1:2 with points pt 7 ps 1 lc rgb 'blue' title "Força en funció de l'angle"
+     "I2vsF.txt" using 1:2 with points pt 7 ps 1 lc rgb 'blue' title "Intensitat al quadrat en funció de la força"

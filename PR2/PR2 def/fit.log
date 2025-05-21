@@ -154,3 +154,40 @@ correlation matrix of the fit parameters:
                 a      b      
 a               1.000 
 b              -0.905  1.000 
+
+
+*******************************************************************************
+Wed May 21 10:58:50 2025
+
+
+FIT:    data read from "I2vsF.txt" using 1:2
+        format = x:z
+        x range restricted to [0.00000 : 0.000300000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.9801720536e+03   0.00e+00  7.07e-01    1.000000e+00   1.000000e+00
+   7 3.1479546506e+01  -5.89e-01  7.07e-08    2.577247e+05  -7.409390e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 31.4795
+rel. change during last iteration : -5.88968e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.23932
+variance of residuals (reduced chisquare) = WSSR/ndf   : 10.4932
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 257725           +/- 2.089e+04    (8.106%)
+b               = -7.40939         +/- 3.397        (45.85%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.905  1.000 
