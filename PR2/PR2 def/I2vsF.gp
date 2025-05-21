@@ -8,7 +8,7 @@ set key bottom right
 
 # Establir els límits per als eixos
 set xrange [0:0.0003]
-# set yrange [10:80]
+set yrange [-10:80]
  
 
 # Defineix la funció lineal f(x) = a*x + b
