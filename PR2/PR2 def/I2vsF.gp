@@ -2,8 +2,8 @@ set terminal pngcairo size 800,600
 set output 'I2vsF_amb_errors.png'
 
 # Títols i etiquetes
-set xlabel "I^2 (A^2)"
-set ylabel "Força (N)"
+set ylabel "I^2 (A^2)"
+set xlabel "Força (N)"
 set key bottom right
 
 # Establir els límits per als eixos
