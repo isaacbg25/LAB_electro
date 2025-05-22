@@ -58,36 +58,33 @@ En aquesta pràctica estudiarem com es desvia el feix de raigs catòdics sota el
     \item Determinar, amb dos mètodes diferents, de què estan fets els raigs catòdics trobant la relació entre la càrrega i la massa de les seves partícules.
 \end{list}
 
-El camp elèctric generat pel condensador que desviarà el feix es pot considerar un camp uniforme:
 
+%DESV E
+Primerament, estudiarem la desviació del feix degut a un camp elèctric perpendicular a la velocitat; aplicant una diferència de potencial $V_p$ entre dues plaques plano-paral·leles. Degut a què la distància entre plaques $d$ (= 54 mm) és de l'ordre del tamany d'aquestes, no podem considerar el sistema com un condensador de plaques plano-paral·leles ideal amb un camp uniforme $E=V/d$. En comptes, seguirem considerant-lo uniforme però modificarem l'expressió mitjançant una constant $k$ que tindrà en compte els efectes de vorada i que trobarem experimentalment.
 \begin{equation}
     E = \frac{kV_p}{d}
     \label{eq: Camp E}
 \end{equation}
 
-On $V_p$ és el potencial aplicat entre les plàques, $d$ la separació entre elles ($d$ = 54mm) i $k$ una constant que té en compte els efectes de varada degut a que el consdensador no es pot considerar ideal, ja que la distacia és del ordre del tamany.
-
-Una partícula de massa $m$ i càrrega $q$ sota l'influència d'un camp elèctric uniforme en direcció $y$ i magnitut $E$ i amb velocitat en direcció $x$ i magnitut $v_0$ descriurà la següent trajectòria:
-\begin{align}
+Si les partícules de les quals està format els raigs catòdics (de massa $m$) tenen càrrega elèctrica $q$, aquestes es desviaran cap a un dels dos elèctrodes; al càtode si són negatives i a l'ànode si són positives. I la trajectòria que seguiran serà una paràbola parametritzada per l'Eq. (\ref{eq: trajectoria}), ja que el camp és uniforme i en direcció $y$.
+\begin{align}    \label{eq: trajectoria}
     &x = v_0 t      &y = -\frac{qEt^2}{2m}
-    \label{eq: trajectoria}
 \end{align}
 
-Tenint en compte la conservació de l'energia tenim:
+On $v_0$ és la velocitat en direcció $x$ que tenen inicialment les partícules al sortir del filament.
+Donat que un cop emeses les partícules, aquestes es veuen accelerades degut al voltatge aplicat $V_a$; per conservació de l'energia, la velocitat ha de ser:
 \begin{equation}
     \frac{1}{2}mv_0^2=qV_a
     \label{eq: Energia}
 \end{equation}
 
-On $V_a$ és el potencial amb què s'acceleren les partícules.
-
-Combinant les equacions \ref{eq: Camp E}, \ref{eq: trajectoria} i \ref{eq: Energia} finalment obtenim:
+Tot i això, no es pot veure el moviment d'una partícula individual en funció del temps, sinó que es veu una corba formada per moltes partícules en diferents moments de la trajectòria. L'expressió d'aquesta corba com una funció de $x$ ($y$ = $f(x)$)  s'obtè combinant les Eqs. (\ref{eq: Camp E}), (\ref{eq: trajectoria}) i (\ref{eq: Energia}):
 \begin{equation}
     y = \frac{kV_px^2}{4dV_a}
     \label{eq: parabola}
 \end{equation}
 
-Y apartir del pendent $m$ d'una recta de regressió lineal y l'equació (\ref{eq: parabola}):
+Per últim, queda determinar experimentalment la constant $k$ a partir del pendent $m$ de la recta de regressió lineal de $y$ en funció de $x^2$ i de l'equació (\ref{eq: parabola}):
  \begin{equation}
       k =\frac{4mdV_a}{V_p}
       \label{eq: k}
@@ -177,57 +174,42 @@ Llavors, per cada un dels punts s'ha determinat la posició dins la grid comptan
 \newpage
 \section{Resultats i discussió}
 
-\subsection{Desviació electroestàtica}\label{sec: desv_electr}
+\section{Desviació electroestàtica}\label{sec: desv_electr}
 
+En subministrar una diferència de potencial a les plaques s'observa com el raig es desvia cap al càtode\footnote{Les imatges de la desviació electroestàtica (Fig.(\ref{fig: Desv E})) es troben a l'annex (\ref{sec: imatges}) }. Per tant, les partícules de les què està compost els raigs catòdics tenen una càrrega negativa.
+
+ Per comprovar que les trajectòries es tracten de paràboles hem fet una regressió de les $y$ en funció de les $x^2$, com es mostra a la figura (\ref{fig: Regressió Desv E}). Aquestes tenen els següents coeficients de correlació \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: Reg}}:
+ r$^2$ = 0.9777, 0.9973, 0.9940, 0.9832. Confirmant que les partícules segueixen una trajectòria parabòlica.
 \begin{figure}[h]
     \centering
-    \begin{minipage}{0.38\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{1kV.jpg}
-    \end{minipage}
-    \begin{minipage}{0.38\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{2kV.jpg}
-    \end{minipage}
-    \begin{minipage}{0.38\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{3kV.jpg}
-    \end{minipage}
-    \begin{minipage}{0.38\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{4kV.jpg}
-    \end{minipage}
-    \caption{Desviació del raigs en presència del camp elèctric generat per les plàques. (a) 1kV, (b) 2kV, (c) 3kV, (d) 4kV}
-    \label{fig: Desv E}
-\end{figure}
-
-Com es mostra en la Fig. \ref{fig: Desv E}, en subministrar una diferència de potencial a les plaques s'observa com el raig es desvia cap al càtode. Per tant, les partícules de les què està compost els raigs catòdics tenen una càrrega negativa.
-
- Per comprovar que les trajectòries es tracten de paràboles hem fet una regressió de les $y$ en funció de les $x^2$, com es mostra a la Fig. (\ref{fig: Regressió Desv E}). Aquestes tenen un coeficient de correlació $r^2 \sim 0,98$ \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: Reg}}, confirmant que les partícules segueixen una trajectòria parabolica. Alhora, a partir del pendent d'aquestes regressions junt amb l'equació (\ref{eq: k}) obtenim els valors de la constant $k$ per a els diferents valors del potencial $V_p$ \footnote{El càlcul de les incerteses es mostra a l'anex \ref{sec: incerteses}}.
- 
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.75\textwidth}
     \centering
         \includegraphics[width=1\linewidth]{Plot yvsx.PNG}
         \caption{Regressió de $y$ en funció de $x^2$  de la desviació deguda al camp elèctric}
         \label{fig: Regressió Desv E}
     \end{minipage}
-    \hfill
+\end{figure}
+
+A la taula \ref{tab:kvsVp} podem observar els diferents valors que pren $k$ \footnote{El càlcul de les incerteses es mostra a l'anex \ref{sec: incerteses}} en funció del potencial entre plaques $V_p$, obtinguts a partir del pendent d'aquestes regressions lineals juntament amb l'Eq. (\ref{eq: k}). Observem que la $k$ no és constant i que augmenta amb la diferència de potencial. Fent una regressió lineal entre $V_p$ i $k$ obtenim que hi ha una relació lineal entre els dos amb un coeficient de correlació r$^2$ = 0.9737 i una equació de la recta: $k = 0.453 \cdot 10^{-3}\, V^{-1}  \cdot V_p + 0.45$.
+
+
+\begin{figure}[h]
+    \centering
     \begin{minipage}{0.45\textwidth} 
         \centering
         \begin{tabular}{|c|c|}
             \hline
             $V_p$ (V)	&	$k$	\\\hline
-            (1000 ± 200)	&	(0.87 ± 0.19)   \\\hline
-            (2000 ± 200)	&	(1.35 ± 0.15)	\\\hline
-            (3000 ± 200)	&	(1.94 ± 0.16)	\\\hline
-            (4000 ± 200)	&	(2.17 ± 0.16)	\\\hline           
+            (1000 ± 200)	&	(0.87 ± 0.64)   \\\hline
+            (2000 ± 200)	&	(1.35 ± 0.22)	\\\hline
+            (3000 ± 200)	&	(1.94 ± 0.25)	\\\hline
+            (4000 ± 200)	&	(2.17 ± 0.26)	\\\hline           
         \end{tabular}
-        \captionof{table}{Resultats experimentals de les constants $k$ del condensadpr per cada valor del potencial $V_p$.}
+        \captionof{table}{Resultats experimentals de les constants $k$ del condensador per cada valor del potencial $V_p$.}
         \label{tab:kvsVp}
     \end{minipage}
 \end{figure}
+
 
 \subsection{Desviació magnetoestàtica}\label{sec: desv_magn}
 Després de comprovar a la Secció \ref{sec: desv_electr} que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
@@ -388,6 +370,31 @@ Així doncs, s'ha verificat que els feixos tractats, els raigs catòdics, estan 
     \end{minipage}
 \end{figure}
 
+
+\section{Imatges} \label{sec: imatges}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{1kV.jpg}
+    \end{minipage}
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{2kV.jpg}
+    \end{minipage}
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{3kV.jpg}
+    \end{minipage}
+    \begin{minipage}{0.38\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{4kV.jpg}
+    \end{minipage}
+    \caption{Desviació del raigs en presència del camp elèctric generat per les plàques. (a) 1kV, (b) 2kV, (c) 3kV, (d) 4kV}
+    \label{fig: Desv E}
+\end{figure}
 
 
 
