@@ -303,14 +303,14 @@ Per últim, combinant els resultat experimentals i els de la simulació hem idea
 \vspace{1em}  % Espai abans del contingut
 
 \begin{abstract}
-    En aquesta pràctica estudiem la força magnètica entre dos fils amb corrent elèctric de mateixa intensitat, en concret, analitzem la seva relacció amb la magnitud d'intensitat dels fils i la dependència amb la distància que els separa. També s'aprofita el muntatge experimental per mesurar la component horizonal del camp magnètic terrestre. Les dades experimentals es tracten mitjançant el mètode dels mínims quadrats per obtenir paràmetres que es poden comparar amb valors teòrics. Aquests presenten diferències prou significatives respecte els nostres resultats tot i trobear-se dins l'interval d'incertesa, el que creiem que és degut a la gran complexitat del mètode experimental emprat.
+    En aquesta pràctica estudiem la força magnètica entre dos fils amb corrent elèctric de mateixa intensitat, en concret, analitzem la seva relacció amb la magnitud de la intensitat dels fils i la dependència amb la distància que els separa. També s'aprofita el muntatge experimental per mesurar la component horizonal del camp magnètic terrestre. Les dades experimentals es tracten mitjançant el mètode dels mínims quadrats per obtenir paràmetres que es poden comparar amb valors teòrics, en concret calcularem el valor de la permeabilitat magnètica al buit. Aquests presenten diferències prou significatives respecte els nostres resultats tot i trobear-se dins l'interval d'incertesa, el que creiem que és degut a la gran complexitat del mètode experimental emprat.
 \end{abstract}
 
 \subsection{Introducció}\label{sec: PR2_intro}
 
-En aquesta pràctica tenim per objectiu estudiar la força magnètica que es genera entre dos fils pels quals es fa passar corrent elèctric. També, aprofitarem el muntatge experimental per a mesurar la component normal del camp magnètic terrestre.
+En aquesta pràctica tenim per objectiu estudiar la força magnètica que es genera entre dos fils paral·lels pels quals es fa passar corrent elèctric. També, aprofitarem el muntatge experimental per a mesurar la component normal del camp magnètic terrestre.
 
-La força magnètica entre dos fils finits de corrent es calcula a través de la llei de Biot-Savart. Però tenint que la separació entre els fils de corrent és molt menor a la longitud d'aquests, podem arribar a considerar que el camp magnètic que rep un dels fils és el generat per un altre fil infinit situat a una distància d'ell. 
+La força magnètica entre dos fils finits de corrent es calcula a través de la llei de Biot-Savart. Però tenint que la separació entre els fils de corrent és molt menor a la longitud d'aquests, podem arribar a considerar que el camp magnètic que rep un dels fils és el generat per un altre fil infinit situat paral·lelament a una certa distància d'ell. 
 
 Aquesta aproximació ens facilita molt més els càlculs ja que podem trobar el camp magnètic generat per un fil infinit amb la llei d'Ampère, que ens dona com a resultat la següent expressió:
 
@@ -321,7 +321,7 @@ Aquesta aproximació ens facilita molt més els càlculs ja que podem trobar el 
 I que la força mangètica que rep el fil d'una longitud $L$ és
 
 \begin{equation}\label{eq: PR2_Fmagn_en_funcio_B}
-    \vec{F} = I\oint d\vec{l}\times\vec{B}(\vec{r})
+    \vec{F} = I\int d\vec{l}\times\vec{B}(\vec{r})
 \end{equation}
 
 Ens resultat que la força magnètica (el mòdul) té l'expressió següent:
@@ -332,15 +332,17 @@ Ens resultat que la força magnètica (el mòdul) té l'expressió següent:
 
 Per mesurar la força magnètica entre dos fils de corrent i la seva dependència amb la intensitat de corrent que hi circula i amb la distància de separació entre ells utilitzarem una balança. Aquesta permet saber quan el sistema està en equlibri, és a dir, quan la força magnètica generada pels fils és compensada per una altra força d'igual direcció però sentit contrari. 
 
-Aquesta altra força, que ha de ser fàcilment parametritzable, pot correspondre a la força gravetat  associada al fil superior. La qual mesurarem a través de les masses conegudes que col·locarem sobre la cassoleta que té aquest fil.
+Aquesta altra força, que ha de ser fàcilment parametritzable, pot correspondre a la força de la gravetat associada al fil superior. La qual mesurarem a través de les masses conegudes que col·locarem sobre la cassoleta que té aquest fil.
 
 També pot correspondre a la força de torsió del sistema que conté el fil superior. La qual es pot mesurar a través de l'angle de gir resultant del fil superior al rebre la força magnètica.
  
-La força gravetat segueix la següent equació
+La força de la gravetat segueix la següent equació
 
 \begin{equation}\label{eq: PR2_Fgrav}
     F_{grav} = mg
 \end{equation}
+
+On $m$ correspon a la massa coneguda col·locada sobre la cassoleta i $g$ és la gravetat de la terra, la qual agafem com a constant amb valor $g = 9,81 \, m/s^2$\footnote{Valor mitjà tabulat extret de la Viquipèdia}
 
 I la força de torsió
 
@@ -348,9 +350,11 @@ I la força de torsió
     F_{tor} = k\theta
 \end{equation}
 
+On $k$ és la constant de torsió del fil superior i $theta$ l'angle de torsió del fil, prenent com a 0º la posició que té el fil superior quan no rep força de l'altre fil.
+
 \subsection{Mètode Experimental}\label{sec: PR2_met_exp}
 
-La balança de corrent està formada per un marc rectangular per on hi circula un corrent, gr. Aquest es troba sustentat pel fil de torsió i es troba sotmès a un equilibri entre la força del contrapes i la força entre fils. 
+La balança de corrent està formada per un marc rectangular per on hi circula un corrent. Aquest es troba sustentat pel fil de torsió i es troba sotmès a un equilibri entre la força del contrapès i la força entre fils. 
 
 Per tal d'afavorir el moviment del rectangle conductor, les
 connexions entre el marc i la font de corrent es fan usant gal·li fos. Els motius pels quals s'usa el gal·li són la seva baixa temperatura de fusió (29;76ºC) i al seu preu econòmic. El metall fos permet la mobilitat del marc i proporciona una connexió continua i gairebé sense presentar fricció. S'obren els pots de gal·li i es connecta el transformador de corrent de 9 V per fondre'l. 
@@ -378,7 +382,7 @@ els pots de gal·li amb el marc rectangular, que té unes petites puntes sobreso
 \caption{Muntatge de la balança usada}
 \end{figure}
 
-La importància de la presa de mesures en aquesta pràctica recau en la calibració de la balança. Primerament, es col·loca la balana de tal forma que els cables siguin paral·lels al camp magnètic terrestre, seguint la direcció que ens indica la brúixola. Així, es pot eliminar la contribució del camp
+La importància de la presa de mesures en aquesta pràctica recau en la calibració de la balança. Primerament, es col·loca la balança de tal forma que els cables siguin paral·lels al camp magnètic terrestre, seguint la direcció que ens indica la brúixola. Així, es pot eliminar la contribució del camp
 magnètic terrestre, que alteraria els resultats. 
 
 En segon lloc ajustem les potes de les potes de tal manera que la bombolla quedi al centre de l'espai disponible que te per moure's, fet que indica que està completament paral·lela al pla z. A continuació, ens assegurem que el dial de torsió del marc rectangular està al zero. 
@@ -416,7 +420,7 @@ A la pràctica, l'aleta d'amortiment mai es quedava en una posició sense movime
 
 En la primera part de la pràctica volem estudiar la relació que hi ha entre la intensitat que circula per un fil i la força que aquest rep a causa d’un altre fil pel que hi circula la mateixa intensitat. 
 
-S’ha mesurat la intensitat necessària per fer circular pel fil perquè la força magnètica i la força gravitatòria de la massa de la balança estiguin en equilibri. S’ha fet la mesura per a 5 masses diferents, començant per 5 mg, i augmentant-la de 5 en 5 mg a cada nova mesura. Per a cada massa s’han
+S’ha mesurat la intensitat necessària per a fer circular pel fil perquè la força magnètica i la força gravitatòria de la massa de la balança estiguin en equilibri. S’ha fet la mesura per a 5 masses diferents, començant per 5 mg, i augmentant-la de 5 en 5 mg a cada nova mesura. Per a cada massa s’han
 realitzat 3 mesures de la intensitat i se n’ha fet el promig.
 
 Per comprovar la dependència s’ha representat la força en funció del quadrat de la intensitat i s’ha fet una regressió lineal. Els
@@ -429,9 +433,9 @@ valors obtinguts es mostren gràficament a la Fig. \ref{fig: regr_mvsI2}:
     \label{fig: PR2_regr_I2vsF}
 \end{figure}
 
-La regressió té un coeficient de correlació de $R^2 = 0,98$. Axií doncs, que la força que un fil que transporta una intensitat I rep a causa d’un altre fil que transporta la mateixa intensitat I compleix la lineal proporcional: $F \sim I^2$.
+La regressió té un coeficient de correlació de $R^2 = 0,98$. Així doncs, la força que un fil que transporta una intensitat I rep generat pel camp magnètic produit per un altre fil situat paral·lelament i en les mateixes condicions de corrent és proporcional al quadrat de la intensitat: $F \sim I^2$.
 
-El pendent de la recta de regressió ens permet trobar un valor aproximat de $\mu_0$. A partir de l’Eq. \eqref{eq: PR2_Fm_entre_fils} es dedueix que el pendent m serà $m = \frac{2\pi d}{\mu_0 L}$. Aïllant $\mu_0$ s’obté $\mu_0 = (0,413 \pm 0,091) · 10^{-6}\, T · m/A$, que difereix bastant (tot i tenir el mateix ordre de magnitud) del valor real que hem pres, de $4\pi · 10^{−7}\, T · m/A \,=\, 1,26 · 10^{−6}\, T·m/A$. 
+El pendent de la recta de regressió ens permet trobar un valor aproximat de $\mu_0$. A partir de l’Eq. \eqref{eq: PR2_Fm_entre_fils} es dedueix que el pendent m serà $m = \frac{2\pi d}{\mu_0 L}$. Aïllant $\mu_0$ s’obté $\mu_0 = (0,413 \pm 0,091) · 10^{-6}\, T · m/A$, que difereix bastant (tot i tenir el mateix ordre de magnitud) del valor tabulat que hem pres, de $4\pi \cdot 10^{−7}\, T \cdot m/A \,=\, 1,26 \cdot 10^{−6}\, T\cdotm/A$\footnote{Aquest valor tabulat s'ha extret del guió de la pràctica corresponent}. 
 
 Podem veure que el valor teòric no es troba dins l’interval d’incerteses considerat pel valor experimental i per tant els resultats no són compatibles. La incertesa instrumental associada a les mesures com per exemple la diferència de massa real respecte el marcat en les etiquetes i el que s'ha utilitzat per fer les regressions fa augmentar la discrepància entre els resultats. 
 
@@ -467,7 +471,7 @@ Es representen els resultats obtinguts en la Fig. \ref{fig: PR2_regr_thetavsr} o
     \label{fig: PR2_regr_thetavsr}
 \end{figure}
 
-La regressió té un coeficient de correlació de $R^2 = 0,976$.
+La regressió té un coeficient de correlació de $R^2 = 0,98$.
 Aplicant la relació \eqref{F_ktheta} a l'equació que acabem de trobar i operant, s’obté que el valor de $\mu_o$ ve donat per l’equació $\mu_0 = \frac{2πm}{LI^2}$ on $m$ correspon al pendent de la regressió lineal. 
 
 Aplicant el valor experimental s’obté que: $\mu_0 = (0,525 \pm 0,058) \cdot 10^{-6}\, N/A^2$. Tot i que el resultat tampoc és compatible amb l’esperat, sí és molt similar al resultat experimental de l’apartat anterior (tenint en compte els seus intervals d'incertesa, sí són compatibles) . 
@@ -483,9 +487,9 @@ la Terra perquè aquest no fes cap força sobre el fil). D’aquesta manera, mes
 
 Per a una intensitat determinada, la força que rep el fil ve donada per l’equaci´o (2.2), i simmplement a¨ıllant el camp es podria trobar el seu valor. 
 
-Fixant la intensitat a $(8,00 \pm 0,01)\,A$, trobem el valor de l'angle que permet tornar a deixar a equilibrar la balança, és a dir, igualem la força que rep el fil degut al camp magnètic amb la de torsió. La torsió obtinguda experimentalment és de $(19,5 \pm 2,3)$. 
+Fixant la intensitat a $(8,00 \pm 0,01)\,A$, trobem el valor de l'angle que permet tornar a deixar a equilibrar la balança, és a dir, igualem la força que rep el fil degut al camp magnètic amb la de torsió. La torsió obtinguda experimentalment és de $(19,5 \pm 2,3)º$. 
 
-Aprofitant el resultat de la constant de torsió trobada en la Sec. \ref{sec: PR2_Fm_sep}, podem trobar que la força magnètica que s’ha obtingut és de $F = (7,28 \pm 0,90) · 10^{-5}\,N$. 
+Aprofitant el resultat de la constant de torsió trobada en la Sec. \ref{sec: PR2_Fm_sep}, podem trobar que la força magnètica que s’ha obtingut és de $F = (7,28 \pm 0,90) \cdot 10^{-5}\,N$. 
 
 De l’Eq \eqref{eq: PR2_Fmagn_en_funcio_B}, podem aïllar $B$ i obtenir que la component horitzontal del camp magnètic de la Terra al laboratori de la Universitat Autònoma, és $B = (3,08 \pm 0,59)·10^{-5}\,T$. El valor real que hem agafat és de $B = 2,53·10^{−5}\,T$ \footnote{Valor obtingut d'un document de la R.S.E.F. on s'havia mesurat la component horitzontal del camp magnètic a Salamanca}. Per tant, com el valor experimental es troba dins l’interval d’incerteses, és compatible amb el resultat esperat.
 
