@@ -55,7 +55,7 @@
 \newpage
 \vspace{10em}
 
-{\huge \textbf{Pràctica 1}}  % Títol petit en negreta
+\section{\huge \textbf{Pràctica 1}}  % Títol petit en negreta
 
 \vspace{0.5em}  % Espai vertical
 
@@ -70,7 +70,7 @@
 \end{abstract}
 
 
-\section{Introducció teòrica}\label{sec: intro}
+\subsection{Introducció teòrica}\label{sec: intro}
 En aquesta pràctica trobem experimentalment les línies equipotencials i de camp de tres distribucions de conductors en un material dielèctric de difícil o inexistent solució analítica, així com alguna propietat associada. La primera distribució estudiada és un condensador de plaques plano-paral·leles d'altura infinita i llargada finita, del qual també en calculem la capacitat; la segona són dos fils infinits paral·lels a diferents potencials; i per últim, estudiem una placa amb una escletxa davant d'un fil infinit a diferents potencials.
 
 Per estudiar aquestes distribucions de conductors dins un medi dielèctric usem la dualitat que existeix entre el camp de corrents, $\vec{J}$, i el camp de desplaçament elèctric, $\vec{D}$. Com podem veure a les Eqs. (\ref{eq: J_D}) aquests dos camps tenen les mateixes equacions i, per tant, si repliquem les condicions de contorn d'un sistema en medi dielèctric en un sistema en medi conductor conductor, obtindrem les mateixes solucions per les corrents que obtindreim en el sistema dielèctirc pel camp de desplaçament.
@@ -123,7 +123,7 @@ i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon
     \label{eq: c_t}
 \end{equation}
 
-\section{Mètode experimental}\label{sec: metode}
+\subsection{Mètode experimental}\label{sec: metode}
 Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectangles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora. Així doncs, hem traduït els nostres sistemes de tres dimensions (però amb simetria en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció dels conductors cap a la direcció $Z$. Per exemple, el condensador s'ha convertit en dues línies paral·leles o els dos fils infinits en dos punts. A l'Annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca, hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest punt és molt important comprovar que el conductor està ben dibuixat mirant si tots els punts tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
 
 En el cas del condensador és important que tingui les dimensions adequades. Ha de ser prou petit per obtenir línies tancades i que $\frac{d}{l}$ sigui prou petit perquè aquestes siguin paral·leles a la zona central del condensador. Unes bones mides per la dimensió del nostre paper són: $d=3cm$ i $l=8cm$.
@@ -135,10 +135,10 @@ Per representar els punts experimentals els hem digitalitzat amb el programa web
 
 Finalment, hem fet una simulació em Python per calcular computacionalment les línies equipotencials i de camp de les tres configuracions de conductors.\footnote{\label{nota: codis}Tots els codis es troben a l'Annex \ref{sec: python}}
 
-\section{Resultats i discussió}\label{sec: resultats}
+\subsection{Resultats i discussió}\label{sec: resultats}
 En aquesta secció presentem i comparem els resultats obtinguts tant experimentalment com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
 
-\subsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
+\subsubsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
 La primera distribució de càrrega que estudiarem és un condensador de plaques plano-paral·leles centrat a l'orígen. Les plaques són paral·leles al pla $YZ$, finites en la direcció $Y$ i molt llargues o infinies en la direcció $Z$.
 En les Figs. (\ref{fig: cond_pot}) i (\ref{fig: cond_e}) podem veure representades les línies de camp elèctric i les línies equipotencials obtingudes tant experimentalment com en la simulació.   
 \begin{figure}[h]
@@ -170,7 +170,7 @@ Per calcular la capacitat del condensador, primer hem calculat la càrrega per u
 
 Aquest resultat el podem comparar amb el resultat tèoric de la capacitat d'un condensador ideal amb les mateixes dimensions. Usant l'Eq. (\ref{eq: c_t}) obtenim $(\frac{C}{L})_t =(2,667 \pm 0,095)\, \mathrm{F/m}$ que és compatible amb el resultat experimental del nostre condensador no ideal.
 
-\subsection{Fils infinits}\label{sec: fils}
+\subsubsection{Fils infinits}\label{sec: fils}
 La segona configuració estudiada són dos fils infinits paral·lels amb càrrega oposada. Conseqüentment, en aquest cas, la simulació representa el cas ideal.
 \begin{figure}[h]
     \centering
@@ -193,7 +193,7 @@ A la Fig. (\ref{fig: fils_pot}), si ens fixem en les línies equipotencials expe
 
 Per altra banda, el camp elèctric  experimental mostrat a la Fig. (\ref{fig: fils_camp}) també segueix la tendència de la simulació tot i que les línies de camp que surten del fil a $7.5$ V tenen més tendència a tancar-se cap al fil a $-7.5$ V. Això pot ser degut a que hi ha diversos efectes que no hem tingut en compte a la simulació com hem explicat en el cas del potencial. 
 
-\subsection{Placa amb escletxa i fil infinit}\label{sec:lliure}
+\subsubsection{Placa amb escletxa i fil infinit}\label{sec:lliure}
 La tercera configuració estudiada és un fil infinit enfront una placa infinita en l'eix $Z$ amb una escletxa al llarg de la placa i al davant del fil. A més, existeix una diferència de potencial entre el fil i les dues parts de la placa, què sí que estan al mateix potencial. Aquesta, és una disposició similar a la d'un experiment de difracció si tractem el fil com un "emissor" de línies equipotencials i les plaques amb l'escletxa com l'objecte que les difracta. Per tant, la motivació per estudiar aquesta configuració prové de voler veure si amb les línies de potencial passa algun fenomen similar a la difracció d'ones\footnote{Més informació sobre la difració d'ones a \url{https://en.wikipedia.org/wiki/Diffraction}}.
 
 \begin{figure}[h]
@@ -223,7 +223,7 @@ No obstant això, si ens fixem en les línies equipotencials simulades veiem cla
 Per altra banda, a la Fig. (\ref{fig: lliure_camp}) podem veure el camp elèctric generat per aquesta configuració. Com en les altres configuracions veiem que el camp experimental seguexi la tendència de la simulació però es tanca més al voltant de les vores de les plaques i dels fils infinits. Aquestes diferències s'expliquen pels mateixos raonaments que en els casos anteriors.
 
 
-\subsection{(extra) Estimació de la permitivitat relativa}
+\subsubsection{(extra) Estimació de la permitivitat relativa}
 A la Secció \ref{sec: cond} hem vist com les línies equipotencials simulades diferien de les experimentals principalment a causa de que la simulació està feta al buit, i en canvi, l'experiment emula un dielèctric. Aprofitarem aquestes diferencies per estimar el valor de la permitivitat relativa d'aquest dielèctric, $\varepsilon_r$.
 
 En el cas ideal, dins del conductor, el camp elèctric queda fixat per la distància entre plaques, $d$, i la diferència de potencial $V$. Fora del condensador, però, el camp sí que depèn d'$\varepsilon_r$. 
@@ -241,7 +241,7 @@ Per poder treballar còmodament posem el zero de potencial a una de les dues pla
     \varepsilon_r=(1,98 \pm 0,10)\, \mathrm{F/m}.
 \end{equation}
 
-\section{Conclusions}\label{sec: conc}
+\subsection{Conclusions}\label{sec: conc}
 
 En aquesta pràctica hem estudiat les línies equipotencials i de camp dins d'un material dielèctric de tres configuracions de conductors diferents, gràcies al paral·lelisme entre les equacions del camp de corrents i del camp de desplaçament. 
 
@@ -254,7 +254,7 @@ En tercer lloc, hem estudiat una placa amb una escletxa davant d'un fil infinit 
 Per últim, combinant els resultat experimentals i els de la simulació hem ideat una manera d'estimar el valor de la permitivitat relativa del medi dielèctric de l'experiment. Així hem obtingut un valor de $\varepsilon_r=(1,98 \pm 0,10)\, \mathrm{F/m}$.
 
 \appendix{Annex}\label{sec: annex}
-\section{Imatges del muntatge experimental}\label{fotos}
+\subsection{Imatges del muntatge experimental}\label{fotos}
 \begin{figure}[h!]
     \centering
 
@@ -273,7 +273,7 @@ Per últim, combinant els resultat experimentals i els de la simulació hem idea
     \caption{Muntatge experimental de les tres distribucions de conductors.}
     \label{fig:figura3}
 \end{figure}
-\section{Càlcul d'incerteses}
+\subsection{Càlcul d'incerteses}
 \begin{equation}
     u_{Q/L} = \varepsilon \sqrt{
         \left( \sum_i \frac{\Delta l_i}{\Delta r_i} \right)^2 u^2_{\Delta \phi_i} +
@@ -297,7 +297,7 @@ Per últim, combinant els resultat experimentals i els de la simulació hem idea
     \label{eq: ins_ct}
 \end{equation}
 
-\section{Dades experimentals}
+\subsection{Dades experimentals}
 \begin{table}[ht]
     \centering
     \begin{tabular}{ccc}
@@ -330,7 +330,7 @@ Per últim, combinant els resultat experimentals i els de la simulació hem idea
     \label{tab:mesures}
 \end{table}
 
-\section{Fitxers de programa de la simulació}\label{sec: python}
+\subsection{Fitxers de programa de la simulació}\label{sec: python}
 Per fer les simulacions de les línies equipotencials de les diferents configuracions de conductors hem solucionat l'equació de Laplace amb el mètode de Jacobi amb un programa de python. Aquí mostrem el probrama pel cas del condensador. Per calcular els altre casos només cal canviar les dimencions dels conductors ($l$ i $d$) i les condicions de contorn.
 
 \begin{lstlisting}[caption={Simulació del potencial}, label={lst:simulacio}]
