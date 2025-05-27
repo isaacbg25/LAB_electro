@@ -710,7 +710,7 @@ amb un coeficient de determinació de $r^2\approx0,99$. Per tant, la relació é
         \label{fig: RvsVa}
     \end{minipage}
 \end{figure}
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmoholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa} que es troba a l'annex. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és quadràtica amb la variació de $V_a$. Al fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmoholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa} que es troba a l'Annex. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és quadràtica amb la variació de $V_a$. Al fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
 \begin{equation}
     y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(2.28\times 10^{-3}\pm9.8\times10^{-4})
 \end{equation}  
@@ -959,14 +959,15 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
 
 \newpage
 
-\appendix{Annex}
+\appendix
 \section{Annex}
 
 
 \subsection{Resultats experimentals}\label{taules_dades_exp}
-\subsubsection{Dades experimentals pràctica 1}
+\subsubsection{Dades experimentals Pràctica 1}
 \begin{table}[ht]
     \centering
+    \caption{Mesures de $\Delta l$, $\Delta r$ i $\Delta V$ amb inserteses}
     \begin{tabular}{ccc}
         \hline
         $\Delta l$ (m) & $\Delta r$ (m) & $\Delta V$ (V) \\
@@ -993,7 +994,7 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
         $0.015 \pm 0.001$ & $0.004 \pm 0.001$ & $1.5 \pm 0.1$ \\
         \hline
     \end{tabular}
-    \caption{Mesures de $\Delta l$, $\Delta r$ i $\Delta V$ amb inserteses}
+    
     \label{tab:mesures}
 \end{table}
 
@@ -1050,6 +1051,7 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
+        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor de potencial d'acceleració.}
         \begin{tabular}{|c|c|}
             \hline
             Va (V)	&	R (m)	\\\hline
@@ -1059,12 +1061,13 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
             (5000 ± 200)	&	(0.128 ± 0.015)	\\\hline
             
         \end{tabular}
-        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor de potencial d'acceleració.}
+        
         \label{tab:RvsVa}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth} 
         \centering
+        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor d'intensitat de corrent.}
         \begin{tabular}{|c|c|}
             \hline
             I(A)	&	R (m)	\\\hline
@@ -1078,13 +1081,14 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
             (0,100 ± 0,010)	&	(0,26 ± 0,10)	\\\hline
             
         \end{tabular}
-        \captionof{table}{Resultats experimentals dels radis de la trajectòria per cada valor d'intensitat de corrent.}
+        
         \label{tab:RvsI}
     \end{minipage}
 \end{figure}
 
 \begin{table}[h!]
     \centering
+    \caption{Resultats experimentals de la trajectòria amb valor de potencial (fixa camp $\vec{E}$) entre les plaques constant.}
     \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Vp (kV)} & \textbf{x (cm)} & \textbf{y (cm)} \\
@@ -1096,11 +1100,12 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
          & 5.00 $\pm$ 0.10 & 0.32 $\pm$ 0.10 \\
         \hline
     \end{tabular}
-    \caption{Resultats experimentals de la trajectòria amb valor de potencial (fixa camp $\vec{E}$) entre les plaques constant.}
+    
 \end{table}
 
 \begin{table}[h!]
     \centering
+    \caption{Resultats experimentals de la trajectòria amb valors d'intensitat de corrent (fixa camp $\vec{B}$) i potencial entre les plaques (fixa camp $\vec{E}$) constants.}
     \begin{tabular}{|c|c|c|c|}
         \hline
         \textbf{Vp (kV)} & \textbf{I (A)} & \textbf{x (cm)} & \textbf{y (cm)} \\
@@ -1112,12 +1117,12 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
          &  & 6.00 $\pm$ 0.10 & 0.65 $\pm$ 0.10 \\
         \hline
     \end{tabular}
-    \caption{Resultats experimentals de la trajectòria amb valors d'intensitat de corrent (fixa camp $\vec{B}$) i potencial entre les plaques (fixa camp $\vec{E}$) constants.}
+    
 \end{table}
 
 \subsubsection{Resultats experimentals Pràctica 7} \label{PR7_taules_dades_exp}
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
         \begin{tabular}{|c|c|c|c|c|c|}
             \hline
@@ -1195,7 +1200,24 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
     \label{fig: Desv E}
 \end{figure}
 \subsection{Càlcul d'incerteses}
-\subsubsection{Càlcul d'incerteses pràctica 1}
+\underline{Incertesa estadística de la mitja d'un conjunt de mesures:} La fórmula per trobar l'incertesa estadística d'un conjunt de mesures és:
+\begin{equation} \label{eq: incertesa estadística}
+    u^2 = \frac{1}{N(N-1)} \sum_{i=1}^{N} (x_i - <x>)^2
+\end{equation}
+on ${x_i}$ són les variables mesurades, $<x>$ la seva mitjana i $N$ el nombre de variables mesurades.
+
+\underline{Incertesa total:} Per obtenir l'incertesa total d'una mesura a partir de les incerteses estadístiques i instrumentals usem:
+\begin{equation} \label{eq: incertesa total}
+    u_{Total}^2 = u_{ins}^2+u_{est}^2
+\end{equation}
+
+\underline{Propagació d'errors:}  Per trobar les incerteses de magnituds dependents d'altres magnituds mesurables hem usat l'equació de propagació d'incerteses
+\begin{equation} \label{eq: propagació d'errors}
+    u_{y}^2=\sum_{i=1}^{N}(\frac{\partial y}{\partial x_i})^2u_{x_i}^2
+\end{equation}
+on y és la magnitud dependent i ${x_i}$ les variables mesurables.
+
+\subsubsection{Càlcul d'incerteses Pràctica 1}
 \begin{equation}
     u_{Q/L} = \varepsilon \sqrt{
         \left( \sum_i \frac{\Delta l_i}{\Delta r_i} \right)^2 u^2_{\Delta \phi_i} +
@@ -1218,23 +1240,7 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
     \left( \frac{l}{d^2} \right)^2 u^2_d}
     \label{eq: ins_ct}
 \end{equation}
-\subsubsection{Càlcul d'incerteses pràctica 6}\label{sec: incerteses}
-\underline{Incertesa estadística de la mitja d'un conjunt de mesures:} La fórmula per trobar l'incertesa estadística d'un conjunt de mesures és:
-\begin{equation} \label{eq: incertesa estadística}
-    u^2 = \frac{1}{N(N-1)} \sum_{i=1}^{N} (x_i - <x>)^2
-\end{equation}
-on ${x_i}$ són les variables mesurades, $<x>$ la seva mitjana i $N$ el nombre de variables mesurades.
-
-\underline{Incertesa total:} Per obtenir l'incertesa total d'una mesura a partir de les incerteses estadístiques i instrumentals usem:
-\begin{equation} \label{eq: incertesa total}
-    u_{Total}^2 = u_{ins}^2+u_{est}^2
-\end{equation}
-
-\underline{Propagació d'errors:}  Per trobar les incerteses de magnituds dependents d'altres magnituds mesurables hem usat l'equació de propagació d'incerteses
-\begin{equation} \label{eq: propagació d'errors}
-    u_{y}^2=\sum_{i=1}^{N}(\frac{\partial y}{\partial x_i})^2u_{x_i}^2
-\end{equation}
-on y és la magnitud dependent i ${x_i}$ les variables mesurables.
+\subsubsection{Càlcul d'incerteses Pràctica 7}\label{sec: incerteses}
 
 
 \underline{Incertesa instrumental Pràcitca 7:}
@@ -1313,7 +1319,7 @@ El mètode dels mínims quadrats es basa en optimitzar els paràmetres $\lambda_
 \end{align}
 
 \subsection{Fitxers de programa}
-\subsubsection{Simulació pràctica 1}\label{sec: python}
+\subsubsection{Simulació Pràctica 1}\label{sec: python}
 Per fer les simulacions de les línies equipotencials de les diferents configuracions de conductors hem solucionat l'equació de Laplace amb el mètode de Jacobi amb un programa de python. Aquí mostrem el probrama pel cas del condensador. Per calcular els altre casos només cal canviar les dimencions dels conductors ($l$ i $d$) i les condicions de contorn.
 
 \begin{lstlisting}[caption={Simulació del potencial}, label={lst:simulacio}]
