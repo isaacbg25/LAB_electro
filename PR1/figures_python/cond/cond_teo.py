@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Dimensions de la malla
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Dimensions de la malla
 nx, ny = 132, 132
 V = np.zeros((ny, nx))
 d = 15
@@ -11,7 +15,7 @@ l = 40
 V[int(ny/2-l/2):int(ny/2+l/2), int(nx/2 - d/2):int(nx/2 - d/2)+2] = 7.5  # placa esquerra
 V[int(ny/2-l/2):int(ny/2+l/2), int(nx/2 + d/2):int(nx/2 + d/2)+2] = -7.5    # placa dreta
 
-# Iteració per resoldre Laplace (mètode de Jacobi)
+# Iteracio per resoldre Laplace (metode de Jacobi)
 for _ in range(6000):
     V_new = V.copy()
     V_new[1:-1,1:-1] = 0.25 * (V[1:-1, :-2] + V[1:-1, 2:] + V[:-2, 1:-1] + V[2:, 1:-1])
@@ -22,8 +26,6 @@ for _ in range(6000):
     
     V = V_new
 
-V[0,:]=100
-V[:,0]=100
 #V[90:99,:]=0.1
 #V[:,90:99]=0.1
 
