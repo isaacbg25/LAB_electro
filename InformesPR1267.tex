@@ -375,12 +375,20 @@ Finalment, es mou el contrapès fins que la balança estigui estable i després 
 
 Després de fer una mesura, la balança pot quedar descalibrada (l'aleta d'amortiment no queda alineada amb el cursor de marques). Si aquest és el cas, cal tornar a calibrar la balança de nou.
 
-Un cop la balança calibrada, la pràctica es divideix en 3 parts. En la primera part, es fan girar els cargols 5 voltes completes de tal forma que se separen els cables 5 mm més. A continuació es posa la massa de 5 mg i es connecta la font de corrent continu augmentant la intensitat ens que
-s'equilibra la balança. Es repetirà el mateix procés per a les diferents masses, augmentant-les de 5 mg en 5 mg.
+Un cop la balança calibrada, la pràctica es divideix en 3 parts. En la primera part, es fan girar els cargols 5 voltes completes de tal forma que se separen els cables 5 mm més. A continuació es posa la massa de 5 mg i es connecta la font de corrent continu augmentant la intensitat fins que
+s'equilibra la balança. Es repetirà el mateix procés per a les diferents masses, augmentant-les de 5 mg en 5 mg a cada nova mesura.
 
 En la segona part de la pràctica, es posa la massa de 5mg sobre la cassoleta i es gira el dial ens que la balança torni a l'equilibri. Seguidament es repeteix el procés per les masses de 10, 15, 20 i 25 mg i a continuació es van separant els fils a I constant (girant les rodetes que desplacen el fil inferior) per a trobar el valor de $\mu_o$.
 
-Finalment, en la tercera part de la pràctica es rota el sistema 90 graus per així detectar la component normal del camp magnètic terrestre. A continuació, es desconnecta la intesitat del cable inferior i pel superior es fa circular la major intensitat possible. Finalment, es gira el dial fins a equilibrar la balança.
+Finalment, en la tercera part de la pràctica es rota el sistema 90 graus de manera que sigui el camp de la Terra qui faci la força sobre el fil de corrent (recordem que fins ara el teníem paral·lel al camp de la Terra perquè aquest no fes cap força sobre el fil). A continuació, es desconnecta la intesitat del cable inferior i pel superior es fa circular la major intensitat possible. Finalment, es gira el dial fins a equilibrar la balança. D’aquesta manera, mesurant la força que rep el fil es podrà trobar de quina magnitud és el camp causant d’aquesta força.
+
+Per a una intensitat determinada, la força que rep el fil ve donada per l’Eq. \eqref{eq: PR2_Fmagn_en_funcio_B}, i simmplement aïllant el camp es podria trobar el seu valor:
+
+\begin{equation}\label{eq: PR2_Btnorm}
+    B_{t_{norm}} = \frac{k\theta}{LI}
+\end{equation}
+
+On $k$ representa la constant de torsió trobada en la segona part de la pràctica, $\theta$ els graus necessaris per equilibrar la balança, $L$ la longitud del fil de corrent i $I$ la intensitat d'aquest.
 
 %EQUILIBRAT DE LA BALANÇA
 
@@ -404,20 +412,19 @@ A la pràctica, l'aleta d'amortiment mai es quedava en una posició sense movime
 
 En la primera part de la pràctica volem estudiar la relació que hi ha entre la intensitat que circula per un fil i la força que aquest rep a causa d’un altre fil pel que hi circula la mateixa intensitat. 
 
-S’ha mesurat la intensitat necessària per a fer circular pel fil perquè la força magnètica i la força gravitatòria de la massa de la balança estiguin en equilibri. S’ha fet la mesura per a 5 masses diferents, començant per 5 mg, i augmentant-la de 5 en 5 mg a cada nova mesura. Per a cada massa s’han
-realitzat 3 mesures de la intensitat i se n’ha fet el promig.
+S’ha mesurat la intensitat necessària per a fer circular pel fil perquè la força magnètica i la força gravitatòria de la massa de la balança estiguin en equilibri. Per a cada massa s’han realitzat 3 mesures de la intensitat i se n’ha fet el promig.
 
 Per comprovar la dependència s’ha representat la força en funció del quadrat de la intensitat i s’ha fet una regressió lineal. Els
 valors obtinguts es mostren gràficament a la Fig. \ref{fig: regr_mvsI2}:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]PR2_regr_I2vsF.png}
+    \includegraphics[width=0.5\textwidth]{PR2_regr_I2vsF.png}
     \caption{El quadrat de la intensitat en funció de la Força.}
     \label{fig: PR2_regr_I2vsF}
 \end{figure}
 
-La regressió té un coeficient de correlació de $R^2 = 0,98$. Així doncs, la força que un fil que transporta una intensitat I rep generat pel camp magnètic produit per un altre fil situat paral·lelament i en les mateixes condicions de corrent és proporcional al quadrat de la intensitat: $F \sim I^2$.
+La regressió té un coeficient de correlació de $R^2 = 0,9806$. Així doncs, la força que un fil que transporta una intensitat I rep generat pel camp magnètic produit per un altre fil situat paral·lelament i en les mateixes condicions de corrent és proporcional al quadrat de la intensitat: $F \sim I^2$.
 
 El pendent de la recta de regressió ens permet trobar un valor aproximat de $\mu_0$. A partir de l’Eq. \eqref{eq: PR2_Fm_entre_fils} es dedueix que el pendent m serà $m = \frac{2\pi d}{\mu_0 L}$. Aïllant $\mu_0$ s’obté $\mu_0 = (0,413 \pm 0,091) · 10^{-6}\, T · m/A$, que difereix bastant (tot i tenir el mateix ordre de magnitud) del valor tabulat que hem pres, de $4\pi \cdot 10^{−7}\, T \cdot m/A \,=\, 1,26 \cdot 10^{−6}\, T\cdotm/A$\footnote{Aquest valor tabulat s'ha extret del guió de la pràctica corresponent}. 
 
@@ -427,7 +434,7 @@ Podem veure que el valor teòric no es troba dins l’interval d’incerteses co
 
 En aquest segon apartat analitzarem com depèn la força magnètica amb la distància de separació entre fils per on circula corrent. 
 
-Ho farem aconseguint mantenir en equilibri la força magnètica amb la força de torsió. Així doncs, primer cal obtenir la constant de torsió del fil. Es fixa una intensitat de (5,00 ± 0,01)A i es representen les dades de la força en funció de l’angle. Posteriorment es realitza una recta de regressió que ens permet trobar el valor de la constant k.
+Ho farem aconseguint mantenir en equilibri la força magnètica amb la força de torsió. Així doncs, primer cal obtenir la constant de torsió del fil. Es fixa una intensitat de $(5,00 ± 0,01) \,A$ i es representen les dades de la força en funció de l’angle. Posteriorment es realitza una recta de regressió que ens permet trobar el valor de la constant $k$.
 
 \begin{figure}[H]
     \centering
@@ -442,7 +449,7 @@ La força que s’obté de la regressió és:
     F(\theta) = (3,73 \pm 0,10) \cdot 10^{-6}\, \theta
 \end{equation}
 
-Cal remarcar que la regressió lineal posseeix una ordenada a l’origen llunyana al zero ($(-1,75 \pm 0,50)·10^{-5}$). Tot i que aquesta ordenada d’origen no és menyspreable enfront els valors de la força,\textbf{ els resultats experimentals avalen que es pot no tenir en compte}. Aquesta ordenada d'origen pot haver aparegut a causa d’una imprecisa cal·libració de la balança, ja que es feia a ull. A més a més, el fet que la constant sigui positiva és un bon indicatiu, perquè la força ha d’augmentar linealment amb l’angle de torsió.
+Cal remarcar que la regressió lineal posseeix una ordenada a l’origen llunyana al zero ($(-1,75 \pm 0,50)·10^{-5}$). Tot i que aquesta ordenada d’origen no és menyspreable enfront els valors de la força, podem no tenir-la en compte ja que aquesta ordenada a l'origen pot haver aparegut a causa d’una imprecisa cal·libració de la balança. A més a més, el fet que la constant de torsió sigui positiva és un bon indicatiu, perquè la força ha d’augmentar linealment amb l’angle de torsió.
 
 A continuació, mantenint fixa la intensitat anterior, es va variant la distància entre ambdós fils de corrent per calcular el valor de la permeabilitat magnètica $\mu_0$. 
 
@@ -455,7 +462,7 @@ Es representen els resultats obtinguts en la Fig. \ref{fig: PR2_regr_thetavsr} o
     \label{fig: PR2_regr_thetavsr}
 \end{figure}
 
-La regressió té un coeficient de correlació de $R^2 = 0,98$.
+La regressió té un coeficient de correlació de $R^2 = 0,9762$.
 Aplicant la relació \eqref{F_ktheta} a l'equació que acabem de trobar i operant, s’obté que el valor de $\mu_o$ ve donat per l’equació $\mu_0 = \frac{2πm}{LI^2}$ on $m$ correspon al pendent de la regressió lineal. 
 
 Aplicant el valor experimental s’obté que: $\mu_0 = (0,525 \pm 0,058) \cdot 10^{-6}\, N/A^2$. Tot i que el resultat tampoc és compatible amb l’esperat, sí és molt similar al resultat experimental de l’apartat anterior (tenint en compte els seus intervals d'incertesa, sí són compatibles) . 
@@ -466,10 +473,7 @@ Per millorar l'experiment i que els resultats numèrics fóssin més propers al 
 
 \subsubsection{Camp magnètic terrestre}\label{sec: PR2_Bterra}
 
-En aquesta última part de la pràctica es pretén mesurar la component horitzontal del camp magnètic terrestre. Per fer-ho, s’ha girat el dispositiu 90º de manera que sigui el camp de la Terra qui faci la força sobre el fil de corrent (recordem que fins ara el teníem paral·lel al camp de
-la Terra perquè aquest no fes cap força sobre el fil). D’aquesta manera, mesurant la força que rep el fil es podrà trobar de quina magnitud és el camp causant d’aquesta força.
-
-Per a una intensitat determinada, la força que rep el fil ve donada per l’equaci´o (2.2), i simmplement a¨ıllant el camp es podria trobar el seu valor. 
+En aquesta última part de la pràctica es pretén mesurar la component horitzontal del camp magnètic terrestre. 
 
 Fixant la intensitat a $(8,00 \pm 0,01)\,A$, trobem el valor de l'angle que permet tornar a deixar a equilibrar la balança, és a dir, igualem la força que rep el fil degut al camp magnètic amb la de torsió. La torsió obtinguda experimentalment és de $(19,5 \pm 2,3)º$. 
 
@@ -1230,6 +1234,29 @@ on y és la magnitud dependent i ${x_i}$ les variables mesurables.
     \left( \frac{l}{d^2} \right)^2 u^2_d}
     \label{eq: ins_ct}
 \end{equation}
+
+\subsubsection{Càlcul d'incerteses pràctica 2}\label{sec: PR2_calcul_incerteses}
+
+L'incertesa de $\mu_0$ a partir de les dades de regressió \ref{fig: PR2_regr_I2vsF}:
+\begin{equation}
+    u_{\mu_0}^2 = \left(\frac{2\pi r}{m^2L}\right)^2u_m^2 + \left(\frac{2\pi r}{mL^2}\right)^2u_I^2 + \left(\frac{2\pi}{mL}\right)^2u_r^2
+\end{equation}
+
+L'incertesa de $F$ per obtenir les dades de regressió \ref{fig: PR2_regr_Fvstheta}:
+\begin{equation}
+    u_{F}^2 = k^2u_{theta}^2 + \theta^2u_{k}^2
+\end{equation}
+
+L'incertesa de $\mu_0$ a partir de les dades de regressió \ref{fig: PR2_regr_thetavsr}:
+\begin{equation}
+    u_{\mu_0}^2 = \left(\frac{2\pi k}{LI^2}\right)^2u_m^2 + \left(\frac{2\pi m}{LI^2}\right)^2u_k^2 + \left(\frac{2\pi km}{L^2I^2}\right)^2u_L^2 + \left(\frac{4\pi km}{LI^3}\right)^2u_L^2
+\end{equation}
+
+L'incertesa de $B_{t_{norm}}$ a partir de l'Eq. \eqref{eq: PR2_Btnorm}:
+\begin{equation}
+    u_{\mu_0}^2 = \left(\frac{2\pi r}{m^2L}\right)^2u_m^2 + \left(\frac{2\pi r}{mL^2}\right)^2u_I^2 + \left(\frac{2\pi}{mL}\right)^2u_r^2
+\end{equation}
+
 \subsubsection{Càlcul d'incerteses Pràctica 7}\label{sec: incerteses}
 
 
