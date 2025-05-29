@@ -797,20 +797,20 @@ On $I$ és la intensitat que circula, $N$ és el nombre de voltes que té l'espi
 \subsection{Mètode experimental}\label{sec: mètode}
 
 \underline{Muntatge experimental:}
-Per dur a terme els experiments, hem muntat el circuit que es mostra en la Fig (\ref{fig: muntatge}). On l'espira o bobina es troba connectada al generador que subministrarà corrent continu i connectada en sèrie a un amperímetre. És important que l'escala de l'amperímetre estigui en 10A i no deixar la intensitat circulant durant massa temps perquè treballarem amb intensitats altes. Alhora, la sonda Hall estarà connectada al teslàmetre i estarà agafada per un suport que permeti moure-la i orientar-la amb facilitat.
+Per dur a terme els experiments, hem muntat el circuit que es mostra en la Fig. (\ref{fig: muntatge}). On l'espira o bobina es troba connectada al generador que subministra corrent continu i a un amperímetre en sèrie. És important que l'escala de l'amperímetre estigui en 10A i no deixar la intensitat circulant durant massa temps perquè treballarem a intensitats altes. Alhora, la sonda Hall estarà connectada al teslàmetre i estarà agafada per un suport que permeti moure-la i orientar-la amb facilitat.
 
-Al encendre el teslàmetre, cal esperar a que aquest s'estabilitzi el màxim possible al voltant d'un valor; tot i això, el valor sempre oscil·larà al voltant de $\pm$ 2 mT. Seguidament, ajustar el zero. És possible que durant la realització de l'experiment el teslàmetre es descalibri; en aquest cas, cal tornar a ajustar el zero. Al realitzar mesures amb el teslàmetre, la sonda ha de estar completament alineada amb el camp que es vol mesurar, ja que només mesura la component del camp $B$ paral·lel a aquesta.
+En encendre el teslàmetre, cal esperar a que aquest s'estabilitzi el màxim possible al voltant d'un valor; tot i això, el valor sempre oscil·larà al voltant de $\pm$ 2 mT. Seguidament, ajustar el zero. És possible que durant la realització de l'experiment el teslàmetre es descalibri; en aquest cas, caldria tornar a ajustar el zero. Al realitzar mesures amb el teslàmetre, la sonda ha de estar completament alineada amb el camp que es vol mesurar, ja que només mesura la component del camp $\vec{B}$ paral·lela a aquesta.
 
 A l'hora de fer el muntatge per mesurar el camp de les espires, col·loquem l'espira a un suport mòbil com el de la sonda, de manera que la sonda i l'espira es troben a la mateixa alçada, i la connectem al generador. A l'hora de mesurar el camp d'inducció generat per l'espira, la punta de la sonda s'ha de trobar al centre de l'espira. La punta de la sonda es trobarà just al centre si la distància entre la sonda i qualsevol punt de l'espira és igual al radi de l'espira. Alhora, la sonda estarà alineada amb el camp quan es trobi totalment perpendicular al pla de l'espira. 
 
 
-El muntatge per mesurar el camp de les bobines consistirà en la regla graduada, la sonda en el suport mòbil i les bobines, elevades per uns blocs de fusta, i connectades al generador. 
+El muntatge per mesurar el camp de les bobines consisteix en una regla graduada, una sonda col·locada en el suport mòbil i unes bobines, elevades per uns blocs de fusta, i connectades al generador. 
 Segons la sonda vagi entrant en la bobina, mesurarem la distància recorreguda per saber en quin punt es troba la punta de la sonda relativa al origen. Escollim l'origen just quan la punta de la sonda es troba a l'extrem de la bobina (la part de plàstic); de manera que la posició de la punta de la sonda serà la distància relativa menys la distància des d'on comencen els cables fins on comença la bobina (plàstic).
-Per mesurar el camp d'inducció amb la major precisió possible, ens assegurem que la punta de la sonda es troba en l'eix de la bobina a ull (ja que no és possible fer-ho amb el regle com abans); mirant des d'un extrem de la bobina, evitant al màxim possible l'efecte parallax. Com que la sonda ha de entrar sencera dins de la bobina, aquesta ja estarà alineada.
+Per mesurar el camp d'inducció amb la major precisió possible, ens assegurem que la punta de la sonda es troba en l'eix de la bobina a ull (ja que no és possible fer-ho amb el regle com abans); mirant des d'un extrem de la bobina, evitant al màxim possible l'efecte paral·laxi (parallax en anglès)\footnote{L'efecte parallax és una desviació de la posició aparent d'un objecte respecte un altre, depenent del punt de vista escollit}. Com que la sonda ha de entrar sencera dins de la bobina, aquesta ja estarà alineada.
 
 
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{Muntatge Experimental.png}
     \caption{Muntatge Experimental}
@@ -829,22 +829,22 @@ La primera dependència que estudiarem serà amb el radi; aquesta, segons la lle
 \begin{equation}\label{eq: BvsR}
     B=\frac{m}{R} + n
 \end{equation}
-Per realitzar la regressió, prendrem mesures en tres espires diferents amb radis $R$: $3cm$, $4.25cm$ i $6.75cm$. I amb la resta de paràmetres fixats: $I=1A$ i $N=1$. 
+Per realitzar la regressió, prendrem mesures en tres espires diferents amb radis $R$: 3 cm, 4,25 cm i 6,75cm . I amb la resta de paràmetres fixats: $I=1A$ i $N=1$. 
 
 La segona dependència que estudiarem serà amb el nombre de voltes que té el conjunt d'espires; aquesta, pel principi de superposició, ha de ser proporcional. D'aquesta manera, la regressió lineal serà la següent:
 \begin{equation}\label{eq: BvsN}
     B=mN + n
 \end{equation}
-Per realitzar la regressió, prendrem mesures en tres conjunts d'espires amb diferent nombre d'espires $N$: 1, 2 i 3. I amb la resta de paràmetres fixats: $I=1A$ i $R = 6.75 cm$. 
+Per realitzar la regressió, prendrem mesures en tres conjunts d'espires amb diferent nombre d'espires $N$: 1, 2 i 3. I amb la resta de paràmetres fixats: $I=1A$ i $R = 6,75 cm$. 
 
 A partir d'aquestes regressions, a més de confirmar la relació entre el camp i el radi i el nombre d'espires, calcularem la permeabilitat magnètica del buit $\mu_0$ comparant les dues rectes de regressió fetes anteriorment i l'expressió teòrica del camp magnètic:
 
-Comparant les Eqs (\ref{eq: B_espira}), (\ref{eq: BvsR}).
+Comparant les Eqs. (\ref{eq: B_espira}), (\ref{eq: BvsR}).
 \begin{align} \label{eq: mu1}
     m = \frac{\mu_0IN}{2}      \nonumber \\
     \mu_0=\frac{2m}{IN}
 \end{align}
-I comparant les Eqs (\ref{eq: B_espira}), (\ref{eq: BvsN})
+I comparant les Eqs. (\ref{eq: B_espira}), (\ref{eq: BvsN})
 \begin{align} \label{eq: mu2}
     m = \frac{\mu_0I}{2R}        \nonumber \\
     \mu_0=\frac{2Rm}{I}
@@ -853,21 +853,21 @@ I comparant les Eqs (\ref{eq: B_espira}), (\ref{eq: BvsN})
 \subsection{Resultats experimentals}\label{sec: resultats}
 \subsubsection{Mesaura del camp de les espires}\label{subsec: espires}
 
-En la Fig (\ref{fig:BvsR}) es mostren les dades obtingudes experimentalment del camp d'inducció $B$ enfront de l'invers del radi de les espires $1/R$ (en blau) juntament amb el valor teòric que haurien de tenir (en verd) seguint l'Eq (\ref{eq: B_espira}); es pot observar com les dades experimentals i teòriques són compatibles.
-Juntament amb les dades experimentals, la figura presenta una recta de regressió lineal amb un coeficient de correlació \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: Ap_Regr}} $r^2 = 0.9994$ i amb l'equació: 
+En la Fig. (\ref{fig:BvsR}) es mostren les dades obtingudes experimentalment del camp d'inducció $B$ enfront de l'invers del radi de les espires $1/R$ (en blau) juntament amb el valor teòric que haurien de tenir (en verd) seguint l'Eq. (\ref{eq: B_espira}); es pot observar com les dades experimentals i teòriques són compatibles.
+Juntament amb les dades experimentals, la figura presenta una recta de regressió lineal amb un coeficient de correlació \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: Ap_Regr}} $r^2 = 0,9994$ i amb l'equació: 
 \begin{equation} \label{reg: BvsR}
-    B = (2.7\pm 1.1) \cdot10^{-6} m\cdot T*\frac{1}{R}+(-3 \pm 28)\cdot10^{-6} \, T
+    B = (2,7\pm 1,1) \cdot10^{-6} m\cdot T*\frac{1}{R}+(-3 \pm 28)\cdot10^{-6} \, T
 \end{equation}
 El coeficient de correlació és suficientment elevat com per confirmar una relació lineal entre el camp $B$ i l'invers del radi $1/R$.
-Alhora, l'ordenada a l'origen de l'Eq (\ref{reg: BvsR}) és $(-3 \pm 28)\cdot10^{-6}$ T essent compatible amb zero; això ha de ser així per què quan $1/R$ és zero, és a dir $R$ tendeix a infinit, és com si no hi hagués cap espira i, per tant, no ha d'haver-hi cap camp. Per tant, confirmem que el camp és inversament proporcional al radi.
+Alhora, l'ordenada a l'origen de l'Eq. (\ref{reg: BvsR}) és $(-3 \pm 28)\cdot10^{-6}$ T essent compatible amb zero; això ha de ser així per què quan $1/R$ és zero, és a dir $R$ tendeix a infinit, és com si no hi hagués cap espira i, per tant, no ha d'haver-hi cap camp. Per tant, confirmem que el camp és inversament proporcional al radi.
 
-Finalment, a partir de la pendent de la recta de regressió de l'Eq (\ref{reg: BvsR}) i l'Eq (\ref{eq: mu1}) obtenim la $\mu_0$:
+Finalment, a partir de la pendent de la recta de regressió de l'Eq. (\ref{reg: BvsR}) i l'Eq. (\ref{eq: mu1}) obtenim la $\mu_0$:
 
 \[
-\boxed{\mu_0=(1.35\pm0.55)\cdot10^{-6} \, N/A^2}
+\boxed{\mu_0=(1,35\pm0,55)\cdot10^{-6} \, N/A^2}
 \]
 
-El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de la regressió és compatible amb el valor tabulat de $\mu_0 =$  1.25664 $\cdot 10^{-6}$ N/A$^2$ (REFRERÈNCIA DEL VALOR).
+El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de la regressió és compatible amb el valor tabulat de $\mu_0 =$  1,25664 $\cdot 10^{-6}$ N/A$^2$ (REFRERÈNCIA DEL VALOR).
 
 \begin{figure}[h!]
     \centering
@@ -876,22 +876,22 @@ El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de
     \label{fig:BvsR}
 \end{figure}
 
-En la Fig (\ref{fig:BvsN}) es mostren les dades obtingudes experimentalment del camp d'inducció $B$ enfront del nombre d'espires $N$ del conjunt (en blau) juntament amb el valor teòric que haurien de tenir (en verd) seguint la fórmula (\ref{eq: B_espira}); es pot observar com les dades experimentals i teòriques són compatibles.
-Juntament amb les dades experimentals, la figura presenta una recta de regressió lineal amb un coeficient de correlació de $r^2=0.9987$ i amb una equació:
+En la Fig. (\ref{fig:BvsN}) es mostren les dades obtingudes experimentalment del camp d'inducció $B$ enfront del nombre d'espires $N$ del conjunt (en blau) juntament amb el valor teòric que haurien de tenir (en verd) seguint la fórmula (\ref{eq: B_espira}); es pot observar com les dades experimentals i teòriques són compatibles.
+Juntament amb les dades experimentals, la figura presenta una recta de regressió lineal amb un coeficient de correlació de $r^2=0,9987$ i amb una equació:
 \begin{equation} \label{reg: BvsN}
-    B = [(4.0 \pm 1.0) \cdot10^{-5} *N +(-3 \pm 22)\cdot10^{-6}] \, T
+    B = [(4,0 \pm 1,0) \cdot10^{-5} *N +(-3 \pm 22)\cdot10^{-6}] \, T
 \end{equation}
-El coeficient de correlació és suficientment elevat com per confirmar una relació lineal entre el camp $B$ i el nombre d'espires $N$. Alhora, l'ordenada a l'origen de la recta (\ref{reg: BvsN}) és $(-3 \pm 22)\cdot10^{-6} \, T$ essent compatible amb zero i el pendent d'aquesta és $(4.0 \pm 1.0)\cdot10^{-5}$ T compatible amb el valor del camp d'inducció $B$ per a una única espira $3.723\cdot10^{-5}$ T; això ha de ser així pel principi de superposició: fent que els camps de les espires individuals es sumin; però, com que són espires iguals i es troben prou a prop, el camp total és el nombre d'espires multiplicat pel camp que genera una única espira, i quan no hi ha espires el camp ha de ser zero. Per tant, confirmem que el camp és proporcional al nombre d'espires.
+El coeficient de correlació és suficientment elevat com per confirmar una relació lineal entre el camp $B$ i el nombre d'espires $N$. Alhora, l'ordenada a l'origen de la recta (\ref{reg: BvsN}) és $(-3 \pm 22)\cdot10^{-6} \, T$ essent compatible amb zero i el pendent d'aquesta és $(4,0 \pm 1,0)\cdot10^{-5}$ T compatible amb el valor del camp d'inducció $B$ per a una única espira $3,723\cdot10^{-5}$ T; això ha de ser així pel principi de superposició: fent que els camps de les espires individuals es sumin; però, com que són espires iguals i es troben prou a prop, podem assumir que el camp total és el nombre d'espires multiplicat pel camp que genera una única espira, i quan no hi ha espires el camp ha de ser zero. Per tant, confirmem que el camp és proporcional al nombre d'espires.
 
-Finalment, a partir de la pendent de la recta de regressió de l'Eq (\ref{reg: BvsN}) i l'Eq (\ref{eq: mu2}) obtenim la $\mu_0$:
+Finalment, a partir de la pendent de la recta de regressió de l'Eq. (\ref{reg: BvsN}) i l'Eq. (\ref{eq: mu2}) obtenim la $\mu_0$:
 
 \[
-\boxed{\mu_0=(1.35\pm0.34)\cdot10^{-6} \, N/A^2}
+\boxed{\mu_0=(1,35\pm0,34)\cdot10^{-6} \, N/A^2}
 \]
 
-El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de la regressió és compatible amb el valor tabulat de $\mu_0 = 1.25664\cdot 10^{-6} N/A^2$.
+El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de la regressió és compatible amb el valor tabulat de $\mu_0 = 1,25664\cdot 10^{-6} N/A^2$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{BvsN.PNG}
     \caption{Regressió lineal del camp generat $B$ per a un conjunt de $N$ espires en funció del nombre d'espires $N$, comparat amb els valors teòrics.}
@@ -903,36 +903,36 @@ Mitjançant tots dos mètodes obtenim un valor de la permeabilitat $\mu_0$ que �
 
 \subsubsection{Mesura del camp de les bobines}\label{subsec: bobines}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{Bobina 1.PNG}
     \caption{Camp d'inducció $B$ en l'eix d'una bobina (33mm de diàmetre, 16 cm de longitud i 300 voltes) en funció de la posició $x$. Punts experimentals i valor teòric.}
     \label{fig: BvsX_33mm}
 \end{figure}
 
-En la Fig (\ref{fig: BvsX_33mm}) podem veure com el camp d'inducció mesurat proper al centre de la bobina (2.285 $\pm$ 0.014)mT és compatible amb el camp teòric 2.298 mT. Però, els valors mesurats en els extrems de la bobina són significativament més baixos que els valors teòrics. Això pot ser degut a què no vàrem mesurar exactament a l'eix de la bobina: on en el centre té, aproximadament, el mateix valor, però cap als extrems el camp decau més ràpidament. (REFERENCIAR LA INFO O FER NOSALTRES LA SIMULACIÓ)
+En la Fig. (\ref{fig: BvsX_33mm}) podem veure com el camp d'inducció mesurat proper al centre de la bobina (2,285 $\pm$ 0,014) mT és compatible amb el camp teòric 2,298 mT. Però, els valors mesurats en els extrems de la bobina són significativament més baixos que els valors teòrics. Això pot ser degut a què no vàrem mesurar exactament a l'eix de la bobina: on en el centre té, aproximadament, el mateix valor, però cap als extrems el camp decau més ràpidament. (REFERENCIAR LA INFO O FER NOSALTRES LA SIMULACIÓ)
 
 Aquest error es deu a que el nostre mètode per saber si la sonda es troba a l'eix (descrit a la secció \ref{sec: mètode}) és poc exacte. Un mètode més exacte seria mesurar amb el regle la distància entre la part de la sonda que està fora de la bobina i l'exterior de la bobina i, si aquesta es troba a un radi de distància, la part de la sonda mesurada es trobarà en l'eix. I, com que la sonda ha d'estar alineada amb el camp d'inducció, tota la sonda es trobarà en l'eix.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{Bobines 2,3,4.PNG}
-    \caption{Camp d'inducció $B$ en l'eix de tres bobines diferents (26mm de diàmetre i 15.8 cm de longitud) en funció de la posició $x$. Punts experimentals i valor teòric.}
+    \caption{Camp d'inducció $B$ en l'eix de tres bobines diferents (26mm de diàmetre i 15,8 cm de longitud) en funció de la posició $x$. Punts experimentals i valor teòric.}
     \label{fig: BvsX_26mm}
 \end{figure}
 
-En la Fig (\ref{fig: BvsX_26mm}) podem veure com el camp d'inducció mesurat al voltant dels 6 a 12 cm de les bobines és de (0.590 $\pm$ 0.014)mT, (1.180 $\pm$ 0.014)mT i (2.335 $\pm$ 0.014)mT, és compatible amb el camp teòric 0.591 mT, 1.184 mT i 2.338 mT, respectivament. Però a l'inici, el valor mesurat és significativament menor i al final, significativament més gran. Aquesta desviació respecte del valor teòric pot ser deguda a què no vàrem començar a mesurar en l'origen.
+En la Fig. (\ref{fig: BvsX_26mm}) podem veure com el camp d'inducció mesurat al voltant dels 6 a 12 cm de les bobines és de (0,590 $\pm$ 0,014) mT, (1,180 $\pm$ 0,014) mT i (2,335 $\pm$ 0,014) mT, és compatible amb el camp teòric 0,591 mT, 1,184 mT i 2,338 mT, respectivament. Però a l'inici, el valor mesurat és significativament menor i al final, significativament més gran. Aquesta desviació respecte del valor teòric pot ser deguda a que la sonda Hall es trobava desplaçada de l'origen al començar a mesurar.
 
-Per tal de comprovar aquesta hipòtesi, hem realitzat el mètode dels mínims quadrats \footnote{El mètode dels mínims quadrats es troba explicat a l'annex \ref{sec: mínims_quadrats}} per trobar si hi ha un origen on tots els punts experimentals són compatibles. Al aplicar-ho, trobem que per a les tres bobines el nostre origen es trobava 8 mm desplaçat cap a fora. En la Fig (\ref{fig: Bvsx_26mm}), on es mostren les dades experimentals i teòriques tenint en compte aquest desplaçament de 8 mm, es veu que totes les dades experimentals de les tres bobines són compatibles amb els valors teòrics, excepte el punt a 7.5 cm de la bobina de 300 voltes, que és considerablement menor.
+Per tal de comprovar aquesta hipòtesi, hem usat el mètode dels mínims quadrats \footnote{El mètode dels mínims quadrats es troba explicat a l'annex \ref{sec: mínims_quadrats}} per trobar si hi ha un origen on tots els punts experimentals són compatibles. Al aplicar-ho, trobem que per a les tres bobines el nostre origen es trobava 8 mm desplaçat cap a fora. En la Fig. (\ref{fig: Bvsx_26mm}), on es mostren les dades experimentals i teòriques tenint en compte aquest desplaçament de 8 mm, es veu que totes les dades experimentals de les tres bobines són compatibles amb els valors teòrics, excepte el punt a 7,5 cm de la bobina de 300 voltes, que és considerablement menor.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{Bobines 2,3,4 shift 8mm.PNG}
-    \caption{Camp d'inducció $B$ en l'eix de tres bobines diferents (26mm de diàmetre i 15.8 cm de longitud) en funció de la posició $x$. Punts experimentals i valor teòric amb l'origen desplaçat.}
+    \caption{Camp d'inducció $B$ en l'eix de tres bobines diferents (26mm de diàmetre i 15,8 cm de longitud) en funció de la posició $x$. Punts experimentals i valor teòric amb l'origen desplaçat.}
     \label{fig: Bvsx_26mm}
 \end{figure}
 
-Donat que amb el desplaçament de 8 mm del origen tots els punts, excepte un, són compatibles, confirmem que aquest és el motiu de la desviació entre l'experiment i la teoria. Aquest error es deu a que el nostre mètode per trobar l'origen de la bobina (descrit a la secció \ref{sec: mètode}) és poc exacte. Un mètode més exacte és usar bobines d'un plàstic transparent, de manera que l'origen seria el punt on la punta de la sonda es troba just entrant en els cables; les demés posicions se seguirien trobant amb el mètode de la distància relativa, ja que els cables seguirien essent opacs. Un altre mètode més exacte és posar un petit sensor de proximitat a la punta de la sonda i tapar un dels extrems de la bobina; de manera que el sensor mesura la distància de la punta a la tapa i la posició de la punta és aquesta distància menys la distància de la tapa a l'inici dels cables.
+Donat que amb el desplaçament de 8 mm del origen tots els punts, excepte un, són compatibles, confirmem que aquest és el motiu de la desviació entre l'experiment i la teoria. Aquest error es deu a que el nostre mètode per trobar l'origen de la bobina (descrit a la secció \ref{sec: mètode}) és poc exacte. Un mètode més exacte és que el suport de plàstic de les bobines sigui transparent, de manera que l'origen seria el punt on la punta de la sonda es troba just entrant en els cables; les demés posicions se seguirien trobant amb el mètode de la distància relativa, ja que els cables seguirien essent opacs. Un altre mètode més exacte és posar un petit sensor de proximitat a la punta de la sonda i tapar un dels extrems de la bobina; de manera que el sensor mesura la distància de la punta a la tapa i la posició de la punta és aquesta distància menys la distància de la tapa a l'inici dels cables.
 
 D'altra banda, comparant el valor del camp entre elles (bobines de dimensions iguals i diferent nombre de voltes), fent el quocient entre els camps per a cada bobina en cada punt, trobem que el camp per 300 voltes és aproximadament el doble que el de 150 i aquest, alhora, és aproximadament el doble que el de 75 \footnote{Els valors del camp i els quocients es troben a l'annex \ref{PR7_taules_dades_exp} a la Taula \ref{tab: taula Bx}}. Pel que veiem, el camp generat per una bobina és proporcional al nombre de voltes. Confirmant el principi de superposició.
 
@@ -940,9 +940,9 @@ D'altra banda, comparant el valor del camp entre elles (bobines de dimensions ig
 \subsection{Conclusions}\label{sec: conclusions}
 En aquesta pràctica hem estudiat el camp d'inducció magnètica generat per espires i bobines de diferents radis i nombre de voltes. 
 
-En primer lloc, hem estudiat les dependències amb el radi i el nombre de voltes del camp d'inducció generat per una espira en el seu centre. Obtenint que el camp és proporcional al nombre de voltes i inversament proporcional al radi de l'espira. Concordant amb el resultat teòric obtingut a partir de la llei de Biot-Savart. A més, comparant les dependències obtingudes amb la fórmula experimental hem obtingut dos valors de la permeabilitat magnètica del buit $\mu_0$ = (1.35 $\pm$ 0.55)$\cdot10^{-6}$ N/A$^2$ i $\mu_0$ = (1.35 $\pm$ 0.34)$\cdot10^{-6}$ N/A$^2$, tots dos compatibles amb el valor tabulat de $\mu_0 =$  1.25664 $\cdot 10^{-6}$ N/A$^2$.
+En primer lloc, hem estudiat les dependències amb el radi i el nombre de voltes del camp d'inducció generat per una espira en el seu centre. Obtenint que el camp és proporcional al nombre de voltes i inversament proporcional al radi de l'espira. Concordant amb el resultat teòric obtingut a partir de la llei de Biot-Savart. A més, comparant les dependències obtingudes amb la fórmula experimental hem obtingut dos valors de la permeabilitat magnètica del buit $\mu_0$ = (1,35 $\pm$ 0,55)$\cdot10^{-6}$ N/A$^2$ i $\mu_0$ = (1,35 $\pm$ 0,34)$\cdot10^{-6}$ N/A$^2$, tots dos compatibles amb el valor tabulat de $\mu_0 =$  1,25664 $\cdot 10^{-6}$ N/A$^2$.
 
-En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del seu eix. Obtenint perfils del camp d'inducció que en el centre són compatibles amb el resultat teòric, però que en els extrems no ho són. Deduïm que aquests errors es deuen a una metodologia inexacta. A més, comparant els perfils obtinguts per tres bobines de la mateixa geometria però amb diferent nombre de voltes, observem que els camps d'inducció són proporcionals al nombre de voltes; resultat compatible amb el principi de superposició.
+En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del seu eix. Obtenint perfils del camp d'inducció que en el centre són compatibles amb el resultat teòric, però que en els extrems no ho són. Hem pogut deduir que aquests errors es deuen a una metodologia inexacta. A més, comparant els perfils obtinguts per tres bobines de la mateixa geometria però amb diferent nombre de voltes, observem que els camps d'inducció són proporcionals al nombre de voltes; resultat compatible amb el principi de superposició.
 
 
 \newpage
