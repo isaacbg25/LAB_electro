@@ -166,7 +166,7 @@ i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon
 En relació a l'últim objectiu, la tercera configuració estudiada és un fil infinit enfront una placa infinita en l'eix $Z$ amb una escletxa al llarg de la placa i al davant del fil. A més, existeix una diferència de potencial entre el fil i les dues parts de la placa, què sí que estan al mateix potencial. Aquesta, és una disposició similar a la d'un experiment de difracció si tractem el fil com un "emissor" de línies equipotencials i les plaques amb l'escletxa com l'objecte que les difracta. Per tant, la motivació per estudiar aquesta configuració prové de voler veure si amb les línies de potencial passa algun fenomen similar a la difracció d'ones\footnote{Més informació sobre la difració d'ones a \url{https://en.wikipedia.org/wiki/Diffraction}}.
 
 \subsection{Mètode experimental}\label{sec: metode}
-Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectangles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora de plata. Així doncs, hem traduït els nostres sistemes de tres dimensions (però amb simetria translacional en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció de les geometries cap a la direcció $Z$. Per exemple, el condensador s'ha convertit en dues línies paral·leles o els dos fils infinits en dos punts. A l'Annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca (s'ha d'esperar uns 20 min), hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest punt és molt important comprovar que el conductor està ben dibuixat mirant si tots els punts tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
+Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectangles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora de plata. Així doncs, hem traduït els nostres sistemes de tres dimensions (però amb simetria translacional en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció de les geometries cap a la direcció $Z$. Per exemple, el condensador s'ha convertit en dues línies paral·leles i els dos fils infinits en dos punts. A l'Annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca (s'ha d'esperar uns 20 min), hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest moment és molt important comprovar que el conductor està ben dibuixat mirant si tots els punts de l'elèctrode tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
 
 En el cas del condensador és important que tingui les dimensions adequades. Ha de ser prou petit per obtenir línies tancades i que $\frac{d}{l}$ sigui prou petit perquè aquestes siguin paral·leles a la zona central del condensador. Unes bones mides per la dimensió del nostre paper són: $d=3cm$ i $l=8cm$.
 Pel que fa al sistema de fils infinits, que sobre el paper representem com dos punts, és important que aquests siguin prou grans perquè les forquilles amb què els connectem a la font de corrent hi càpiguen i no generin interferències.
@@ -178,7 +178,7 @@ Per representar els punts experimentals els hem digitalitzat amb el programa web
 Finalment, hem fet una simulació en Python per calcular computacionalment les línies equipotencials i de camp de les tres configuracions de conductors. Com veurem a la següent secció, la simulació no és del tot fidel amb la realitat. Per millorar-ne els resultats es pot mesurar el potencial a les vores del paper conductor i aplicar aquests valors com a condició de contorn a la simulació.\footnote{\label{nota: codis}Tots els codis es troben a l'Annex \ref{sec: python}}
 
 \subsection{Resultats i discussió}\label{sec: resultats}
-En aquesta secció presentem i comparem els resultats obtinguts tant experimentalment com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
+En aquesta secció presentem i comparem els resultats obtinguts tant experimentalment com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode numèric de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
 
 \subsubsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
 La primera distribució de càrrega que estudiarem és un condensador de plaques plano-paral·leles centrat a l'orígen. Les plaques són paral·leles al pla $YZ$, finites en la direcció $Y$ i molt llargues o infinies en la direcció $Z$.
@@ -253,8 +253,8 @@ La tercera configuració estudiada és un fil infinit enfront una placa infinita
         \label{fig: lliure_pot_0}
     \end{subfigure}
 \end{figure}
-Si ens fixem en les línies equipotencials experimentals de la Fig. (\ref{fig: lliure_pot_e}) veiem que es comporten de la següent manera: el radi de corvatura de les línies equipotencials va augmentant a mesura que ens allunyem de l'"emissor" (fil) i ens apropem a l'escletxa, tal com ho faria el front d'una ona. A l'altra banda de l'escletxa, el radi de corvatura disminueix respecte l'observat abans de l'escletxa de tal forma que és com si l'escletxa fos un segon emissor. Per tant, amb aquesta informació sembla que hi hagi hagut un fenòment de difracció degut a l'escletxa.
-No obstant això, si ens fixem en les línies equipotencials simulades veiem clarament que el motiu de la forma de les línies equipotencials no té res a veure amb l'escletxa. El veritable fet que explica les línies equipotencials mostrades és la superposició del potencial elèctric generat pel fil i la placa (que ja en coneixem la forma gràcies a les configuracions anteriors). De fet, com podem veure a la Fig. (\ref{fig: lliure_pot_0})l'existència de l'escletxa quasi bé no afecta a la forma de les línies equipotencials, ja que és molt petita en comparació amb les dimencions del fil i de la placa. Per tant, la difracció no serveix per explicar les observacions experimentals, tot i que, experimentalment, en un principi ho pugui semblar. Aquest resultat, era d'esperar ja que el potencial d'un sistema electroestàtic, per començar, no depen del temps i, per tant, no pot tenir propietats ondulatòries.
+Si ens fixem en les línies equipotencials experimentals de la Fig. (\ref{fig: lliure_pot_e}) veiem que es comporten de la següent manera: el radi de corvatura de les línies equipotencials va augmentant a mesura que ens allunyem de l'"emissor" (fil) i ens apropem a l'escletxa, tal com ho faria el front d'una ona. A l'altra banda de l'escletxa, el radi de corvatura disminueix respecte l'observat abans de l'escletxa de tal forma que és com si l'escletxa fos un segon emissor. Per tant, amb aquesta informació sembla que hi hagi hagut un fenòmen de difracció degut a l'escletxa.
+No obstant això, si ens fixem en les línies equipotencials simulades veiem clarament que el motiu de la forma de les línies equipotencials no té res a veure amb l'escletxa. El veritable fet que explica les línies equipotencials mostrades és la superposició del potencial elèctric generat pel fil i la placa (que ja en coneixem la forma gràcies a les configuracions anteriors). De fet, com podem veure a la Fig. (\ref{fig: lliure_pot_0}) l'existència de l'escletxa quasi bé no afecta a la forma de les línies equipotencials, ja que és molt petita en comparació amb les dimencions del fil i de la placa. Per tant, la difracció no serveix per explicar les observacions experimentals, tot i que, experimentalment, en un principi ho pugui semblar. Aquest resultat, era d'esperar ja que el potencial d'un sistema electroestàtic, per començar, no depen del temps i, per tant, no pot tenir propietats ondulatòries.
 \begin{figure}
     \centering
     \includegraphics[width=0.45\textwidth]{lliure_camp.pdf}
@@ -262,7 +262,7 @@ No obstant això, si ens fixem en les línies equipotencials simulades veiem cla
     \label{fig: lliure_camp}
 \end{figure}
 
-Per altra banda, a la Fig. (\ref{fig: lliure_camp}) podem veure el camp elèctric generat per aquesta configuració. Com en les altres configuracions veiem que el camp experimental seguexi la tendència de la simulació però es tanca més al voltant de les vores de les plaques i dels fils infinits. Aquestes diferències s'expliquen pels mateixos raonaments que en els casos anteriors.
+Per altra banda, a la Fig. (\ref{fig: lliure_camp}) podem veure el camp elèctric generat per aquesta configuració. Com en les altres configuracions veiem que el camp experimental segueixi la tendència de la simulació però es tanca més al voltant de les vores de les plaques i dels fils infinits. Aquestes diferències s'expliquen pels mateixos raonaments que en els casos anteriors.
 
 
 \subsection{Conclusions}\label{sec: conc}
@@ -275,7 +275,7 @@ En segon lloc hem estudiat dos fils infinits paral·lels a potencials oposats. E
 
 Per últim, hem estudiat una placa amb una escletxa davant d'un fil infinit a un potencial diferent amb l'objectiu de veure si les línies equipotencials pateixen algun fenòmen similar a la difracció d'una ona a causa de l'escletxa. Tanmateix, amb l'experiment hem constatat que no obstant les línies experimentals semblaven patir quelcom semblant a la difracció, amb la simulació hem pogut comprovar que la forma de les línies equipotencials quasi no depenia de si hi havia escletxa o no, i per tant, hem descartat aquesta idea.
 
-
+\newpage
 \section{\huge \textbf{Pràctica 2}}
 
 {}  % Títol petit en negreta
@@ -514,7 +514,7 @@ En aquesta pràctica estudiarem com es desvia el feix de raigs catòdics sota el
 
 
 %DESV E
-Primerament, estudiarem la desviació del feix degut a un camp elèctric perpendicular a la velocitat; aplicant una diferència de potencial $V_p$ entre dues plaques plano-paral·leles. Degut a què la distància entre plaques $d$ (= 54 mm) és de l'ordre del tamany d'aquestes, no podem considerar el sistema com un condensador de plaques plano-paral·leles ideal amb un camp uniforme $E=V/d$. En comptes, seguirem considerant-lo uniforme però modificarem l'expressió mitjançant una constant $k$ que tindrà en compte els efectes de vorada i que trobarem experimentalment.
+Primerament, estudiarem la desviació del feix deguda a un camp elèctric perpendicular a la velocitat; aplicant una diferència de potencial $V_p$ entre dues plaques plano-paral·leles. Degut a què la distància entre plaques $d$ (= 54 mm) és de l'ordre del tamany d'aquestes, no podem considerar el sistema com un condensador de plaques plano-paral·leles ideal amb un camp uniforme $E=V/d$. En comptes, seguirem considerant-lo uniforme però modificarem l'expressió mitjançant una constant $k$ que tindrà en compte els efectes de vorada i que trobarem experimentalment.
 \begin{equation}
     E = \frac{kV_p}{d}
     \label{eq: Camp E}
@@ -546,13 +546,12 @@ Per últim, queda determinar experimentalment la constant $k$ a partir del pende
 
 %DESV M
 \vspace{1cm}
-
-Per calcular el radi de corvatura i posteriorment la relació $\frac{q}{m}$ de les partícules dels raigs catòdics necessitem caracteritzar la trajectòria de les partícules carregades sota un camp magnètic uniforme. En l'experiment, el camp d'inducció magnètica està generat per unes bobines de Hemholtz que aproximadament produeixen el camp uniforme 
+Per altra banda, estudiarem la desviació del feix deguda a un camp magnètic perpendicular per calcular el radi de corvatura i posteriorment la relació $\frac{q}{m}$ de les partícules dels raigs catòdics. Per això necessitem caracteritzar la trajectòria de les partícules carregades sota un camp magnètic uniforme. En l'experiment, el camp d'inducció magnètica està generat per unes bobines de Hemholtz que aproximadament produeixen el camp uniforme 
 \begin{equation}
     \vec{B}=\frac{32\pi nI}{5\sqrt{5}r}\cross10^{-7} \quad \hat{z}\quad Wb/m^2.
     \label{eq: B}
 \end{equation}
-Per altra banda, la llei de Lorentz dicta que una partícula carregada negativament sota un camp d'inducció magnètica, $\vec{B}$, pateix una força
+A més a més, la llei de Lorentz dicta que una partícula carregada negativament sota un camp d'inducció magnètica, $\vec{B}$, pateix una força
 \begin{equation}
     \vec{F}=q\vec{v}\cross\vec{B}.
     \label{eq: Lorentz} 
@@ -681,7 +680,7 @@ Al fer la regressió lineal del radi en funció de l'inversa de l'intensitat hem
 \begin{equation}
     y=x(0.03976\pm0.0006)+(0.0002\pm0.0016)
 \end{equation}  
-amb un coeficient de determinació de $r^2\approx0,99$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El radi de corvatura és inversament proporcional a la intensitat a causa de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
+amb un coeficient de determinació de $r^2\approx0,9989$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El radi de corvatura és inversament proporcional a la intensitat a causa de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
 \begin{figure}[h]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -702,14 +701,14 @@ Per calcular el radi de la trajectòria de les partícules dels raigs catòdics 
 \begin{equation}
     y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(2.28\times 10^{-3}\pm9.8\times10^{-4})
 \end{equation}  
-amb un coeficient de determinació $r^2=0.98$. Per tant, la relació és certament lineal (quadràtica respecte $R$) i corrobora l'Eq. (\ref{eq: q/m}).
+amb un coeficient de determinació $r^2=0,9965$. Per tant, la relació és certament lineal (quadràtica respecte $R$) i corrobora l'Eq. (\ref{eq: q/m}). Tanmateix, l'ordenada a l'origen no és compatible amb la teoria ja que no inclou l'origen. Aquesta discrepància amb la teoria possiblement es deguda a que hi ha altres factors instrumentals que no hem tingut en compte a la incertesa com la deformació òptica de les fotografies del feix.
 
 
 Finalment, amb l'Eq. (\ref{eq: q/m}) hem obtingut la relació $\frac{q}{m}$ de les partícules dels raigs catòdics
 \[
 \boxed{\frac{q}{m}=(-4.16\pm0.88)\cross10^{11}\quad \mathrm{\frac{C}{Kg}.}}
 \]
-Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$. Així, hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $r^2\approx0.98$. El pendent d'aquesta recta ens ha donat el valor de $\frac{q}{m}$ i després hem afegit l'insertesa instrumental al resultat. La linealitat dels punts indica que els nostres resultats concorden amb la teoria ja que com veiem a l'Eq. (\ref{eq: q/m}) la relació ha de ser lineal. 
+Per fer-ho hem calculat la regressió lineal ajustada entre $2V_a$ i $B^2R^2$. Així, hem obtingut la recta $y=(4.16\pm0.38)x - (1412.64\pm791.71)$ amb un coeficient de determinació de $r^2\approx0,9837$. El pendent d'aquesta recta ens ha donat el valor de $\frac{q}{m}$ i després hem afegit l'insertesa instrumental al resultat. La $r^2$ tant propera a $1$ indica que els nostres resultats concorden amb la teoria ja que com veiem a l'Eq. (\ref{eq: q/m}) la relació ha de ser lineal. 
 Per altra banda, el valor tabulat\footnote{Valor obingut de la pàgina del NIST: "The NIST Reference on Constants, Units and Uncertainty".} de la relació $\frac{q}{m}$ dels electrons és de $\frac{q}{m}=(-1.76\times10^{11}\pm5.5\times10^{2}) \frac{C}{Kg}$ que    com podem veure no és compatible amb el nostre resultat però sí que coincideix en ordre de magnitud. Això pot ser per diversoso motius com que, com es veu a la Secció \ref{sec: traj_no_rect} el camp magnètic generat per les bobines de Hemholtz no és del tot uniforme o que el feix dels raigs catòdics té un gruix considerable que fa molt difícil l'obtenció dels punts experimentals.
 
 
