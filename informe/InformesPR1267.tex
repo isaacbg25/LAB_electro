@@ -542,7 +542,7 @@ Tot i això, no es pot veure el moviment d'una partícula individual en funció 
     \label{eq: parabola}
 \end{equation}
 
-Per últim, queda determinar experimentalment la constant $k$ a partir del pendent $m$ de la recta de regressió lineal de $y$ en funció de $x^2$ i de l'equació (\ref{eq: parabola}):
+Per últim, queda determinar experimentalment la constant $k$ a partir del pendent $m$ de la recta de regressió lineal de $y$ en funció de $x^2$ i de l'Eq. (\ref{eq: parabola}):
  \begin{equation}
       k =\frac{4mdV_a}{V_p}
       \label{eq: k}
@@ -637,7 +637,7 @@ En aquest punt, mitjançant un dispositiu mòbil s'han fotografiat els diferents
 En subministrar una diferència de potencial a les plaques s'observa com el raig es desvia cap al càtode\footnote{Les imatges de la desviació electroestàtica (Fig.(\ref{fig: Desv E})) es troben a l'annex (\ref{sec: imatges}) }. Per tant, les partícules de les què està compost els raigs catòdics tenen una càrrega negativa.
 
  Per comprovar que les trajectòries es tracten de paràboles hem fet una regressió de les $y$ en funció de les $x^2$, com es mostra a la figura (\ref{fig: Regressió Desv E}). Aquestes tenen els següents coeficients de correlació \footnote{Les regressions lineals en detall es troben a l'annex \ref{sec: Ap_Regr}}:
- r$^2$ = 0.9777, 0.9973, 0.9940, 0.9832. Confirmant que les partícules segueixen una trajectòria parabòlica.
+ r$^2$ = 0.9777, 0.9973, 0.9940, 0.9832. Confirmant que les partícules segueixen una trajectòria parabòlica i, per tant, el camp elèctric generat pel condensador es pot considerar uniforme; tal com haviem proposat. 
 \begin{figure}[H]
     \centering
     \begin{minipage}{0.75\textwidth}
@@ -650,6 +650,7 @@ En subministrar una diferència de potencial a les plaques s'observa com el raig
 
 A la taula \ref{tab:kvsVp} podem observar els diferents valors que pren $k$ \footnote{El càlcul de les incerteses es mostra a l'anex \ref{sec: incerteses}} en funció del potencial entre plaques $V_p$, obtinguts a partir del pendent d'aquestes regressions lineals juntament amb l'Eq. (\ref{eq: k}). Observem que la $k$ no és constant i que augmenta amb la diferència de potencial. Fent una regressió lineal entre $V_p$ i $k$ obtenim que hi ha una relació lineal entre els dos amb un coeficient de correlació r$^2$ = 0.9737 i una equació de la recta: $k = 0.453 \cdot 10^{-3}\, V^{-1}  \cdot V_p + 0.45$.
 
+Aquests resultats ens indiquen que, per als voltatges de 2 kV, 3 kV i 4 kV, el valor del camp elèctric (en la regió dins del condensador) és major que el camp elèctric que generaria un condensador de plaques plano-paral·leles ideal. Aquest resultat és contradictori perquè el potencial entre plàques és $V_p \equiv \Delta V = \int\vec{E}\cdot\vec{dl}$, on hem suposat que el camp $\vec{E}$ té mòdul constant. Escollint el camí amb direcció tangencial al camp elèctric: $V_p = E \cdot l\ge E\cdot d = kV_p > V_p$. No només això, les dades també indiquen que el camp elèctric depèn quadràticament del potencial de les plàques. Sabem que aquest resultat és incompatible amb la teoria; ja que, donades unes condicions de contorn del potencial $V(\vec{r)}$ i la solució de l'equació de Laplace $\phi(\vec{r})$ i $\vec{E}(\vec{r})$ , la solució per a unes condicions proporcionals $V'(\vec{r)}=\lambda V(\vec{r)}$ és també proporcional $\phi'(\vec{r}) = \lambda \phi(\vec{r})$ i $\vec{E}'(\vec{r}) = \lambda \vec{E}(\vec{r})$.
 
 \begin{figure}[H]
     \centering
@@ -668,6 +669,7 @@ A la taula \ref{tab:kvsVp} podem observar els diferents valors que pren $k$ \foo
     \end{minipage}
 \end{figure}
 
+Aleshores, podem deduir que la constant $k$ no és una constant que modifiqui directament el camp elèctric $E$, sinó que la constant $k$ ens permet representar el sistema com un condensador de plaques plano-paral·leles ideal amb una diferència de potencial $k V_p$. 
 
 \subsubsection{Desviació magnetoestàtica}\label{sec: desv_magn}
 Després de comprovar a la Secció \ref{sec: desv_electr} que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interacció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Helmholtz. 
