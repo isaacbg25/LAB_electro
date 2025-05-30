@@ -104,14 +104,14 @@
 %\title{\Huge\bfseries Pràctica 1 \\ Feixos de raigs catòdics \\ [2ex] \Large}
 
 \begin{abstract}
-    En aquesta pràctica estudiem el potencial i el camp elèctric en un medi dielèctric (lineal, isòtrop i homogeni) de tres distribucions de càrregua amb simetria translacional en l'eix vertical. Un condensador plano-paral·lel, dos fils infinits i una geometria escollida entre els membres del grup que replica la disposició d'un experiment de difracció. Per estudiar el camp elèctric aprofitem la simetria del les distribucions de càrrega que ens permet simplificar el nostre sistema de tres dimensions a dues dimensions. També aprofitem la dualitat entre el camp de desplaçament elèctric i el camp de densitat de corrent elèctric per determinar el potencial del camp elèctric mesurant el potencial del camp de corrents. Els resultats obtinguts són corroborats per simulacions computacionals i comparats amb els resultats del cas ideal dels què en difereix substancialment. També s'obté experimentalment la capacitat del condensador i es conclou que no difereix significativament del càlcul ideal.
+    En aquesta pràctica estudiem el potencial i el camp elèctric en un medi dielèctric (lineal, isòtrop i homogeni) de tres distribucions de càrrega amb simetria translacional en l'eix vertical. Un condensador de plàques plano-paral·leles, dos fils infinits i una geometria escollida entre els membres del grup que replica la disposició d'un experiment de difracció. Per estudiar el camp elèctric aprofitem la simetria de les distribucions de càrrega que ens permet simplificar el nostre sistema de tres dimensions a dues dimensions. També aprofitem la dualitat entre el camp de desplaçament elèctric i el camp de densitat de corrent elèctric per determinar el potencial del camp elèctric mesurant el potencial del camp de corrents. Els resultats obtinguts són corroborats per simulacions computacionals i comparats amb els resultats del cas ideal dels què en difereix substancialment. També s'obté experimentalment la capacitat del condensador i es conclou que no difereix significativament del càlcul ideal.
 \end{abstract}
 
 
 \subsection{Introducció teòrica}\label{sec: intro}
-En aquesta pràctica trobem experimentalment les línies equipotencials i de camp del camp elèctric de tres distribucions de carrega en un material dielèctric (lineal, isòtrop i homogeni) de difícil o inexistent solució analítica, així com alguna propietat associada. La primera distribució estudiada és un condensador de plaques plano-paral·leles d'altura infinita i llargada finita, del qual també en calculem la capacitat; la segona són dos fils infinits paral·lels a diferents potencials; i per últim, estudiem una placa amb una escletxa davant d'un fil infinit a diferents potencials.
+En aquesta pràctica trobem experimentalment les línies equipotencials i de camp del camp elèctric de tres distribucions de càrrega en un material dielèctric (lineal, isòtrop i homogeni) de difícil o inexistent solució analítica, així com alguna propietat associada. La primera distribució estudiada és un condensador de plaques plano-paral·leles d'altura infinita i llargada finita, del qual també en calculem la capacitat; la segona són dos fils infinits paral·lels a diferents potencials; i per últim, estudiem una placa amb una escletxa davant d'un fil infinit, a diferents potencials.
 
-Per estudiar aquestes distribucions de càrregues dins un medi dielèctric usem la dualitat que existeix entre el camp de corrents, $\vec{J}$, i el camp de desplaçament elèctric, $\vec{D}$. Com podem veure a les Eqs. (\ref{eq: J_D}) aquests dos camps tenen les mateixes equacions i, per tant, si repliquem les condicions de contorn d'un sistema en medi dielèctric en un sistema en medi conductor, obtindrem les mateixes solucions per les corrents que obtindreim en el sistema dielèctirc pel camp de desplaçament.
+Per estudiar aquestes distribucions de càrregues dins un medi dielèctric usem la dualitat que existeix entre el camp de corrents, $\vec{J}$, i el camp de desplaçament elèctric, $\vec{D}$. Com podem veure a les Eqs. (\ref{eq: J_D}) aquests dos camps tenen les mateixes equacions i, per tant, si repliquem les condicions de contorn d'un sistema en medi dielèctric en un sistema en medi conductor, obtindrem les mateixes solucions per les corrents que obtindrem en el sistema dielèctric pel camp de desplaçament.
 \begin{equation}
     \begin{array}{lll}
     \vec{\nabla} \times \vec{J}=0 & \vec{J}=\sigma \vec{E} & \vec{\nabla} \cdot \vec{J}=0 \\
@@ -132,9 +132,9 @@ Concretament, en aquesta pràctica els objectius que ens proposem són:
             \item  Dos fils infinits paral·lels a diferents potencials.
             \item  Una placa amb una escletxa paral·lela a un fil infinit a diferents potencials.
         \end{enumerate}  
-        i comparar-les amb els resultats simulats i els càlculs tèorics del cas ideal.
+        i comparar-les amb els resultats simulats i els càlculs teòrics del cas ideal.
     \item Determinar la capacitat per unitat de longitud del condensador.
-    \item Estudiar algun fenomen físic relacionat amb les línies equipotencials a través de la tercera configuragicó de càrrega, proposada pel grup.
+    \item Estudiar algun fenomen físic relacionat amb les línies equipotencials a través de la tercera configuració de càrrega, proposada pel grup.
 \end{list}
 
 Per assolir el primer objectiu, procedirem com s'explica a la Secció \ref{sec: metode}.
@@ -152,7 +152,7 @@ Aleshores, podem calcular la capacitat per unitat de longitud si sabem el potenc
     \label{eq: C}
 \end{equation}
 
-Per altra banda, per obtenir la capacitat ideal d'un condensador de plaques plano-paral·lels com el que tenim a l'experiment calculem la diferència de potencial entre les plaques,
+Per altra banda, per obtenir la capacitat ideal d'un condensador de plaques plano-paral·leles com el que tenim a l'experiment calculem la diferència de potencial entre les plaques,
 \begin{equation}
     |\Delta\phi|=\int_{0}^{d} \vec{E}\vec{dl}= Ed,
 \end{equation}
@@ -163,7 +163,7 @@ i com que assumim que el camp és uniforme i de valor $\frac{\sigma}{\varepsilon
     \label{eq: c_t}
 \end{equation}
 
-En relació a l'últim objectiu, la tercera configuració estudiada és un fil infinit enfront una placa infinita en l'eix $Z$ amb una escletxa al llarg de la placa i al davant del fil. A més, existeix una diferència de potencial entre el fil i les dues parts de la placa, què sí que estan al mateix potencial. Aquesta, és una disposició similar a la d'un experiment de difracció si tractem el fil com un "emissor" de línies equipotencials i les plaques amb l'escletxa com l'objecte que les difracta. Per tant, la motivació per estudiar aquesta configuració prové de voler veure si amb les línies de potencial passa algun fenomen similar a la difracció d'ones\footnote{Més informació sobre la difració d'ones a \url{https://en.wikipedia.org/wiki/Diffraction}}.
+En relació a l'últim objectiu, la tercera configuració estudiada és un fil infinit enfront d'una placa infinita en l'eix $Z$ amb una escletxa al llarg de la placa i al davant del fil. A més, existeix una diferència de potencial entre el fil i les dues parts de la placa, què sí que estan al mateix potencial. Aquesta és una disposició similar a la d'un experiment de difracció si tractem el fil com un "emissor" de línies equipotencials i les plaques amb l'escletxa com l'objecte que les difracta. Per tant, la motivació per estudiar aquesta configuració prové de voler veure si amb les línies de potencial passa algun fenomen similar a la difracció d'ones\footnote{Més informació sobre la difració d'ones a \url{https://en.wikipedia.org/wiki/Diffraction}}.
 
 \subsection{Mètode experimental}\label{sec: metode}
 Per dur a terme l'experiment hem dibuixat les tres configuracions esmentades anteriorment sobre uns rectangles de paper de carbó (de $28cm\cross20cm$) amb tinta conductora de plata. Així doncs, hem traduït els nostres sistemes de tres dimensions (però amb simetria translacional en un eix) a sistemes de dues dimensions dibuixant sobre el paper la secció de les geometries cap a la direcció $Z$. Per exemple, el condensador s'ha convertit en dues línies paral·leles i els dos fils infinits en dos punts. A l'Annex \ref{fotos} hi ha imatges de les tres configuracions que hem muntat al laboratori. Tot seguit, quan la tinta era seca (s'ha d'esperar uns 20 min), hem connectat el sistema a una font de corrent amb una diferència de potencial de $15 V$. En aquest moment és molt important comprovar que el conductor està ben dibuixat mirant si tots els punts de l'elèctrode tenen el mateix potencial. Finalment, amb un voltímetre hem anat marcant punts amb el mateix potencial per poder dibuixar les línies equipotencials.
@@ -178,7 +178,7 @@ Per representar els punts experimentals els hem digitalitzat amb el programa web
 Finalment, hem fet una simulació en Python per calcular computacionalment les línies equipotencials i de camp de les tres configuracions de conductors. Com veurem a la següent secció, la simulació no és del tot fidel amb la realitat. Per millorar-ne els resultats es pot mesurar el potencial a les vores del paper conductor i aplicar aquests valors com a condició de contorn a la simulació.\footnote{\label{nota: codis}Tots els codis es troben a l'Annex \ref{sec: python}}
 
 \subsection{Resultats i discussió}\label{sec: resultats}
-En aquesta secció presentem i comparem els resultats obtinguts tant experimentalment com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode numèric de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
+En aquesta secció presentem i comparem els resultats obtinguts tant experimentalment com computacionalment. Mostrem les línies de camp i les línies equipotencials de les tres distribucions de càrrega, així com el resultat experimental de la capacitat d'una d'elles. Per fer les simulacions hem solucionat l'equació de Laplace amb el mètode numèric de Jacobi\footnotemark[3]. Cal destacar que les simulacions les hem fet al buit, ja que no coneixem el valor de la permetivitat del dielèctric. A més, s'ha considerat que els elèctrodes són conductors ideals i constitueixen les úniques fonts del camp.
 
 \subsubsection{Condensador de plaques plano-paral·leles}\label{sec: cond}
 La primera distribució de càrrega que estudiarem és un condensador de plaques plano-paral·leles centrat a l'origen. Les plaques són paral·leles al pla $YZ$, finites en la direcció $Y$ i molt llargues o infinites en la direcció $Z$.
@@ -199,7 +199,7 @@ En les Figs. (\ref{fig: cond_pot}) i (\ref{fig: cond_e}) podem veure representad
     \end{subfigure}
 \end{figure}
 
-A la Fig. (\ref{fig: cond_pot}) s'observa com a la regió central del condensador les línies equipotencials són paral·leles a les plaques, com prediu la teoria. En canvi, a prop de les vores, les línies es corben fins que s'acaben tancant. La disminució de la component $Y$ del camp elèctric provoca aquesta corbatura i es deu a que en aquesta direcció ens allunyem de la placa, és a dir, de la font de camp. Aquest resultat difereix del cas ideal (condensador de plaques infinites), en el que les línies equipotencials mai es tanquen. Tanmateix, veiem que coincideix amb la simulació, on les línies també es tanquen tot i que ho fan més a prop. Aquesta discrepància entre la simulació i l'experiment principalment és a causa de que a la simulació no hem introduït la condició de contorn relacionada amb els límits del paper conductor. També hi ha altres efectes com les irregularitats dels elèctrodes, la connexió entre la font i els elèctrodes o les possibles fluctuacions de la idealitat del medi que no hem tingut en compte a la simulació i poden contribuir a la diferència dels resultats.
+A la Fig. (\ref{fig: cond_pot}) s'observa com a la regió central del condensador les línies equipotencials són paral·leles a les plaques, com prediu la teoria. En canvi, a prop de les vores, les línies es corben fins que s'acaben tancant. La disminució de la component $Y$ del camp elèctric provoca aquesta corbatura i es deu a que en aquesta direcció ens allunyem de la placa, és a dir, de la font de camp. Aquest resultat difereix del cas ideal (condensador de plaques infinites), en el qual les línies equipotencials mai es tanquen. Tanmateix, veiem que coincideix amb la simulació, on les línies també es tanquen tot i que ho fan més a prop. Aquesta discrepància entre la simulació i l'experiment principalment és a causa de que a la simulació no hem introduït la condició de contorn relacionada amb els límits del paper conductor. També hi ha altres efectes com les irregularitats dels elèctrodes, la connexió entre la font i els elèctrodes o les possibles fluctuacions de la idealitat del medi que no hem tingut en compte a la simulació i poden contribuir a la diferència dels resultats.
 
 Pel que fa a la Fig. (\ref{fig: cond_e}) veiem com les línies de camp van des de la placa positiva a la negativa (com era d'esperar) i tenen major densitat a prop d'aquestes, indicant que el camp és més intens. Com en el cas del potencial, les línies segueixen un comportament semblant al ideal a la part central i, en canvi, a prop de les vores es desvien a causa dels efectes de vorada. Similarment, els segments experimentals, que representen la direcció del camp, també segueixen la tendència del càlcul computacional tot i que les línies experimentals tendeixen a tancar-se més sobre els elèctrodes. Aquestes diferències s'expliquen igual que les discutides anteriorment.
 
@@ -210,7 +210,7 @@ Per calcular la capacitat del condensador, primer hem calculat la càrrega per u
 \boxed{ \frac{C}{L} = \varepsilon  (2{,}51 \pm 0{,}63)\, \mathrm{F/m} }
 \]    
 
-Aquest resultat el podem comparar amb el resultat tèoric de la capacitat d'un condensador ideal amb les mateixes dimensions. Usant l'Eq. (\ref{eq: c_t}) obtenim $(\frac{C}{L})_t =\varepsilon(2,667 \pm 0,095)\, \mathrm{F/m}$ que és compatible amb el resultat experimental del nostre condensador no ideal.
+Aquest resultat el podem comparar amb el resultat teòric de la capacitat d'un condensador ideal amb les mateixes dimensions. Usant l'Eq. (\ref{eq: c_t}) obtenim $(\frac{C}{L})_t =\varepsilon(2,667 \pm 0,095)\, \mathrm{F/m}$ que és compatible amb el resultat experimental del nostre condensador no ideal.
 
 \subsubsection{Fils infinits}\label{sec: fils}
 La segona configuració estudiada són dos fils infinits paral·lels amb càrrega oposada. Conseqüentment, en aquest cas, la simulació representa el cas ideal.
@@ -231,7 +231,7 @@ La segona configuració estudiada són dos fils infinits paral·lels amb càrreg
 \end{figure}
 
 
-A la Fig. (\ref{fig: fils_pot}), si ens fixem en les línies equipotencials experimentals veiem que es tanquen en el·lipses al voltant dels fils i presenten una línia vertical just entre els dos elèctrodes. Aquesta és la tendència dictada per la simulació tot i que en la simulació les línies es tanquen en circumferències. Aquesta diferència pot ser deguda a diversos factors. En primer lloc, el nostre sistema té una discontinuïtat en el medi als límits del paper (rectangular) que no hem introduït a la simulació i, al no tenir la mateixa geometria que el sistema, afecta a la forma de les línies equipotencials. En segon lloc, el nostre muntatge experimental és una aproximació en dues dimensions del sistema en tres dimensions que intentem replicar. Per últim, pot haver altres contribucions al camp que no hem tingut en compte com la unió entre els elèctrodes i la font de corrent o un camp extern present al laboratori.
+A la Fig. (\ref{fig: fils_pot}), si ens fixem en les línies equipotencials experimentals veiem que es tanquen en el·lipses al voltant dels fils i presenten una línia vertical just entre els dos elèctrodes. Aquesta és la tendència dictada per la simulació tot i que en la simulació les línies es tanquen en circumferències. Aquesta diferència pot ser deguda a diversos factors. En primer lloc, el nostre sistema té una discontinuïtat en el medi als límits del paper (rectangular) que no hem introduït a la simulació i, al no tenir la mateixa geometria que el sistema, afecta la forma de les línies equipotencials. En segon lloc, el nostre muntatge experimental és una aproximació en dues dimensions del sistema en tres dimensions que intentem replicar. Per últim, pot haver altres contribucions al camp que no hem tingut en compte com la unió entre els elèctrodes i la font de corrent o un camp extern present al laboratori.
 
 Per altra banda, el camp elèctric  experimental mostrat a la Fig. (\ref{fig: fils_camp}) també segueix la tendència de la simulació tot i que les línies de camp que surten del fil a $7.5$ V tenen més tendència a tancar-se cap al fil a $-7.5$ V. Això pot ser degut a que hi ha diversos efectes que no hem tingut en compte a la simulació com hem explicat en el cas del potencial. 
 
@@ -269,11 +269,11 @@ Per altra banda, a la Fig. (\ref{fig: lliure_camp}) podem veure el camp elèctri
 
 En aquesta pràctica hem estudiat les línies equipotencials i de camp dins d'un material dielèctric de tres configuracions de conductors diferents, gràcies al paral·lelisme entre les equacions del camp de corrents i del camp de desplaçament. 
 
-En primer lloc hem estudiat un condensador de plaques plano-paral·leles finites només en una dimensió i hem pogut veure com, a diferència del cas ideal, les línies de camp es tanquen al voltant de les plaques. També hem vist com la simulació al buit coincideix en tendència amb l'experiment però les línies equipotencials simulades es tanquen més aprop de les plaques a causa de que el camp elèctric al buit és més intens que en el dielèctirc. A més, hem realitzat un càlcul experimental de la capacitat del condensador i hem obtingut un valor de $ \frac{C}{L} = \varepsilon  (2{,}51 \pm 0{,}63)\, \mathrm{F/m} $ que es compatible amb el resultat del model ideal.
+En primer lloc hem estudiat un condensador de plaques plano-paral·leles finites només en una dimensió i hem pogut veure com, a diferència del cas ideal, les línies de camp es tanquen al voltant de les plaques. També hem vist com la simulació al buit coincideix en tendència amb l'experiment però les línies equipotencials simulades es tanquen més a prop de les plaques a causa que el camp elèctric al buit és més intens que en el dielèctric. A més, hem realitzat un càlcul experimental de la capacitat del condensador i hem obtingut un valor de $ \frac{C}{L} = \varepsilon  (2{,}51 \pm 0{,}63)\, \mathrm{F/m} $ que és compatible amb el resultat del model ideal.
 
-En segon lloc hem estudiat dos fils infinits paral·lels a potencials oposats. En aquest cas hem pogut observar com les limitacions del nostre experiment per reproduïr aquesta configuració han provocat que les línies equipotencials fòssin el·líptiques en comptes de circulars.
+En segon lloc hem estudiat dos fils infinits paral·lels a potencials oposats. En aquest cas hem pogut observar com les limitacions del nostre experiment per reproduïr aquesta configuració han provocat que les línies equipotencials fossin el·líptiques en comptes de circulars.
 
-Per últim, hem estudiat una placa amb una escletxa davant d'un fil infinit a un potencial diferent amb l'objectiu de veure si les línies equipotencials pateixen algun fenòmen similar a la difracció d'una ona a causa de l'escletxa. Tanmateix, amb l'experiment hem constatat que no obstant les línies experimentals semblaven patir quelcom semblant a la difracció, amb la simulació hem pogut comprovar que la forma de les línies equipotencials quasi no depenia de si hi havia escletxa o no, i per tant, hem descartat aquesta idea.
+Per últim, hem estudiat una placa amb una escletxa davant d'un fil infinit a un potencial diferent amb l'objectiu de veure si les línies equipotencials pateixen algun fenomen similar a la difracció d'una ona a causa de l'escletxa. Tanmateix, amb l'experiment hem constatat que, no obstant les línies experimentals semblaven patir quelcom semblant a la difracció, amb la simulació hem pogut comprovar que la forma de les línies equipotencials quasi no depenia de si hi havia escletxa o no, i per tant, hem descartat aquesta idea.
 
 \newpage
 \section{\huge \textbf{Pràctica 2}}
@@ -287,7 +287,7 @@ Per últim, hem estudiat una placa amb una escletxa davant d'un fil infinit a un
 \vspace{1em}  % Espai abans del contingut
 
 \begin{abstract}
-    En aquesta pràctica estudiem la força magnètica entre dos fils amb corrent elèctric de mateixa intensitat, en concret, analitzem la seva relacció amb la magnitud de la intensitat dels fils i la dependència amb la distància que els separa. També s'aprofita el muntatge experimental per mesurar la component horizonal del camp magnètic terrestre. Les dades experimentals es tracten mitjançant el mètode dels mínims quadrats per obtenir paràmetres que es poden comparar amb valors teòrics, en concret calcularem el valor de la permeabilitat magnètica al buit. Aquests presenten diferències prou significatives respecte els nostres resultats tot i trobear-se dins l'interval d'incertesa, el que creiem que és degut a la gran complexitat del mètode experimental emprat.
+    En aquesta pràctica estudiem la força magnètica entre dos fils amb corrent elèctric de mateixa intensitat, en concret, analitzem la seva relació amb la magnitud de la intensitat dels fils i la dependència amb la distància que els separa. També s'aprofita el muntatge experimental per mesurar la component horitzontal del camp magnètic terrestre. Les dades experimentals es tracten mitjançant el mètode dels mínims quadrats per obtenir paràmetres que es poden comparar amb valors teòrics, en concret calcularem el valor de la permeabilitat magnètica al buit. Aquests presenten diferències prou significatives respecte als nostres resultats tot i trobar-se dins l'interval d'incertesa, el que creiem que és degut a la gran complexitat del mètode experimental emprat.
 \end{abstract}
 
 \subsection{Introducció}\label{sec: PR2_intro}
@@ -302,19 +302,19 @@ Aquesta aproximació ens facilita molt més els càlculs ja que podem trobar el 
     B = \frac{\mu_0I}{2\pi r}
 \end{equation}
 
-I que la força mangètica que rep el fil d'una longitud $L$ és
+I que la força magnètica que rep el fil d'una longitud $L$ és
 
 \begin{equation}\label{eq: PR2_Fmagn_en_funcio_B}
     \vec{F} = I\int d\vec{l}\times\vec{B}(\vec{r})
 \end{equation}
 
-Ens resultat que la força magnètica (el mòdul) té l'expressió següent:
+La força magnètica (el mòdul) resultant té l'expressió següent:
 
 \begin{equation}\label{eq: PR2_Fm_entre_fils}
     F = \frac{\mu_0I^2L}{2\pi r}
 \end{equation}
 
-Per mesurar la força magnètica entre dos fils de corrent i la seva dependència amb la intensitat de corrent que hi circula i amb la distància de separació entre ells utilitzarem una balança. Aquesta permet saber quan el sistema està en equlibri, és a dir, quan la força magnètica generada pels fils és compensada per una altra força d'igual direcció però sentit contrari. 
+Per mesurar la força magnètica entre dos fils de corrent i la seva dependència amb la intensitat de corrent que hi circula i amb la distància de separació entre ells utilitzarem una balança. Aquesta permet saber quan el sistema està en equilibri, és a dir, quan la força magnètica generada pels fils és compensada per una altra força d'igual direcció però de sentit contrari. 
 
 Aquesta altra força, que ha de ser fàcilment parametritzable, pot correspondre a la força de la gravetat associada al fil superior. La qual mesurarem a través de les masses conegudes que col·locarem sobre la cassoleta que té aquest fil.
 
@@ -341,10 +341,9 @@ On $k$ és la constant de torsió del fil superior i $theta$ l'angle de torsió 
 La balança de corrent està formada per un marc rectangular per on hi circula un corrent. Aquest es troba sustentat pel fil de torsió i es troba sotmès a un equilibri entre la força del contrapès i la força entre fils. 
 
 Per tal d'afavorir el moviment del rectangle conductor, les
-connexions entre el marc i la font de corrent es fan usant gal·li fos. Els motius pels quals s'usa el gal·li són la seva baixa temperatura de fusió (29;76ºC) i al seu preu econòmic. El metall fos permet la mobilitat del marc i proporciona una connexió continua i gairebé sense presentar fricció. S'obren els pots de gal·li i es connecta el transformador de corrent de 9 V per fondre'l. 
+connexions entre el marc i la font de corrent es fan usant gal·li líquid. Els motius pels quals s'usa el gal·li són la seva baixa temperatura de fusió (29ºC) i el seu preu econòmic. El metall fos permet la mobilitat del marc i proporciona una connexió contínua i gairebé sense presentar fricció. S'obren els pots de gal·li i es connecta el transformador de corrent de 9 V per fondre'l. 
 
-A continuació, es posen en contacte
-els pots de gal·li amb el marc rectangular, que té unes petites puntes sobresortint que entre perfectament en l'obertura de cada pot de gal·li. També es connecta el transformador amb el fil inferior, per a que aquest també tingui corrent circulant-hi.
+A continuació, es posen en contacte els pots de gal·li amb el marc rectangular, que té unes petites puntes sobresortint que entren perfectament en l'obertura de cada pot de gal·li. També es connecta el transformador amb el fil inferior per que aquest també tingui corrent circulant-hi.
 
 %DIBUIX MUNTATGE
 
@@ -378,11 +377,11 @@ Després de fer una mesura, la balança pot quedar descalibrada (l'aleta d'amort
 Un cop la balança calibrada, la pràctica es divideix en 3 parts. En la primera part, es fan girar els cargols 5 voltes completes de tal forma que se separen els cables 5 mm més. A continuació es posa la massa de 5 mg i es connecta la font de corrent continu augmentant la intensitat fins que
 s'equilibra la balança. Es repetirà el mateix procés per a les diferents masses, augmentant-les de 5 mg en 5 mg a cada nova mesura.
 
-En la segona part de la pràctica, es posa la massa de 5mg sobre la cassoleta i es gira el dial ens que la balança torni a l'equilibri. Seguidament es repeteix el procés per les masses de 10, 15, 20 i 25 mg i a continuació es van separant els fils a I constant (girant les rodetes que desplacen el fil inferior) per a trobar el valor de $\mu_o$.
+En la segona part de la pràctica, es posa la massa de 5 mg sobre la cassoleta i es gira el dial ens que la balança torni a l'equilibri. Seguidament es repeteix el procés per les masses de 10, 15, 20 i 25 mg i a continuació es van separant els fils a I constant (girant les rodetes que desplacen el fil inferior) per a trobar el valor de $\mu_o$.
 
 Finalment, en la tercera part de la pràctica es rota el sistema 90 graus de manera que sigui el camp de la Terra qui faci la força sobre el fil de corrent (recordem que fins ara el teníem paral·lel al camp de la Terra perquè aquest no fes cap força sobre el fil). A continuació, es desconnecta la intesitat del cable inferior i pel superior es fa circular la major intensitat possible. Finalment, es gira el dial fins a equilibrar la balança. D’aquesta manera, mesurant la força que rep el fil es podrà trobar de quina magnitud és el camp causant d’aquesta força.
 
-Per a una intensitat determinada, la força que rep el fil ve donada per l’Eq. \eqref{eq: PR2_Fmagn_en_funcio_B}, i simmplement aïllant el camp es podria trobar el seu valor:
+Per a una intensitat determinada, la força que rep el fil ve donada per l’Eq. \eqref{eq: PR2_Fmagn_en_funcio_B}, i simplement aïllant el camp es podria trobar el seu valor:
 
 \begin{equation}\label{eq: PR2_Btnorm}
     B_{t_{norm}} = \frac{k\theta}{LI}
@@ -410,7 +409,7 @@ A la pràctica, l'aleta d'amortiment mai es quedava en una posició sense movime
 
 \subsubsection{Dependència de la força mangètica amb la intensitat de corrent}\label{sec: PR2_Fm_intensitat}
 
-En la primera part de la pràctica volem estudiar la relació que hi ha entre la intensitat que circula per un fil i la força que aquest rep a causa d’un altre fil pel que hi circula la mateixa intensitat. 
+En la primera part de la pràctica volem estudiar la relació que hi ha entre la intensitat que circula per un fil i la força que aquest rep a causa d’un altre fil pel qual hi circula la mateixa intensitat. 
 
 S’ha mesurat la intensitat necessària per a fer circular pel fil perquè la força magnètica i la força gravitatòria de la massa de la balança estiguin en equilibri. Per a cada massa s’han realitzat 3 mesures de la intensitat i se n’ha fet el promig.
 
@@ -426,15 +425,16 @@ valors obtinguts es mostren gràficament a la Fig. \ref{fig: regr_mvsI2}:
 
 La regressió té un coeficient de correlació de $R^2 = 0,9806$. Així doncs, la força que un fil que transporta una intensitat I rep generat pel camp magnètic produit per un altre fil situat paral·lelament i en les mateixes condicions de corrent és proporcional al quadrat de la intensitat: $F \sim I^2$.
 
-El pendent de la recta de regressió ens permet trobar un valor aproximat de $\mu_0$. A partir de l’Eq. \eqref{eq: PR2_Fm_entre_fils} es dedueix que el pendent m serà $m = \frac{2\pi d}{\mu_0 L}$. Aïllant $\mu_0$ s’obté $\mu_0 = (0,413 \pm 0,091) · 10^{-6}\, T · m/A$, que difereix bastant (tot i tenir el mateix ordre de magnitud) del valor tabulat que hem pres, de $4\pi \cdot 10^{−7}\, T \cdot m/A \,=\, 1,26 \cdot 10^{−6}\, T\cdotm/A$\footnote{Aquest valor tabulat s'ha extret del guió de la pràctica corresponent}. 
+El pendent de la recta de regressió ens permet trobar un valor aproximat de $\mu_0$. A partir de l’Eq. \eqref{eq: PR2_Fm_entre_fils} es dedueix que el pendent m serà $m = \frac{2\pi d}{\mu_0 L}$.
+Aïllant $\mu_0$ s’obté $\mu_0 = (0,413 \pm 0,091) · 10^{-6}\, T · m/A$, que difereix bastant (tot i tenir el mateix ordre de magnitud) del valor tabulat que hem pres, de $4\pi \cdot 10^{-7}\, T \cdot m/A \,=\, 1,26 \cdot 10^{-6}\, T\cdot m/A$\footnote{Aquest valor tabulat s'ha extret del guió de la pràctica corresponent}. 
 
-Podem veure que el valor teòric no es troba dins l’interval d’incerteses considerat pel valor experimental i per tant els resultats no són compatibles. La incertesa instrumental associada a les mesures com per exemple la diferència de massa real respecte el marcat en les etiquetes i el que s'ha utilitzat per fer les regressions fa augmentar la discrepància entre els resultats. 
+Podem veure que el valor teòric no es troba dins de l’interval d’incerteses considerat pel valor experimental i, per tant, els resultats no són compatibles. La incertesa instrumental associada a les mesures, com per exemple, la diferència de massa real respecte la marcada en les etiquetes i el que s'ha utilitzat per fer les regressions fa augmentar la discrepància entre els resultats. 
 
 \subsubsection{Dependència de la força mangètica amb la distància de separació entre fils}\label{sec: PR2_Fm_sep}
 
 En aquest segon apartat analitzarem com depèn la força magnètica amb la distància de separació entre fils per on circula corrent. 
 
-Ho farem aconseguint mantenir en equilibri la força magnètica amb la força de torsió. Així doncs, primer cal obtenir la constant de torsió del fil. Es fixa una intensitat de $(5,00 ± 0,01) \,A$ i es representen les dades de la força en funció de l’angle. Posteriorment es realitza una recta de regressió que ens permet trobar el valor de la constant $k$.
+Ho farem aconseguint mantenir en equilibri la força magnètica amb la força de torsió. Així doncs, primer cal obtenir la constant de torsió del fil. Es fixa una intensitat de $(5,00 ± 0,01)$ A i es representen les dades de la força en funció de l’angle. Posteriorment es realitza una recta de regressió que ens permet trobar el valor de la constant $k$.
 
 \begin{figure}[H]
     \centering
@@ -443,17 +443,17 @@ Ho farem aconseguint mantenir en equilibri la força magnètica amb la força de
     \label{fig: PR2_regr_Fvstheta}
 \end{figure}
 
-La força que s’obté de la regressió és:
+La força que s’obté a partir de la regressió és:
 
 \begin{equation}\label{F_ktheta}
     F(\theta) = (3,73 \pm 0,10) \cdot 10^{-6}\, \theta
 \end{equation}
 
-Cal remarcar que la regressió lineal posseeix una ordenada a l’origen llunyana al zero ($(-1,75 \pm 0,50)·10^{-5}$). Tot i que aquesta ordenada d’origen no és menyspreable enfront els valors de la força, podem no tenir-la en compte ja que aquesta ordenada a l'origen pot haver aparegut a causa d’una imprecisa cal·libració de la balança. A més a més, el fet que la constant de torsió sigui positiva és un bon indicatiu, perquè la força ha d’augmentar linealment amb l’angle de torsió.
+Cal remarcar que la regressió lineal posseeix una ordenada a l’origen llunyana al zero ($(-1,75 \pm 0,50)·10^{-5}$). Tot i que aquesta ordenada d’origen no és menyspreable enfront dels valors de la força, podem no tenir-la en compte ja que aquesta ordenada a l'origen pot haver aparegut a causa d’una imprecisa cal·libració de la balança. A més a més, el fet que la constant de torsió sigui positiva és un bon indicatiu, perquè la força ha d’augmentar linealment amb l’angle de torsió.
 
 A continuació, mantenint fixa la intensitat anterior, es va variant la distància entre ambdós fils de corrent per calcular el valor de la permeabilitat magnètica $\mu_0$. 
 
-Es representen els resultats obtinguts en la Fig. \ref{fig: PR2_regr_thetavsr} on es grafica la força respecte 1/r:
+Es representen els resultats obtinguts en la Fig. \ref{fig: PR2_regr_thetavsr} on es grafica la força respecte $1/r$:
 
 \begin{figure}[H]
     \centering
@@ -463,11 +463,11 @@ Es representen els resultats obtinguts en la Fig. \ref{fig: PR2_regr_thetavsr} o
 \end{figure}
 
 La regressió té un coeficient de correlació de $R^2 = 0,9762$.
-Aplicant la relació \eqref{F_ktheta} a l'equació que acabem de trobar i operant, s’obté que el valor de $\mu_o$ ve donat per l’equació $\mu_0 = \frac{2πm}{LI^2}$ on $m$ correspon al pendent de la regressió lineal. 
+Aplicant la relació \eqref{F_ktheta} a l'equació que acabem de trobar i operant, s’obté que el valor de $\mu_o$ ve donat per l’equació $\mu_0 = \frac{2\pi m}{LI^2}$ on $m$ correspon al pendent de la regressió lineal. 
 
 Aplicant el valor experimental s’obté que: $\mu_0 = (0,525 \pm 0,058) \cdot 10^{-6}\, N/A^2$. Tot i que el resultat tampoc és compatible amb l’esperat, sí és molt similar al resultat experimental de l’apartat anterior (tenint en compte els seus intervals d'incertesa, sí són compatibles) . 
 
-De nou, cal considerar que la discrepància és deguda la complexitat en la mesura de les dades. Un error tan gran pot ser degut a factors que han influït en la mesura i que no s’han pogut tenir en compte en el càlcul de la incertesa, com ara petites vibracions de la taula o una calibració imprecisa de la balança. De fet, tenir aquesta mateixa discrepància en els dos càlculs de la permeabilitat magnètica al buit pot ser un indicatiu que la balança no estava ben calibrada, per això les dependències entre magnituds són correctes però els valors calulcats no. Tanmateix, el resultat és força proper al valor real.
+De nou, cal considerar que la discrepància és deguda a la complexitat en la mesura de les dades. Un error tan gran pot ser degut a factors que han influït en la mesura i que no s’han pogut tenir en compte en el càlcul de la incertesa, com ara petites vibracions de la taula o una calibració imprecisa de la balança. De fet, tenir aquesta mateixa discrepància en els dos càlculs de la permeabilitat magnètica al buit pot ser un indicatiu que la balança no estava ben calibrada, per això les dependències entre magnituds són correctes, però els valors calculats no. Tanmateix, el resultat és força proper al valor real.
 
 Per millorar l'experiment i que els resultats numèrics fóssin més propers al teòric caldria considerar que la posició d'equilibri es devia trobar desplaçada del zero. També es podria recalibrar la balança de nou per no seguir arrossegant aquest error. Això és el que vam realitzar abans de començar la mesura del camp magnètic terrestre en la secció que ve a continuació.
 
@@ -475,23 +475,23 @@ Per millorar l'experiment i que els resultats numèrics fóssin més propers al 
 
 En aquesta última part de la pràctica es pretén mesurar la component horitzontal del camp magnètic terrestre. 
 
-Fixant la intensitat a $(8,00 \pm 0,01)\,A$, trobem el valor de l'angle que permet tornar a deixar a equilibrar la balança, és a dir, igualem la força que rep el fil degut al camp magnètic amb la de torsió. La torsió obtinguda experimentalment és de $(19,5 \pm 2,3)º$. 
+Fixant la intensitat a $(8,00 \pm 0,01)\,A$, trobem el valor de l'angle que permet tornar a deixar en l'equilibri la balança, és a dir, igualem la força que rep el fil degut al camp magnètic amb la de torsió. La torsió obtinguda experimentalment és de $(19,5 \pm 2,3)º$. 
 
 Aprofitant el resultat de la constant de torsió trobada en la Sec. \ref{sec: PR2_Fm_sep}, podem trobar que la força magnètica que s’ha obtingut és de $F = (7,28 \pm 0,90) \cdot 10^{-5}\,N$. 
 
-De l’Eq \eqref{eq: PR2_Fmagn_en_funcio_B}, podem aïllar $B$ i obtenir que la component horitzontal del camp magnètic de la Terra al laboratori de la Universitat Autònoma, és $B = (3,08 \pm 0,59)·10^{-5}\,T$. El valor real que hem agafat és de $B = 2,53·10^{−5}\,T$ \footnote{Valor obtingut d'un document de la R.S.E.F. on s'havia mesurat la component horitzontal del camp magnètic a Salamanca}. Per tant, com el valor experimental es troba dins l’interval d’incerteses, és compatible amb el resultat esperat.
+De l’Eq \eqref{eq: PR2_Fmagn_en_funcio_B}, podem aïllar $B$ i obtenir que la component horitzontal del camp magnètic de la Terra al laboratori de la Universitat Autònoma, és $B = (3,08 \pm 0,59)·10^{-5}\,T$. El valor real que hem agafat és de $B = 2,53·10^{-5}\,T$ \footnote{Valor obtingut d'un document de la R.S.E.F. on s'havia mesurat la component horitzontal del camp magnètic a Salamanca}. Per tant, com el valor experimental es troba dins l’interval d’incerteses, és compatible amb el resultat esperat.
 
-Només hem pogut estudiar la component horitzontal del camp magnètic terrestre perquè la component vertical d’aquest és perpendicular al conductor i per tant la balança que tenim no permet fer la seva mesura.
+Només hem pogut estudiar la component horitzontal del camp magnètic terrestre perquè la component vertical d’aquest és perpendicular al conductor i, per tant, la balança que tenim no permet fer la seva mesura.
 
-També podem observar que el fet d'haver desplaçat la balança, ens ha obligat a recalibrar aquesta de nou. Això pot haver influit en què els resultats de c'alcul del camp magnètic sí continguin el valor teòric en el seu interval d'incerteses.
+També podem observar que el fet d'haver desplaçat la balança, ens ha obligat a recalibrar aquesta de nou. Això pot haver influit en què els resultats de càlcul del camp magnètic sí continguin el valor teòric en el seu interval d'incerteses.
 
 \subsection{Conclusions}\label{sec: PR2_concl}
 
-En vista dels resultats es comprova que la dependència en $I^2$ i en $1/r$ de la força magnètica, efectivament és lineal, tal com predien les equacions trobades per un sistema de fils parl·lels pels quals circula una mateixa intensitat. 
+En vista dels resultats es comprova que la dependència en $I^2$ i en $1/r$ de la força magnètica, efectivament és lineal, tal com predien les equacions trobades per un sistema de fils paral·lels pels quals circula una mateixa intensitat. 
 
-També s’ha obtingut experimentalment el valor de $\mu_0$ de dues maneres diferents, obtenint en ambdós casos valors que discrepen amb al valor teòric acceptat però similars entre ells.
+També s’ha obtingut experimentalment el valor de $\mu_0$ de dues maneres diferents, obtenint en ambdós casos valors que discrepen amb el valor teòric acceptat però similars entre ells.
 
-Concluim doncs, que el mètode experimental és prou bo tot i els errors que té associats. No obstant, veiem que el calibratge inicial de balança és molt determinant en els resultats numèrics, en el nostre cas, s'hauria de tenir en compte que el punt d'equilibri de la balança es trobava fora del zero o es podria haver recalibrat la balança de nou abans de començar a fer les mesures de cada part de l'experiment.
+Concloem doncs, que el mètode experimental és prou bo tot i els errors que té associats. No obstant, veiem que el calibratge inicial de balança és molt determinant en els resultats numèrics, en el nostre cas, s'hauria de tenir en compte que el punt d'equilibri de la balança es trobava fora del zero o es podria haver recalibrat la balança de nou abans de començar a fer les mesures de cada part de l'experiment.
 
 La component horitzontal del camp magnètic terrestre a la Universitat Autònoma és de $B_{T_{norm}}= (3,08 \pm 0,59)\cdot10^{-5} \, T$ que conté dins del seu rang d’incertesa el valor teòric mesurat a Salamanca (el qual utilitzem de referència).
 
@@ -616,7 +616,7 @@ Primerament, s'ha aplicat una diferència de potencial al tub de raigs catòdics
 
 En el cas del camp magnètic, per poder estudiar la relació entre el radi de corvatura del feix i la intensitat de corrent de les bobines de Helmholtz, s'ha fotografiat el raig per les següents intensitats:  $0.1A, 0.2A, 0.3A, 0.4A, 0.5A, 0.6A, 0.7A, 0.8A$. Igualment, per determinar la relació entre el radi de corbatura i el potencial aplicat hem usat els següents potencials: $2kV, 3kV, 4kV$ i $5kV$.
 
-En aquest punt, mitjançant un dispositiu mòbil s'han fotografiat els diferents casos. Aleshores, s'ha processat cada imatge, ja a ordinador, amb el programa [NOM PROGRAMA] que permet obtenir punts del feix mitjançant la conversió de pixels a distància en cada fotografia. Es a dir, comptant els píxels i convertint-los a centímetres. 
+En aquest punt, mitjançant un dispositiu mòbil s'han fotografiat els diferents casos. Aleshores, s'ha processat cada imatge, ja a ordinador, amb el programa [NOM PROGRAMA] que permet obtenir punts del feix mitjançant la conversió de pixels a distància en cada fotografia. És a dir, comptant els píxels i convertint-los a centímetres. 
 
 %Aquest doncs, ha estat el procediment seguit: triar a consciència diversos punts del feix i donar-ne la posició (x,y) més exacta possible, sempre sent possibles errors degut al processat de la fotografia o al desplaçament de píxels. Més precisament, s'ha aplicat una grid (cuadrícula) sobre els espais compresos entre cada marca de la regla, coincidint amb cada variació de 1 cm, per cada eix. Així, per cada una de les imatges s'ha establert una conversió píxel/cm. S'inclou un exemple gràfic (\ref{fig: ex_grid}) a continuació:
 
@@ -670,10 +670,10 @@ A la taula \ref{tab:kvsVp} podem observar els diferents valors que pren $k$ \foo
 
 
 \subsubsection{Desviació magnetoestàtica}\label{sec: desv_magn}
-Després de comprovar a la Secció \ref{sec: desv_electr} que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interecció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Hemholtz. 
+Després de comprovar a la Secció \ref{sec: desv_electr} que les partícules dels ràigs catòdics tenen càrrega negativa, n'estudiarem la interacció amb el camp magnètic, substancialment uniforme, generat per unes bobines de Helmholtz. 
 Al aplicar el camp, com era d'esperar, hem observat que els ràigs es corbaven i ens hem disposat a estudiar les dependències d'aquesta corba i el seu radi amb la intensitat del corrent de les bobines i amb el potencial dels raigs catòdics.
 
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intensitat de corrent de les bobines hem usat l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la Fig. (\ref{fig: regressio_1}) hem representat una selecció d'aquestes regressions i ja podem veure com a mesura que augmenta la intensitat, el pendent de la recta, és a dir el radi de les partícules, disminueix. 
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció de la intensitat de corrent de les bobines hem usat l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. A la Fig. (\ref{fig: regressio_1}) hem representat una selecció d'aquestes regressions i ja podem veure com, a mesura que augmenta la intensitat, el pendent de la recta, és a dir, el radi de les partícules, disminueix. 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{regressio_1.png}
@@ -685,7 +685,7 @@ Al fer la regressió lineal del radi en funció de l'inversa de l'intensitat hem
 \begin{equation}
     y=x(0.03976\pm0.0006)+(0.0002\pm0.0016)
 \end{equation}  
-amb un coeficient de determinació de $r^2\approx0,9989$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El radi de corvatura és inversament proporcional a la intensitat a causa de què al augmentar la intensitat de les bobines de Hemholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
+amb un coeficient de determinació de $r^2\approx0,9989$. Per tant, la relació és certament lineal tot verificant la predicció de l'Eq.(\ref{eq: fc=fl}) ja que a més a més, l'ordenada a l'origen inclou el zero. El radi de corvatura és inversament proporcional a la intensitat a causa de què al augmentar la intensitat de les bobines de Helmholtz el camp d'inducció magnètica augmenta provocant que les partícules rebin més força centrípeta què alhora provoca que el radi de la trajectòria disminueixi.
 \begin{figure}[h]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -702,7 +702,7 @@ amb un coeficient de determinació de $r^2\approx0,9989$. Per tant, la relació 
         \label{fig: RvsVa}
     \end{minipage}
 \end{figure}
-Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmoholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa} que es troba a l'Annex. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és quadràtica amb la variació de $V_a$. Al fer la regressio lineal de $R^2$ respecte $V_a$ hem obtingut la recta
+Per calcular el radi de la trajectòria de les partícules dels raigs catòdics en funció del potencial d'acceleració d'aquestes usem l'Eq. (\ref{eq: radi}) que defineix el radi com el pendent de la recta de regressió entre $x^2+y^2$ i $2y$. Alicant diferents potencials a les bobines de Helmholtz s'obtenen els radis de corvatura de la Taula \ref{tab:RvsVa} que es troba a l'Annex. Amb aquestes dades hem construit la gràfica de la Fig. (\ref{fig: RvsVa}) on es mostra que la variació de $R$ és quadràtica amb la variació de $V_a$. Al fer la regressió lineal de $R^2$ respecte $V_a$ hem obtingut la recta
 \begin{equation}
     y=x(2.93\times10^{-6}\pm0.27\times10^{-6})+(2.28\times 10^{-3}\pm9.8\times10^{-4})
 \end{equation}  
@@ -873,7 +873,7 @@ Finalment, a partir de la pendent de la recta de regressió de l'Eq. (\ref{reg: 
 \boxed{\mu_0=(1,35\pm0,55)\cdot10^{-6} \, N/A^2}
 \]
 
-El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de la regressió és compatible amb el valor tabulat de $\mu_0 =$  1,25664 $\cdot 10^{-6}$ N/A$^2$ (REFRERÈNCIA DEL VALOR).
+El resultat de la permeabilitat magnètica del buit $\mu_0$ obtingut a partir de la regressió és compatible amb el valor tabulat de $\mu_0 =$  1,25664 $\cdot 10^{-6}$ N/A$^2$ \footnote{El valor tabulat de la permeabilitat magnètica del buit està extreta de: «Convocationde la Conférence générale des poids et mesures (26e réunion)»}.
 
 \begin{figure}[H]
     \centering
@@ -945,18 +945,18 @@ Donat que amb el desplaçament de 8 mm del origen tots els punts, excepte un, s�
 D'altra banda, comparant el valor del camp entre elles (bobines de dimensions iguals i diferent nombre de voltes), fent el quocient entre els camps per a cada bobina en cada punt, trobem que el camp per 300 voltes és aproximadament el doble que el de 150 i aquest, alhora, és aproximadament el doble que el de 75 \footnote{Els valors del camp i els quocients es troben a l'annex \ref{PR7_taules_dades_exp} a la Taula \ref{tab: taula Bx}}. Pel que veiem, el camp generat per una bobina és proporcional al nombre de voltes. Confirmant el principi de superposició.
 
 \subsection{Simulació numèrica del camp d'inducció} \label{sec: programa}
-Per calcular numèricament el camp d'inducció a tot l'espai hem realitzat un programa de Fortran \footnote{Veure l'annex (\ref{sec: fo})} que calcula la integral de la fórmula de Biot-Savart (\ref{eq: Biot-Savart}) per a tots els punts del pla $rz$ suposant que la nostra bobina és un conjunt de $N$ espires separades una distància $L/N$ i de radi $R$; com que aquest sistema té simetria de revolució sobre l'eix z, podem reduir l'espai tridimensional $x, y, z$ a un espai bidimensional $r, z$ on el camp és constant per $\varphi$ i no té component $\varphi$.
+Per calcular numèricament el camp d'inducció a tot l'espai hem realitzat un programa de Fortran \footnote{Veure l'annex (\ref{sec: fortran})} que calcula la integral de la fórmula de Biot-Savart (\ref{eq: Biot-Savart}) per a tots els punts del pla $rz$ suposant que la nostra bobina és un conjunt de $N$ espires separades una distància $L/N$ i de radi $R$; com que aquest sistema té simetria de revolució sobre l'eix $z$, podem reduir l'espai tridimensional $x, y, z$ a un espai bidimensional $r, z$ on el camp és constant per $\varphi$ i no té component $\varphi$.
 
-En la Fig. (\ref{fig: Bprog}) es mostra la magnitud i direcció del camp d'inducció $B$ de les bobines de la secció anterior (\ref{subsec: bobines}) (Figs. (\ref{fig: BvsX_33mm}) i (\ref{fig: Bvsx_26mm})). Podem observar com a l'interior de la bobina el camp es manté relativament constant en mòdul i direcció a prop de l'eix i del centre, però segons ens apropem als cables de les bobines, el camp magnètic augmenta en mòdul i, en els extrems, el camp es corba fins a sortir de la bobina perpendicular a aquesta.
+En la Fig. (\ref{fig: Bprog}) es mostra la magnitud i direcció del camp d'inducció $\vec{B}$ de les bobines de la secció anterior (\ref{subsec: bobines}) (Figs. (\ref{fig: BvsX_33mm}) i (\ref{fig: Bvsx_26mm})). Podem observar com a l'interior de la bobina el camp es manté relativament constant en mòdul i direcció a prop de l'eix i del centre, però segons ens apropem als cables de les bobines, el camp magnètic augmenta en mòdul i, en els extrems, el camp es corba fins a sortir de la bobina perpendicular a aquesta.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{res.png}
-    \caption{Magnitud del camp d'inducció $B$ (mapa de colors) i direcció (vectors verds) generat per una bobina (de 33mm de diàmetre, 300 voltes i 16 cm de longitud per on circula una intensitat de 1 A) en funció de la posició $(z,r)$.
+    \caption{Magnitud del camp d'inducció $B$ (mapa de colors) i direcció (vectors verds) generat per una bobina (de 33mm de diàmetre, 300 voltes i 16 cm de longitud per on circula una intensitat de 1 A) en funció de la posició $(z,r)$.}
     \label{fig: Bprog}
 \end{figure}
 
-En la Fig. () es mostra la component $z$ (mesurada per la sonda) del camp $B$ de la bobina de 33 mm de diàmetre. Observem que dins de la bobina la component $z$ del camp és constant en $r$ a prop de l'eix, però en apropar-nos suficient als cables, aquesta creix. D'aquesta manera, la hipòtesi formulada a la secció anterior (\ref{subsec: bobines}) per justificar la desviació de les dades experimentals respecte de la fórmula teòrica és incorrecta; ja que aquesta assumia que segons ens allunyàvem de l'eix, el camp havia de disminuir.
+En la Fig. () es mostra la component $z$ (mesurada per la sonda) del camp $\vec{B}$ de la bobina de 33 mm de diàmetre. Observem que dins de la bobina la component $z$ del camp és constant en $r$ a prop de l'eix, però en apropar-nos suficient als cables, aquesta creix. D'aquesta manera, la hipòtesi formulada a la secció anterior (\ref{subsec: bobines}) per justificar la desviació de les dades experimentals respecte de la fórmula teòrica és incorrecta; ja que aquesta assumia que segons ens allunyàvem de l'eix, el camp havia de disminuir.
 
 \subsection{Conclusions}\label{sec: conclusions}
 En aquesta pràctica hem estudiat el camp d'inducció magnètica generat per espires i bobines de diferents radis i nombre de voltes. 
@@ -1169,7 +1169,7 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
 
 \subsection{Imatges} \label{sec: imatges}
 \subsubsection{Imatges del muntatge experimental de la pràctica 1}\label{fotos}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
 
     \begin{subcaptionbox}{Condensador\label{fig:img1}}[0.3\textwidth]
@@ -1188,7 +1188,7 @@ En segon lloc, hem estudiat el camp generat per diferents bobines al llarg del s
     \label{fig:figura3}
 \end{figure}
 \subsubsection{imatges pràctica 6}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.38\textwidth}
         \centering
@@ -1455,7 +1455,7 @@ Per altra banda, per trobar les línies de camp elèctric experimentals hem calc
 \subsubsection{Simulació pràctica 7}\label{sec: fortran}
 Per fer les simulacions del camp d'inducció de les diferents bobines hem integrat numèricament l'expressió de Biot-Savart amb un programa de Fortran. Aquí mostrem el programa pel cas de la bobina de 33 mm de diàmetre. Per calcular els altres casos només cal canviar les dimensions de les bobines ($L$, $R$ i $N$).
 
-\begin{lstlisting}
+\begin{lstlisting}[caption={Camp d'inducció numèric}, label={lst:prog_B}]
     
 	implicit none
 	real*8 R,I,L,Bz_total,Br_total
@@ -1585,6 +1585,6 @@ C
 
 
 
- \end{document}
+\end{document}
 
  
