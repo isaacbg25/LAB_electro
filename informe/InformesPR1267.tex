@@ -948,10 +948,11 @@ Donat que amb el desplaçament de 8 mm del origen tots els punts, excepte un, s�
 
 D'altra banda, comparant el valor del camp entre elles (bobines de dimensions iguals i diferent nombre de voltes), fent el quocient entre els camps per a cada bobina en cada punt, trobem que el camp per 300 voltes és aproximadament el doble que el de 150 i aquest, alhora, és aproximadament el doble que el de 75 \footnote{Els valors del camp i els quocients es troben a l'annex \ref{PR7_taules_dades_exp} a la Taula \ref{tab: taula Bx}}. Pel que veiem, el camp generat per una bobina és proporcional al nombre de voltes. Confirmant el principi de superposició.
 
+
 \subsection{Simulació numèrica del camp d'inducció} \label{sec: programa}
 Per calcular numèricament el camp d'inducció a tot l'espai hem realitzat un programa de Fortran \footnote{Veure l'annex (\ref{sec: fortran})} que calcula la integral de la fórmula de Biot-Savart (\ref{eq: Biot-Savart}) per a tots els punts del pla $rz$ suposant que la nostra bobina és un conjunt de $N$ espires separades una distància $L/N$ i de radi $R$; com que aquest sistema té simetria de revolució sobre l'eix $z$, podem reduir l'espai tridimensional $x, y, z$ a un espai bidimensional $r, z$ on el camp és constant per $\varphi$ i no té component $\varphi$.
 
-En la Fig. (\ref{fig: Bprog}) es mostra la magnitud i direcció del camp d'inducció $\vec{B}$ de les bobines de la secció anterior (\ref{subsec: bobines}) (Figs. (\ref{fig: BvsX_33mm}) i (\ref{fig: Bvsx_26mm})). Podem observar com a l'interior de la bobina el camp es manté relativament constant en mòdul i direcció a prop de l'eix i del centre, però segons ens apropem als cables de les bobines, el camp magnètic augmenta en mòdul i, en els extrems, el camp es corba fins a sortir de la bobina perpendicular a aquesta.
+En la Fig. (\ref{fig: Bprog}) es mostra la magnitud i direcció del camp d'inducció $\vec{B}$ de les bobines de la secció anterior (\ref{subsec: bobines}) (Figs. (\ref{fig: BvsX_33mm})). Podem observar com a l'interior de la bobina el camp es manté relativament constant en mòdul i direcció a prop de l'eix i del centre, però segons ens apropem als cables de les bobines, el camp magnètic augmenta en mòdul i, en els extrems, el camp es corba fins a sortir de la bobina perpendicular a aquesta.
 
 \begin{figure}[H]
     \centering
@@ -960,7 +961,14 @@ En la Fig. (\ref{fig: Bprog}) es mostra la magnitud i direcció del camp d'induc
     \label{fig: Bprog}
 \end{figure}
 
-En la Fig. () es mostra la component $z$ (mesurada per la sonda) del camp $\vec{B}$ de la bobina de 33 mm de diàmetre. Observem que dins de la bobina la component $z$ del camp és constant en $r$ a prop de l'eix, però en apropar-nos suficient als cables, aquesta creix. D'aquesta manera, la hipòtesi formulada a la secció anterior (\ref{subsec: bobines}) per justificar la desviació de les dades experimentals respecte de la fórmula teòrica és incorrecta; ja que aquesta assumia que segons ens allunyàvem de l'eix, el camp havia de disminuir.
+En la Fig. (\ref{fig: zcomp}) es mostra la component $z$ (mesurada per la sonda) del camp $\vec{B}$ de la bobina de 33 mm de diàmetre. Observem que dins de la bobina la component $z$ del camp és constant en $r$ a prop de l'eix, però en apropar-nos suficient als cables, aquesta creix. D'aquesta manera, la hipòtesi formulada a la secció anterior (\ref{subsec: bobines}) per justificar la desviació de les dades experimentals respecte de la fórmula teòrica és incorrecta; ja que aquesta assumia que segons ens allunyàvem de l'eix, el camp havia de disminuir.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{zcomp.PNG}
+    \caption{Magnitud de la component z del camp d'inducció $B$ (mapa de colors) i generat per una bobina (de 33mm de diàmetre, 300 voltes i 16 cm de longitud per on circula una intensitat de 1 A) en funció de la posició $(z,r)$.}
+    \label{fig: zcomp}
+\end{figure}
 
 \subsection{Conclusions}\label{sec: conclusions}
 En aquesta pràctica hem estudiat el camp d'inducció magnètica generat per espires i bobines de diferents radis i nombre de voltes. 
