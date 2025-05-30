@@ -1285,6 +1285,55 @@ L'incertesa de $B_{t_{norm}}$ a partir de l'Eq. \eqref{eq: PR2_Btnorm}:
     u_{\mu_0}^2 = \left(\frac{2\pi r}{m^2L}\right)^2u_m^2 + \left(\frac{2\pi r}{mL^2}\right)^2u_I^2 + \left(\frac{2\pi}{mL}\right)^2u_r^2
 \end{equation}
 
+\subsubsection{Càlcul d'incerteses Pràctica 6}
+
+Per a aquest estudi, s’han considerat diverses fonts d’incertesa relacionades amb els valors mesurats. Els potencials elèctrics \( V_a \) i \( V_p \) tenen una incertesa assignada de \( 0{,}2~\text{kV} \) cadascun. La mesura de la intensitat del corrent elèctric a la bobina presenta una incertesa de \( 0{,}01~\text{A} \), mentre que la distància entre les plaques, representada per \( d \), es determina amb una precisió de \( \pm 1~\text{mm} \).
+
+El càlcul de la incertesa sobre la constant \( k \), que reflecteix els efectes marginals del camp elèctric entre plaques paral·leles, es basa en l’equació següent:
+
+\begin{equation}
+    u_k = \sqrt{
+        \left( \frac{4 V_a A}{V_p} u_d \right)^2 +
+        \left( \frac{4 d A}{V_p} u_{V_a} \right)^2 +
+        \left( \frac{4 d V_a}{V_p} u_A \right)^2 +
+        \left( \frac{-4 d V_a A}{V_p^2} u_{V_p} \right)^2
+    }
+    \label{eq:k}
+\end{equation}
+
+A continuació, es determina la incertesa en el càlcul de la relació \( q/m \) (càrrega respecte a la massa), utilitzant les dades obtingudes de l’estudi de la desviació provocada per un camp magnètic. Aquesta es calcula mitjançant:
+
+\begin{equation}
+    u_{q/m} = \sqrt{
+        \left( \frac{2}{K^2 I^2 R^2} u_{V_a} \right)^2 +
+        \left( \frac{-4 V_a}{K^2 R^2 I^3} u_I \right)^2 +
+        \left( \frac{-4 V_a}{K^2 I^2 R^3} u_R \right)^2
+    }
+    \label{eq:qm1}
+\end{equation}
+
+Per obtenir un valor fiable de \( q/m \), es fa una mitjana a partir de diverses mesures. Si designem \( (q/m)_i \) com el resultat de la \( i \)-èsima mesura, i se’n realitzen \( n \), la incertesa global associada al valor mitjà s’expressa com:
+
+\begin{equation}
+    u_{\langle q/m \rangle} = \frac{1}{n} \sqrt{ \sum_{i=1}^n u_{(q/m)_i}^2 }
+    \label{eq:mean}
+\end{equation}
+
+En el cas de mesures amb \( V_a \) fix i intensitat variable, es van realitzar vuit registres (\( n = 8 \)), mentre que amb intensitat constant i \( V_a \) variable es van fer quatre (\( n = 4 \)).
+
+Finalment, es torna a calcular la relació \( q/m \), ara a partir de les dades de desviació electromagnètica. En aquest pas s’inclou també la incertesa associada a la constant \( k \), segons el valor obtingut prèviament:
+
+\begin{equation}
+    u_{q/m} = \sqrt{
+        \left( \frac{V_p}{d K^2 I^2 R} u_k \right)^2 +
+        \left( \frac{k}{d K^2 I^2 R} u_{V_p} \right)^2 +
+        \left( \frac{-k V_p}{K^2 I^2 R d^2} u_d \right)^2 +
+        \left( \frac{-2 k V_p}{d I^3 R K^3} u_I \right)^2 +
+        \left( \frac{-k V_p}{d K^2 I^2 R^2} u_R \right)^2
+    }
+    \label{eq:qm2}
+\end{equation}
+
 \subsubsection{Càlcul d'incerteses Pràctica 7}\label{sec: incerteses}
 
 
